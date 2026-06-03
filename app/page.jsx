@@ -1,4 +1,5 @@
 export default function Home() {
+
 return (
 
 <div>
@@ -10,9 +11,7 @@ DJ DIGITAL
 </h1>
 
 <p>
-
 Maatwerk websites • Hosting • SEO
-
 </p>
 
 <a
@@ -28,5 +27,6 @@ Bekijk tarieven
 
 </div>
 
-);
+)
+
 }
