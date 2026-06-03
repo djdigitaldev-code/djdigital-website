@@ -1,6 +1,10 @@
 export default function Tarieven() {
-
-const pakketten = [
+  return (
+    <section>
+      <h1>Tarieven</h1>
+    </section>
+  );
+}
 
 {
 nummer:"01",

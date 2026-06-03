@@ -1,6 +1,10 @@
 export default function Home() {
-
-return (
+  return (
+    <section>
+      <h1>Home</h1>
+    </section>
+  );
+}
 
 <div>
 
