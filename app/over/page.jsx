@@ -4,3 +4,4 @@ export default function Over() {
       <h1>Over ons</h1>
     </section>
   );
+}
