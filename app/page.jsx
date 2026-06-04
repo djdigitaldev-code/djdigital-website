@@ -12,15 +12,15 @@ function Navbar() {
       <div className="nav-container">
 
 <Link
-  href="/"
-  className="nav-logo"
+href="/"
+className="nav-logo"
 >
 
-  <img
-    src="/logo.png"
-    alt="DJ Digital"
-    className="hero-logo"
-  />
+<img
+src="/logo.png"
+alt="DJ Digital"
+className="hero-logo"
+/>
 
 </Link>
 

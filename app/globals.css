@@ -97,21 +97,6 @@ z-index:100;
 
 }
 
-.logo{
-
-height:64px;
-
-transition:.4s;
-
-}
-
-.logo:hover{
-
-transform:
-scale(1.05);
-
-}
-
 .nav-links{
 
 display:flex;
@@ -963,89 +948,99 @@ margin:auto;
 /* NAVBAR */
 
 .navbar{
+
 position:fixed;
 
 top:0;
 
 left:0;
 
-width:100%;
+right:0;
 
-z-index:1000;
+height:90px;
 
-backdrop-filter:blur(20px);
+display:flex;
 
-background:rgba(12,12,18,.55);
+align-items:center;
 
-border-bottom:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+
+background:
+rgba(
+5,
+5,
+15,
+.75
+);
+
+border-bottom:
+
+1px solid
+rgba(
+177,
+0,
+255,
+.15
+);
+
+z-index:100;
+
 }
 
 .nav-container{
+
 max-width:1400px;
+
+width:100%;
+
+height:100%;
 
 margin:auto;
 
-height:110px;
-
 display:flex;
-
-align-items:center;
 
 justify-content:space-between;
 
-padding:0 32px;
+align-items:center;
+
+padding:0 60px;
+
 }
+
+/* LOGO EXACT ZOALS HERO */
 
 .nav-logo{
-display:flex;
 
-align-items:center;
-
-cursor:pointer;
+display:block;
 
 text-decoration:none;
+
 }
 
-.nav-logo .hero-logo{
-
-width:auto;
-
-height:110px;
-
-transition:.35s;
-}
-
-.nav-logo:hover .hero-logo{
-
-transform:scale(1.03);
-
-filter:
-drop-shadow(0 0 18px rgba(123,97,255,.7));
-}
+/* MENU */
 
 .nav-links{
+
 display:flex;
 
-gap:34px;
+gap:50px;
 
 align-items:center;
+
 }
 
 .nav-links a{
-color:#fff;
 
-text-decoration:none;
+font-size:18px;
 
 position:relative;
 
 transition:.3s;
-}
 
-.nav-links a:hover{
-color:#7b61ff;
 }
 
 .nav-links a::after{
+
 content:"";
 
 position:absolute;
@@ -1058,34 +1053,42 @@ width:0;
 
 height:2px;
 
-background:#7b61ff;
+background:
+
+linear-gradient(
+90deg,
+#00ccff,
+#b100ff
+);
 
 transition:.3s;
+
 }
 
 .nav-links a:hover::after{
+
 width:100%;
+
 }
 
 .nav-cta{
+
 padding:14px 26px;
 
 border-radius:18px;
 
-background:linear-gradient(
-135deg,
-#7b61ff,
-#9d8bff
+background:
+
+linear-gradient(
+90deg,
+#00ccff,
+#b100ff
 );
 
-font-weight:600;
-}
-
-.nav-cta:hover{
-transform:translateY(-2px);
 }
 
 .hamburger{
+
 display:none;
 
 background:none;
@@ -1093,9 +1096,11 @@ background:none;
 border:none;
 
 cursor:pointer;
+
 }
 
 .hamburger span{
+
 display:block;
 
 width:28px;
@@ -1106,7 +1111,6 @@ margin:6px;
 
 background:white;
 
-transition:.3s;
 }
 
 /* MOBILE */
@@ -1117,7 +1121,7 @@ transition:.3s;
 
 position:absolute;
 
-top:82px;
+top:90px;
 
 left:0;
 
@@ -1136,36 +1140,23 @@ pointer-events:none;
 transform:translateY(-20px);
 
 transition:.35s;
+
 }
 
 .nav-links.open{
+
 opacity:1;
 
 pointer-events:auto;
 
 transform:none;
+
 }
 
 .hamburger{
-display:block;
-}
-
-}
-
-.nav-logo{
-display:flex;
-
-align-items:center;
-
-text-decoration:none;
-}
-
-.navbar-logo{
-height:46px;
-
-width:auto;
 
 display:block;
 
-object-fit:contain;
+}
+
 }
