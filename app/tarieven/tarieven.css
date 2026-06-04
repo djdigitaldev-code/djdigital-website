@@ -916,3 +916,13 @@ linear-gradient(
 color:white;
 
 }
+
+.small-cta{
+
+cursor:pointer;
+
+border:none;
+
+outline:none;
+
+}

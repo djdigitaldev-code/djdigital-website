@@ -80,6 +80,35 @@ onClick={()=>setOpen(!open)}
 
 export default function Tarieven() {
 
+const openContact = (pakket) => {
+
+const tekst = `Hoi DJ Digital,
+
+Ik zou graag het pakket "${pakket}" willen kiezen.
+
+Kunnen we een afspraak maken om de mogelijkheden te bespreken?
+
+Alvast bedankt.`;
+
+const whatsapp =
+`https://wa.me/31612345678?text=${encodeURIComponent(tekst)}`;
+
+const email =
+`mailto:info@djdigital.nl?subject=Pakket aanvraag&body=${encodeURIComponent(tekst)}`;
+
+const keuze =
+window.confirm(
+"OK = WhatsApp\nAnnuleren = E-mail"
+);
+
+window.open(
+keuze
+? whatsapp
+: email
+);
+
+};
+
 return(
 
 <>
@@ -252,14 +281,18 @@ Kleine bedrijfswebsite
 Tot 5 pagina's
 </p>
 
-<Link
-href="/contact"
+<button
 className="small-cta"
+onClick={() =>
+openContact(
+"Kleine bedrijfswebsite"
+)
+}
 >
 
 Kies dit pakket →
 
-</Link>
+</button>
 
 </div>
 
@@ -282,14 +315,18 @@ Meer pagina's +
 functionaliteiten
 </p>
 
-<Link
-href="/contact"
+<button
 className="small-cta"
+onClick={() =>
+openContact(
+"Uitgebreide website"
+)
+}
 >
 
 Kies dit pakket →
 
-</Link>
+</button>
 
 </div>
 
@@ -311,14 +348,18 @@ Maatwerk website
 Volledig op maat
 </p>
 
-<Link
-href="/contact"
+<button
 className="small-cta"
+onClick={() =>
+openContact(
+"Maatwerk website"
+)
+}
 >
 
 Bespreek mogelijkheden →
 
-</Link>
+</button>
 
 </div>
 
