@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -79,11 +80,14 @@ export default function Home() {
 
           <div className="hero-left">
 
-            <img
-              src="/logo.png"
-              alt="DJ Digital"
-              className="hero-logo"
-            />
+<Image
+  src="/logo.png"
+  alt="DJ Digital"
+  width={600}
+  height={600}
+  priority
+  className="hero-logo"
+/>
 
           </div>
 

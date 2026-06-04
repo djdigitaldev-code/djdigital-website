@@ -951,11 +951,15 @@ font-size:70px;
 }
 
 .hero-logo{
+width:320px;
 
-max-width:320px;
+height:auto;
 
-margin:auto;
+object-fit:contain;
 
+image-rendering:auto;
+
+transform:translateZ(0);
 }
 
 }
