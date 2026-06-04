@@ -1,150 +1,257 @@
-const pakketten = [
-{
-nummer:"01",
-titel:"Website Ontwikkeling",
-prijs:"€55",
-periode:"/ uur",
-accent:"cyan",
-items:[
-"Maatwerk ontwikkeling",
-"Nieuwe pagina's",
-"Extra functionaliteiten",
-"Technische uitbreidingen",
-"Support"
-]
-},
-
-{
-nummer:"02",
-titel:"Hosting & Onderhoud",
-prijs:"€60",
-periode:"/ maand",
-accent:"purple",
-items:[
-"Hosting inbegrepen",
-"SSL beveiliging",
-"Back-ups",
-"Updates",
-"Monitoring"
-]
-},
-
-{
-nummer:"03",
-titel:"SEO Optimalisatie",
-prijs:"€150",
-periode:"/ maand",
-accent:"cyan",
-items:[
-"Zoekwoorden",
-"SEO verbeteringen",
-"Google indexering",
-"Snelheidsoptimalisatie",
-"Rapportage"
-]
-},
-
-{
-nummer:"04",
-titel:"Website Pakketten",
-prijs:"Vanaf €750",
-periode:"",
-accent:"purple",
-items:[
-"Volledig ontwerp",
-"Responsive",
-"SEO basis",
-"Hosting mogelijk",
-"Op maat"
-]
-}
-];
+import "./tarieven.css";
 
 export default function Tarieven() {
+  return (
 
-return (
+<div className="pricing-page">
 
-<div>
-
-<section className="hero">
+<section className="pricing-title">
 
 <h1>
 Tarieven
 </h1>
 
 <p>
+
 Transparante prijzen.
-Premium websites.
 Geen verrassingen.
+
 </p>
 
 </section>
 
-<section
-style={{
-display:"grid",
-gridTemplateColumns:
-"repeat(auto-fit,minmax(330px,1fr))",
-gap:"40px",
-marginTop:"80px"
-}}
->
+{/* TOP */}
 
-{pakketten.map((pakket)=>(
+<section className="pricing-grid">
 
-<div
-key={pakket.titel}
-className={`prijskaart ${pakket.accent}`}
->
+<div className="price-card cyan">
 
-<div className="prijsnummer">
-{pakket.nummer}
+<div className="number">
+1
 </div>
 
 <h2>
-{pakket.titel}
+Website
+Ontwikkeling
 </h2>
 
-<div className="prijs">
-{pakket.prijs}
+<div className="price">
+
+€55
 
 <span>
-{pakket.periode}
+per uur
 </span>
 
 </div>
 
 <ul>
 
-{pakket.items.map((item)=>(
+<li>✓ Maatwerk</li>
 
-<li key={item}>
-✓ {item}
-</li>
+<li>✓ Functionaliteiten</li>
 
-))}
+<li>✓ Technische uitbreidingen</li>
+
+<li>✓ Support</li>
+
+<li>✓ Flexibel uurtarief</li>
 
 </ul>
 
-<a
-href="/contact"
-className="button"
->
+</div>
 
-Offerte aanvragen
+<div className="price-card purple">
 
-</a>
+<div className="number">
+2
+</div>
+
+<h2>
+Hosting &
+Onderhoud
+</h2>
+
+<div className="price">
+
+€60
+
+<span>
+per maand
+</span>
 
 </div>
 
-))}
+<ul>
+
+<li>✓ Hosting</li>
+
+<li>✓ SSL</li>
+
+<li>✓ Backups</li>
+
+<li>✓ Monitoring</li>
+
+<li>✓ Updates</li>
+
+</ul>
+
+</div>
+
+<div className="price-card cyan">
+
+<div className="number">
+3
+</div>
+
+<h2>
+SEO
+Optimalisatie
+</h2>
+
+<div className="price">
+
+€150
+
+<span>
+per maand
+</span>
+
+</div>
+
+<ul>
+
+<li>✓ Zoekwoorden</li>
+
+<li>✓ Meta titels</li>
+
+<li>✓ Google indexering</li>
+
+<li>✓ Lokale SEO</li>
+
+<li>✓ Rapportage</li>
+
+</ul>
+
+</div>
 
 </section>
 
+{/* MIDDEN */}
 
+<section className="wide-grid">
+
+<div className="wide-card">
+
+<h2>
+4 Website pakketten
+</h2>
+
+<div className="line">
+
+<span>Kleine website</span>
+
+<strong>
+vanaf €750
+</strong>
+
+</div>
+
+<div className="line">
+
+<span>Uitgebreide website</span>
+
+<strong>
+vanaf €1250
+</strong>
+
+</div>
+
+<div className="line">
+
+<span>Maatwerk website</span>
+
+<strong>
+Op aanvraag
+</strong>
+
+</div>
+
+</div>
+
+<div className="wide-card">
+
+<h2>
+5 Extra diensten
+</h2>
+
+<div className="line">
+
+<span>Extra pagina</span>
+
+<strong>
+vanaf €75
+</strong>
+
+</div>
+
+<div className="line">
+
+<span>Complexe pagina</span>
+
+<strong>
+€200
+</strong>
+
+</div>
+
+<div className="line">
+
+<span>Spoedwerk</span>
+
+<strong>
+meerprijs
+</strong>
+
+</div>
+
+</div>
+
+</section>
+
+{/* ONDER */}
+
+<section className="bottom-grid">
+
+<div className="bottom-card">
+
+🌐 Domeinregistratie
+
+</div>
+
+<div className="bottom-card">
+
+🖥 Hosting
+
+</div>
+
+</section>
+
+<section className="icon-row">
+
+<div>WEBDESIGN</div>
+
+<div>DEVELOPMENT</div>
+
+<div>SEO</div>
+
+<div>HOSTING</div>
+
+<div>SUPPORT</div>
+
+</section>
 
 </div>
 
 );
-
 }
