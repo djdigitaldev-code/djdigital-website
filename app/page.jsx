@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -10,36 +11,41 @@ function Navbar() {
 
       <div className="nav-container">
 
-        <a href="/" className="nav-logo">
+        <Link
+          href="/"
+          className="nav-logo"
+        >
           DJ DIGITAL
-        </a>
+        </Link>
 
         <div className={`nav-links ${open ? "open" : ""}`}>
 
-          <a href="/">Home</a>
+          <Link href="/">
+            Home
+          </Link>
 
-          <a href="/diensten">
+          <Link href="/diensten">
             Diensten
-          </a>
+          </Link>
 
-          <a href="/tarieven">
+          <Link href="/tarieven">
             Tarieven
-          </a>
+          </Link>
 
-          <a href="/over-ons">
+          <Link href="/over-ons">
             Over ons
-          </a>
+          </Link>
 
-          <a href="/contact">
+          <Link href="/contact">
             Contact
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/contact"
             className="nav-cta"
           >
             Gratis gesprek
-          </a>
+          </Link>
 
         </div>
 
@@ -66,76 +72,67 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero">
-export default function Home() {
-  return (
-    <>
 
-{/* HERO */}
-<section className="hero">
+        <div className="hero-glow"></div>
 
-<div className="hero-glow"></div>
+        <div className="hero-grid">
 
-<div className="hero-grid">
+          <div className="hero-left">
 
-<div className="hero-left">
+            <img
+              src="/logo.png"
+              alt="DJ Digital"
+              className="hero-logo"
+            />
 
-<img
-src="/logo.png"
-alt="DJ Digital"
-className="hero-logo"
-/>
+          </div>
 
-</div>
+          <div className="hero-right">
 
-<div className="hero-right">
+            <h1>
+              DJ DIGITAL
+            </h1>
 
-<h1>
+            <p className="subtitle">
+              Premium websites.
+              Hosting.
+              SEO.
+              Ontwikkeld voor ondernemers die online willen groeien.
+            </p>
 
-DJ DIGITAL
+            <div className="hero-buttons">
 
-</h1>
+              <Link
+                href="/tarieven"
+                className="button"
+              >
+                Bekijk tarieven
+              </Link>
 
-<p className="subtitle">
+              <Link
+                href="/contact"
+                className="button secondary"
+              >
+                Contact opnemen
+              </Link>
 
-Premium websites.
-Hosting.
-SEO.
-Ontwikkeld voor ondernemers die online willen groeien.
+            </div>
 
-</p>
+          </div>
 
-<div className="hero-buttons">
+        </div>
 
-<a
-href="/tarieven"
-className="button"
->
+      </section>
 
-Bekijk tarieven
+      {/* SERVICES */}
 
-</a>
-
-<a
-href="/contact"
-className="button secondary"
->
-
-Contact opnemen
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
       <section className="services-preview">
 
         <div className="glass-card">
 
-          <h3>🌐 Website Ontwikkeling</h3>
+          <h3>
+            🌐 Website Ontwikkeling
+          </h3>
 
           <p>
             Moderne websites volledig op maat gebouwd.
@@ -145,7 +142,9 @@ Contact opnemen
 
         <div className="glass-card">
 
-          <h3>⚡ Hosting & Onderhoud</h3>
+          <h3>
+            ⚡ Hosting & Onderhoud
+          </h3>
 
           <p>
             Snel, veilig en altijd online.
@@ -155,7 +154,9 @@ Contact opnemen
 
         <div className="glass-card">
 
-          <h3>📈 SEO Optimalisatie</h3>
+          <h3>
+            📈 SEO Optimalisatie
+          </h3>
 
           <p>
             Meer bezoekers en hogere posities.
@@ -165,110 +166,109 @@ Contact opnemen
 
       </section>
 
+      {/* STATS */}
+
       <section className="stats">
 
-  <div className="stat-card">
+        <div className="stat-card">
 
-    <h2>100%</h2>
+          <h2>100%</h2>
 
-    <span>Maatwerk</span>
+          <span>
+            Maatwerk
+          </span>
 
-  </div>
+        </div>
 
-  <div className="stat-card">
+        <div className="stat-card">
 
-    <h2>&lt;2s</h2>
+          <h2>&lt;2s</h2>
 
-    <span>Snelle websites</span>
+          <span>
+            Snelle websites
+          </span>
 
-  </div>
+        </div>
 
-  <div className="stat-card">
+        <div className="stat-card">
 
-    <h2>SEO</h2>
+          <h2>SEO</h2>
 
-    <span>Geoptimaliseerd</span>
+          <span>
+            Geoptimaliseerd
+          </span>
 
-  </div>
+        </div>
 
-</section>
+      </section>
 
-<section className="about-preview">
+      {/* ABOUT */}
 
-  <div className="about-left">
+      <section className="about-preview">
 
-    <h2>
-      Websites die sneller laden,
-      beter gevonden worden
-      en professioneel uitstralen.
-    </h2>
+        <div className="about-left">
 
-    <p>
+          <h2>
+            Websites die sneller laden,
+            beter gevonden worden
+            en professioneel uitstralen.
+          </h2>
 
-      DJ Digital bouwt moderne websites
-      voor ondernemers die meer online
-      resultaat willen behalen.
+          <p>
 
-      Geen standaard templates —
-      volledig maatwerk.
+            DJ Digital bouwt moderne websites
+            voor ondernemers die meer online
+            resultaat willen behalen.
 
-    </p>
+            Geen standaard templates —
+            volledig maatwerk.
 
-    <a
-      href="/contact"
-      className="button"
-    >
-      Start jouw website
-    </a>
+          </p>
 
-  </div>
+          <Link
+            href="/contact"
+            className="button"
+          >
+            Start jouw website
+          </Link>
 
-  <div className="about-right">
+        </div>
 
-    <div className="feature">
+        <div className="about-right">
 
-      ⚡ Snelle prestaties
+          <div className="feature">
+            ⚡ Snelle prestaties
+          </div>
 
-    </div>
+          <div className="feature">
+            🔒 Veilige hosting
+          </div>
 
-    <div className="feature">
+          <div className="feature">
+            📈 Hogere vindbaarheid
+          </div>
 
-      🔒 Veilige hosting
+          <div className="feature">
+            💎 Premium design
+          </div>
 
-    </div>
+        </div>
 
-    <div className="feature">
+      </section>
 
-      📈 Hogere vindbaarheid
+      {/* FOOTER */}
 
-    </div>
+      <footer className="footer">
 
-    <div className="feature">
+        <h3>
+          DJ DIGITAL
+        </h3>
 
-      💎 Premium design
+        <p>
+          Web Development • Hosting • SEO
+        </p>
 
-    </div>
-
-  </div>
-
-</section>
-
-{/* FOOTER */}
-<footer className="footer">
-
-<h3>
-
-DJ DIGITAL
-
-</h3>
-
-<p>
-
-Web Development • Hosting • SEO
-
-</p>
-
-</footer>
+      </footer>
 
     </>
   );
