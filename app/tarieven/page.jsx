@@ -1,7 +1,90 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+
 import "./tarieven.css";
 
+function Navbar() {
+
+const [open,setOpen]=useState(false);
+
+return(
+
+<nav className="navbar">
+
+<div className="nav-container">
+
+<Link
+href="/"
+className="nav-logo"
+>
+
+<img
+src="/logo.png"
+alt="DJ Digital"
+className="logo"
+/>
+
+</Link>
+
+<div className={`nav-links ${open ? "open" : ""}`}>
+
+<Link href="/">
+Home
+</Link>
+
+<Link href="/diensten">
+Diensten
+</Link>
+
+<Link href="/tarieven">
+Tarieven
+</Link>
+
+<Link href="/over-ons">
+Over ons
+</Link>
+
+<Link href="/contact">
+Contact
+</Link>
+
+<Link
+href="/contact"
+className="nav-cta"
+>
+
+Gratis gesprek
+
+</Link>
+
+</div>
+
+<button
+className="hamburger"
+onClick={()=>setOpen(!open)}
+>
+
+☰
+
+</button>
+
+</div>
+
+</nav>
+
+);
+
+}
+
 export default function Tarieven() {
-  return (
+
+return(
+
+<>
+
+<Navbar/>
 
 <div className="pricing-page">
 
@@ -20,8 +103,6 @@ Geen verrassingen.
 
 </section>
 
-{/* TOP */}
-
 <section className="pricing-grid">
 
 <div className="price-card cyan">
@@ -31,8 +112,7 @@ Geen verrassingen.
 </div>
 
 <h2>
-Website
-Ontwikkeling
+Website Ontwikkeling
 </h2>
 
 <div className="price">
@@ -68,8 +148,7 @@ per uur
 </div>
 
 <h2>
-Hosting &
-Onderhoud
+Hosting & Onderhoud
 </h2>
 
 <div className="price">
@@ -105,8 +184,7 @@ per maand
 </div>
 
 <h2>
-SEO
-Optimalisatie
+SEO Optimalisatie
 </h2>
 
 <div className="price">
@@ -137,8 +215,6 @@ per maand
 
 </section>
 
-{/* MIDDEN */}
-
 <section className="wide-grid">
 
 <div className="wide-card">
@@ -149,7 +225,9 @@ per maand
 
 <div className="line">
 
-<span>Kleine website</span>
+<span>
+Kleine website
+</span>
 
 <strong>
 vanaf €750
@@ -159,7 +237,9 @@ vanaf €750
 
 <div className="line">
 
-<span>Uitgebreide website</span>
+<span>
+Uitgebreide website
+</span>
 
 <strong>
 vanaf €1250
@@ -169,7 +249,9 @@ vanaf €1250
 
 <div className="line">
 
-<span>Maatwerk website</span>
+<span>
+Maatwerk website
+</span>
 
 <strong>
 Op aanvraag
@@ -187,7 +269,9 @@ Op aanvraag
 
 <div className="line">
 
-<span>Extra pagina</span>
+<span>
+Extra pagina
+</span>
 
 <strong>
 vanaf €75
@@ -197,7 +281,9 @@ vanaf €75
 
 <div className="line">
 
-<span>Complexe pagina</span>
+<span>
+Complexe pagina
+</span>
 
 <strong>
 €200
@@ -207,7 +293,9 @@ vanaf €75
 
 <div className="line">
 
-<span>Spoedwerk</span>
+<span>
+Spoedwerk
+</span>
 
 <strong>
 meerprijs
@@ -218,8 +306,6 @@ meerprijs
 </div>
 
 </section>
-
-{/* ONDER */}
 
 <section className="bottom-grid">
 
@@ -239,19 +325,32 @@ meerprijs
 
 <section className="icon-row">
 
-<div>WEBDESIGN</div>
+<div>
+WEBDESIGN
+</div>
 
-<div>DEVELOPMENT</div>
+<div>
+DEVELOPMENT
+</div>
 
-<div>SEO</div>
+<div>
+SEO
+</div>
 
-<div>HOSTING</div>
+<div>
+HOSTING
+</div>
 
-<div>SUPPORT</div>
+<div>
+SUPPORT
+</div>
 
 </section>
 
 </div>
 
+</>
+
 );
+
 }
