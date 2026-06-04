@@ -72,6 +72,94 @@ export default function Home() {
 
       </section>
 
+      <section className="stats">
+
+  <div className="stat-card">
+
+    <h2>100%</h2>
+
+    <span>Maatwerk</span>
+
+  </div>
+
+  <div className="stat-card">
+
+    <h2>&lt;2s</h2>
+
+    <span>Snelle websites</span>
+
+  </div>
+
+  <div className="stat-card">
+
+    <h2>SEO</h2>
+
+    <span>Geoptimaliseerd</span>
+
+  </div>
+
+</section>
+
+<section className="about-preview">
+
+  <div className="about-left">
+
+    <h2>
+      Websites die sneller laden,
+      beter gevonden worden
+      en professioneel uitstralen.
+    </h2>
+
+    <p>
+
+      DJ Digital bouwt moderne websites
+      voor ondernemers die meer online
+      resultaat willen behalen.
+
+      Geen standaard templates —
+      volledig maatwerk.
+
+    </p>
+
+    <a
+      href="/contact"
+      className="button"
+    >
+      Start jouw website
+    </a>
+
+  </div>
+
+  <div className="about-right">
+
+    <div className="feature">
+
+      ⚡ Snelle prestaties
+
+    </div>
+
+    <div className="feature">
+
+      🔒 Veilige hosting
+
+    </div>
+
+    <div className="feature">
+
+      📈 Hogere vindbaarheid
+
+    </div>
+
+    <div className="feature">
+
+      💎 Premium design
+
+    </div>
+
+  </div>
+
+</section>
+
     </>
   );
 }
