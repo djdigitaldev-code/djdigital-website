@@ -997,40 +997,30 @@ padding:0 32px;
 }
 
 .nav-logo{
-
 display:flex;
 
 align-items:center;
 
-text-decoration:none;
-
-margin-left:-20px;
-
 cursor:pointer;
+
+text-decoration:none;
 }
 
-.nav-logo-image{
+.nav-logo .hero-logo{
 
-width:170px;
+width:auto;
 
-height:auto;
-
-object-fit:contain;
+height:110px;
 
 transition:.35s;
-
-filter:
-drop-shadow(0 0 12px rgba(77,105,255,.45))
-drop-shadow(0 0 30px rgba(135,74,255,.18));
 }
 
-.nav-logo:hover .nav-logo-image{
+.nav-logo:hover .hero-logo{
 
-transform:scale(1.06);
+transform:scale(1.03);
 
 filter:
-drop-shadow(0 0 22px rgba(77,105,255,.85))
-drop-shadow(0 0 55px rgba(135,74,255,.6));
+drop-shadow(0 0 18px rgba(123,97,255,.7));
 }
 
 .nav-links{

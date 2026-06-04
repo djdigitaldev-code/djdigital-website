@@ -19,9 +19,9 @@ function Navbar() {
   <img
     src="/logo.png"
     alt="DJ Digital"
-    className="nav-logo-image"
+    className="hero-logo"
   />
-  
+
 </Link>
 
         <div className={`nav-links ${open ? "open" : ""}`}>
