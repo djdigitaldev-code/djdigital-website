@@ -21,9 +21,7 @@ function Navbar() {
     alt="DJ Digital"
     className="nav-logo-image"
   />
-
-</Link>
-
+  
 </Link>
 
         <div className={`nav-links ${open ? "open" : ""}`}>
