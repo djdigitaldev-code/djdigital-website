@@ -97,27 +97,21 @@ padding:0 50px;
 
 /* LOGO */
 
-.logo{
+.logo:hover{
 
-height:64px;
-
-width:auto;
-
-display:block;
+transform:scale(1.03);
 
 filter:
 
 drop-shadow(
-0 0 30px
-rgba(24,183,255,.35)
+0 0 40px
+rgba(24,183,255,.9)
 )
 
 drop-shadow(
-0 0 50px
-rgba(177,0,255,.18)
+0 0 80px
+rgba(177,0,255,.65)
 );
-
-transition:.3s;
 
 }
 
