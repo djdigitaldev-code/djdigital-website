@@ -80,32 +80,58 @@ onClick={()=>setOpen(!open)}
 
 export default function Tarieven() {
 
-const openContact = (pakket) => {
+const [selectedPackage,setSelectedPackage]=
+useState(null);
 
-const tekst = `Hoi DJ Digital,
+const openContact=(pakket)=>{
 
-Ik zou graag het pakket "${pakket}" willen kiezen.
+setSelectedPackage(
+pakket
+);
+
+};
+
+const sendWhatsApp=()=>{
+
+const tekst=
+
+`Hoi DJ Digital,
+
+Ik heb interesse in het pakket "${selectedPackage}".
 
 Kunnen we een afspraak maken om de mogelijkheden te bespreken?
 
 Alvast bedankt.`;
 
-const whatsapp =
-`https://wa.me/31612345678?text=${encodeURIComponent(tekst)}`;
+window.open(
 
-const email =
+`https://wa.me/31612345678?text=${encodeURIComponent(tekst)}`,
+
+"_blank"
+
+);
+
+setSelectedPackage(null);
+
+};
+
+const sendMail=()=>{
+
+const tekst=
+
+`Hoi DJ Digital,
+
+Ik heb interesse in het pakket "${selectedPackage}".
+
+Kunnen we een afspraak maken?
+
+Alvast bedankt.`;
+
+window.location.href=
+
 `mailto:info@djdigital.nl?subject=Pakket aanvraag&body=${encodeURIComponent(tekst)}`;
 
-const keuze =
-window.confirm(
-"OK = WhatsApp\nAnnuleren = E-mail"
-);
-
-window.open(
-keuze
-? whatsapp
-: email
-);
+setSelectedPackage(null);
 
 };
 
@@ -283,11 +309,19 @@ Tot 5 pagina's
 
 <button
 className="small-cta"
+<<<<<<< HEAD
+onClick={()=>
+openContact(
+"Kleine bedrijfswebsite"
+)
+}
+=======
 onClick={() =>
 openContact(
 "Kleine bedrijfswebsite"
 )
 }
+>>>>>>> d6af8efff5eac3deb83adfb1c2a620d9d226a6f1
 >
 
 Kies dit pakket →
@@ -317,11 +351,19 @@ functionaliteiten
 
 <button
 className="small-cta"
+<<<<<<< HEAD
+onClick={()=>
+openContact(
+"Uitgebreide website"
+)
+}
+=======
 onClick={() =>
 openContact(
 "Uitgebreide website"
 )
 }
+>>>>>>> d6af8efff5eac3deb83adfb1c2a620d9d226a6f1
 >
 
 Kies dit pakket →
@@ -350,11 +392,19 @@ Volledig op maat
 
 <button
 className="small-cta"
+<<<<<<< HEAD
+onClick={()=>
+openContact(
+"Maatwerk website"
+)
+}
+=======
 onClick={() =>
 openContact(
 "Maatwerk website"
 )
 }
+>>>>>>> d6af8efff5eac3deb83adfb1c2a620d9d226a6f1
 >
 
 Bespreek mogelijkheden →
@@ -568,10 +618,83 @@ SUPPORT
 
 </section>
 
+{
+
+selectedPackage && (
+
+<div
+className="contact-modal"
+>
+
+<div
+className="contact-box"
+>
+
+<button
+className="close-modal"
+onClick={()=>
+setSelectedPackage(
+null
+)
+}
+>
+
+✕
+
+</button>
+
+<span>
+
+CONTACT OPNEMEN
+
+</span>
+
+<h2>
+
+{selectedPackage}
+
+</h2>
+
+<p>
+
+Kies hoe je contact
+wil opnemen.
+
+</p>
+
+<button
+className="modal-primary"
+onClick={
+sendWhatsApp
+}
+>
+
+WhatsApp
+
+</button>
+
+<button
+className="modal-secondary"
+onClick={
+sendMail
+}
+>
+
+E-mail
+
+</button>
+
+</div>
+
+</div>
+
+)
+
+}
+
 </div>
 
 </>
 
 );
-
 }
