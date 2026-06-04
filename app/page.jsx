@@ -11,12 +11,18 @@ function Navbar() {
 
       <div className="nav-container">
 
-        <Link
-          href="/"
-          className="nav-logo"
-        >
-          DJ DIGITAL
-        </Link>
+<Link
+  href="/"
+  className="nav-logo"
+>
+
+  <img
+    src="/logo.png"
+    alt="DJ Digital"
+    className="navbar-logo"
+  />
+
+</Link>
 
         <div className={`nav-links ${open ? "open" : ""}`}>
 
