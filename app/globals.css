@@ -955,35 +955,18 @@ top:0;
 
 left:0;
 
-right:0;
+width:100%;
 
-height:90px;
-
-display:flex;
-
-align-items:center;
+z-index:1000;
 
 backdrop-filter:blur(18px);
 
 background:
-rgba(
-5,
-5,
-15,
-.75
-);
+rgba(5,5,15,.75);
 
 border-bottom:
-
 1px solid
-rgba(
-177,
-0,
-255,
-.15
-);
-
-z-index:100;
+rgba(177,0,255,.15);
 
 }
 
@@ -991,33 +974,53 @@ z-index:100;
 
 max-width:1400px;
 
-width:100%;
-
-height:100%;
+height:90px;
 
 margin:auto;
 
 display:flex;
 
-justify-content:space-between;
-
 align-items:center;
+
+justify-content:space-between;
 
 padding:0 60px;
 
 }
 
-/* LOGO EXACT ZOALS HERO */
-
 .nav-logo{
 
-display:block;
+font-size:32px;
 
-text-decoration:none;
+font-weight:800;
+
+letter-spacing:2px;
+
+background:
+linear-gradient(
+90deg,
+#18b7ff,
+white,
+#b100ff
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+transition:.3s;
 
 }
 
-/* MENU */
+.nav-logo:hover{
+
+filter:
+drop-shadow(
+0 0 18px
+rgba(177,0,255,.6)
+);
+
+}
 
 .nav-links{
 
@@ -1031,11 +1034,7 @@ align-items:center;
 
 .nav-links a{
 
-font-size:18px;
-
 position:relative;
-
-transition:.3s;
 
 }
 
@@ -1054,10 +1053,9 @@ width:0;
 height:2px;
 
 background:
-
 linear-gradient(
 90deg,
-#00ccff,
+#18b7ff,
 #b100ff
 );
 
@@ -1073,15 +1071,14 @@ width:100%;
 
 .nav-cta{
 
-padding:14px 26px;
+padding:14px 24px;
 
-border-radius:18px;
+border-radius:16px;
 
 background:
-
 linear-gradient(
 90deg,
-#00ccff,
+#18b7ff,
 #b100ff
 );
 
@@ -1091,65 +1088,13 @@ linear-gradient(
 
 display:none;
 
-background:none;
-
-border:none;
-
-cursor:pointer;
-
 }
-
-.hamburger span{
-
-display:block;
-
-width:28px;
-
-height:2px;
-
-margin:6px;
-
-background:white;
-
-}
-
-/* MOBILE */
 
 @media(max-width:900px){
 
 .nav-links{
 
-position:absolute;
-
-top:90px;
-
-left:0;
-
-width:100%;
-
-background:#0b0b13;
-
-flex-direction:column;
-
-padding:40px;
-
-opacity:0;
-
-pointer-events:none;
-
-transform:translateY(-20px);
-
-transition:.35s;
-
-}
-
-.nav-links.open{
-
-opacity:1;
-
-pointer-events:auto;
-
-transform:none;
+display:none;
 
 }
 

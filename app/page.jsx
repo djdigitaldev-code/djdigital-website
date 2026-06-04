@@ -1,8 +1,3 @@
-"use client";
-
-import { useState } from "react";
-import Link from "next/link";
-
 function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -11,24 +6,16 @@ function Navbar() {
 
       <div className="nav-container">
 
-<Link
-href="/"
-className="nav-logo"
->
-
-<img
-src="/logo.png"
-alt="DJ Digital"
-className="hero-logo"
-/>
-
-</Link>
+        <Link
+          href="/"
+          className="nav-logo"
+        >
+          DJ DIGITAL
+        </Link>
 
         <div className={`nav-links ${open ? "open" : ""}`}>
 
-          <Link href="/">
-            Home
-          </Link>
+          <Link href="/">Home</Link>
 
           <Link href="/diensten">
             Diensten
@@ -56,12 +43,10 @@ className="hero-logo"
         </div>
 
         <button
-          className={`hamburger ${open ? "active" : ""}`}
+          className="hamburger"
           onClick={() => setOpen(!open)}
         >
-          <span />
-          <span />
-          <span />
+          ☰
         </button>
 
       </div>
@@ -69,7 +54,6 @@ className="hero-logo"
     </nav>
   );
 }
-
 export default function Home() {
   return (
     <>
