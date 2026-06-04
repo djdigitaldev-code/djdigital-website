@@ -1,8 +1,8 @@
 export default function Tarieven() {
   return (
-    <section>
-      <h1>Tarieven</h1>
-    </section>
+    <div>
+      Tarieven
+    </div>
   );
 }
 
