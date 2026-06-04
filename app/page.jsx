@@ -247,7 +247,7 @@ className="project-card"
     Snelle Hosting
   </h3>
 
-</div>>
+</div>
 
   </Link>
 
