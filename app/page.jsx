@@ -185,10 +185,6 @@ Contact opnemen
 
 </section>
 
-    </>
-  );
-}
-
 {/* FOOTER */}
 <footer className="footer">
 
@@ -205,3 +201,7 @@ Web Development • Hosting • SEO
 </p>
 
 </footer>
+
+    </>
+  );
+}
