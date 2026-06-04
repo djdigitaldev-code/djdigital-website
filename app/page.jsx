@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div>
+    <main>
 
       <section className="hero">
 
@@ -21,6 +21,6 @@ export default function Home() {
 
       </section>
 
-    </div>
+    </main>
   );
 }
