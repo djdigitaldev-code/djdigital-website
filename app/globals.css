@@ -993,19 +993,37 @@ align-items:center;
 
 justify-content:space-between;
 
-padding:0 40px;
+padding:0 20px;
 }
 
 .nav-logo{
-font-size:22px;
+display:flex;
 
-font-weight:700;
+align-items:center;
 
-color:white;
+margin-left:-10px;
+}
 
-text-decoration:none;
+.nav-logo-image{
 
-letter-spacing:2px;
+width:180px;
+
+height:auto;
+
+object-fit:contain;
+
+filter:
+drop-shadow(0 0 25px rgba(123,97,255,.45));
+
+transition:.35s;
+}
+
+.nav-logo-image:hover{
+
+transform:scale(1.03);
+
+filter:
+drop-shadow(0 0 40px rgba(123,97,255,.8));
 }
 
 .nav-links{
