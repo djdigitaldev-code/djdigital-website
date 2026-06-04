@@ -19,8 +19,10 @@ function Navbar() {
   <img
     src="/logo.png"
     alt="DJ Digital"
-    className="hero-logo nav-logo-image"
+    className="nav-logo-image"
   />
+
+</Link>
 
 </Link>
 
