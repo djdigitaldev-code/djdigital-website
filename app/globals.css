@@ -98,6 +98,16 @@ display:block;
 
 }
 
+.nav-logo{
+
+display:flex;
+
+align-items:center;
+
+cursor:pointer;
+
+}
+
 .logo{
 
 height:64px;
@@ -106,26 +116,26 @@ width:auto;
 
 display:block;
 
-transition:.3s;
+transition:
+filter .3s;
 
 }
 
-.nav-logo:hover .logo{
+.logo:hover{
 
 filter:
 
 drop-shadow(
-0 0 45px
-rgba(24,183,255,.75)
+0 0 25px
+rgba(24,183,255,.9)
 )
 
 drop-shadow(
-0 0 75px
-rgba(177,0,255,.45)
+0 0 55px
+rgba(177,0,255,.65)
 );
 
 }
-
 /* MENU */
 
 .nav-links{
