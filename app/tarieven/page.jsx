@@ -309,19 +309,11 @@ Tot 5 pagina's
 
 <button
 className="small-cta"
-<<<<<<< HEAD
 onClick={()=>
 openContact(
 "Kleine bedrijfswebsite"
 )
 }
-=======
-onClick={() =>
-openContact(
-"Kleine bedrijfswebsite"
-)
-}
->>>>>>> d6af8efff5eac3deb83adfb1c2a620d9d226a6f1
 >
 
 Kies dit pakket →
@@ -351,19 +343,11 @@ functionaliteiten
 
 <button
 className="small-cta"
-<<<<<<< HEAD
 onClick={()=>
 openContact(
 "Uitgebreide website"
 )
 }
-=======
-onClick={() =>
-openContact(
-"Uitgebreide website"
-)
-}
->>>>>>> d6af8efff5eac3deb83adfb1c2a620d9d226a6f1
 >
 
 Kies dit pakket →
@@ -392,19 +376,11 @@ Volledig op maat
 
 <button
 className="small-cta"
-<<<<<<< HEAD
 onClick={()=>
 openContact(
 "Maatwerk website"
 )
 }
-=======
-onClick={() =>
-openContact(
-"Maatwerk website"
-)
-}
->>>>>>> d6af8efff5eac3deb83adfb1c2a620d9d226a6f1
 >
 
 Bespreek mogelijkheden →
