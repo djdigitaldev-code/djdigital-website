@@ -117,7 +117,7 @@ Website Ontwikkeling
 
 <div className="price">
 
-€55
+€59
 
 <span>
 per uur
@@ -153,7 +153,7 @@ Hosting & Onderhoud
 
 <div className="price">
 
-€60
+€75
 
 <span>
 per maand
@@ -189,7 +189,7 @@ SEO Optimalisatie
 
 <div className="price">
 
-€150
+€250
 
 <span>
 per maand
@@ -252,10 +252,19 @@ Kleine bedrijfswebsite
 Tot 5 pagina's
 </p>
 
+<Link
+href="/contact"
+className="small-cta"
+>
+
+Kies dit pakket →
+
+</Link>
+
 </div>
 
 <strong>
-vanaf €750
+vanaf €899
 </strong>
 
 </div>
@@ -273,10 +282,19 @@ Meer pagina's +
 functionaliteiten
 </p>
 
+<Link
+href="/contact"
+className="small-cta"
+>
+
+Kies dit pakket →
+
+</Link>
+
 </div>
 
 <strong>
-vanaf €1250
+vanaf €1399
 </strong>
 
 </div>
@@ -292,6 +310,15 @@ Maatwerk website
 <p>
 Volledig op maat
 </p>
+
+<Link
+href="/contact"
+className="small-cta"
+>
+
+Bespreek mogelijkheden →
+
+</Link>
 
 </div>
 
