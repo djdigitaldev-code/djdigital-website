@@ -219,15 +219,40 @@ per maand
 
 <div className="wide-card">
 
+<div className="wide-title">
+
+<span className="number">
+4
+</span>
+
+<div>
+
 <h2>
-4 Website pakketten
+Website pakketten
 </h2>
 
-<div className="line">
+<p>
+Professionele websites
+voor elke behoefte
+</p>
 
-<span>
-Kleine website
-</span>
+</div>
+
+</div>
+
+<div className="package-row">
+
+<div>
+
+<h3>
+Kleine bedrijfswebsite
+</h3>
+
+<p>
+Tot 5 pagina's
+</p>
+
+</div>
 
 <strong>
 vanaf €750
@@ -235,11 +260,20 @@ vanaf €750
 
 </div>
 
-<div className="line">
+<div className="package-row">
 
-<span>
+<div>
+
+<h3>
 Uitgebreide website
-</span>
+</h3>
+
+<p>
+Meer pagina's +
+functionaliteiten
+</p>
+
+</div>
 
 <strong>
 vanaf €1250
@@ -247,11 +281,19 @@ vanaf €1250
 
 </div>
 
-<div className="line">
+<div className="package-row">
 
-<span>
+<div>
+
+<h3>
 Maatwerk website
-</span>
+</h3>
+
+<p>
+Volledig op maat
+</p>
+
+</div>
 
 <strong>
 Op aanvraag
@@ -263,15 +305,40 @@ Op aanvraag
 
 <div className="wide-card">
 
+<div className="wide-title">
+
+<span className="number">
+5
+</span>
+
+<div>
+
 <h2>
-5 Extra diensten
+Extra diensten
 </h2>
 
-<div className="line">
+<p>
+Uitbreidingen &
+aanvullingen
+</p>
 
-<span>
+</div>
+
+</div>
+
+<div className="package-row">
+
+<div>
+
+<h3>
 Extra pagina
-</span>
+</h3>
+
+<p>
+Simpel
+</p>
+
+</div>
 
 <strong>
 vanaf €75
@@ -279,11 +346,20 @@ vanaf €75
 
 </div>
 
-<div className="line">
+<div className="package-row">
 
-<span>
+<div>
+
+<h3>
 Complexe pagina
-</span>
+</h3>
+
+<p>
+Formulieren /
+boekingen
+</p>
+
+</div>
 
 <strong>
 €200
@@ -291,14 +367,22 @@ Complexe pagina
 
 </div>
 
-<div className="line">
+<div className="package-row">
 
-<span>
+<div>
+
+<h3>
 Spoedwerk
-</span>
+</h3>
+
+<p>
+Versnelde oplevering
+</p>
+
+</div>
 
 <strong>
-meerprijs
+Meerprijs
 </strong>
 
 </div>
@@ -311,13 +395,52 @@ meerprijs
 
 <div className="bottom-card">
 
-🌐 Domeinregistratie
+<div className="mini-number">
+
+6
+
+</div>
+
+<h3>
+
+Domein &
+E-mail
+
+</h3>
+
+<p>
+
+Domeinnaam,
+zakelijke e-mail
+en installatie.
+
+</p>
 
 </div>
 
 <div className="bottom-card">
 
-🖥 Hosting
+<div className="mini-number">
+
+7
+
+</div>
+
+<h3>
+
+Hosting &
+Beveiliging
+
+</h3>
+
+<p>
+
+Hosting,
+backups,
+updates
+en SSL.
+
+</p>
 
 </div>
 
@@ -325,24 +448,54 @@ meerprijs
 
 <section className="icon-row">
 
-<div>
+<div className="icon-item">
+
+<span>
+🌐
+</span>
+
 WEBDESIGN
+
 </div>
 
-<div>
+<div className="icon-item">
+
+<span>
+⚡
+</span>
+
 DEVELOPMENT
+
 </div>
 
-<div>
+<div className="icon-item">
+
+<span>
+📈
+</span>
+
 SEO
+
 </div>
 
-<div>
+<div className="icon-item">
+
+<span>
+🖥
+</span>
+
 HOSTING
+
 </div>
 
-<div>
+<div className="icon-item">
+
+<span>
+💎
+</span>
+
 SUPPORT
+
 </div>
 
 </section>
