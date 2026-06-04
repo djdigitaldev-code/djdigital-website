@@ -1,3 +1,71 @@
+"use client";
+
+import { useState } from "react";
+
+function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <nav className="navbar">
+
+      <div className="nav-container">
+
+        <a href="/" className="nav-logo">
+          DJ DIGITAL
+        </a>
+
+        <div className={`nav-links ${open ? "open" : ""}`}>
+
+          <a href="/">Home</a>
+
+          <a href="/diensten">
+            Diensten
+          </a>
+
+          <a href="/tarieven">
+            Tarieven
+          </a>
+
+          <a href="/over-ons">
+            Over ons
+          </a>
+
+          <a href="/contact">
+            Contact
+          </a>
+
+          <a
+            href="/contact"
+            className="nav-cta"
+          >
+            Gratis gesprek
+          </a>
+
+        </div>
+
+        <button
+          className={`hamburger ${open ? "active" : ""}`}
+          onClick={() => setOpen(!open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+      </div>
+
+    </nav>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+
+      <Navbar />
+
+      {/* HERO */}
+      <section className="hero">
 export default function Home() {
   return (
     <>
