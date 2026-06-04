@@ -9,7 +9,6 @@ scroll-behavior:smooth;
 }
 
 body{
-
 background:
 radial-gradient(
 circle at top,
@@ -24,7 +23,6 @@ Arial,
 sans-serif;
 
 overflow-x:hidden;
-
 }
 
 a{
@@ -33,11 +31,8 @@ color:white;
 }
 
 main{
-
 max-width:1400px;
-
 margin:auto;
-
 }
 
 /* NAVBAR */
@@ -95,7 +90,13 @@ padding:0 50px;
 
 }
 
-/* LOGO */
+/* NAVBAR LOGO */
+
+.nav-logo{
+
+display:block;
+
+}
 
 .logo{
 
@@ -105,37 +106,27 @@ width:auto;
 
 display:block;
 
-filter:
-
-drop-shadow(
-0 0 30px
-rgba(24,183,255,.35)
-)
-
-drop-shadow(
-0 0 50px
-rgba(177,0,255,.18)
-);
-
 transition:.3s;
 
 }
 
-.logo:hover{
+.nav-logo:hover .logo{
 
 filter:
 
 drop-shadow(
 0 0 45px
-rgba(24,183,255,.55)
+rgba(24,183,255,.75)
 )
 
 drop-shadow(
-0 0 70px
-rgba(177,0,255,.4)
+0 0 75px
+rgba(177,0,255,.45)
 );
 
 }
+
+/* MENU */
 
 .nav-links{
 
@@ -218,7 +209,6 @@ position:relative;
 min-height:100vh;
 
 padding:
-
 180px
 40px
 120px;
@@ -345,7 +335,6 @@ flex-wrap:wrap;
 .button{
 
 padding:
-
 18px
 34px;
 
@@ -398,7 +387,7 @@ rgba(
 
 }
 
-/* CARDS */
+/* CONTENT */
 
 .services-preview,
 .stats{
