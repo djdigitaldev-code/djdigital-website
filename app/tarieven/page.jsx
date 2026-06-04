@@ -1,11 +1,4 @@
-export default function Tarieven() {
-  return (
-    <div>
-      Tarieven
-    </div>
-  );
-}
-
+const pakketten = [
 {
 nummer:"01",
 titel:"Website Ontwikkeling",
@@ -65,8 +58,9 @@ items:[
 "Op maat"
 ]
 }
+];
 
-]
+export default function Tarieven() {
 
 return (
 
@@ -75,17 +69,13 @@ return (
 <section className="hero">
 
 <h1>
-
 Tarieven
-
 </h1>
 
 <p>
-
 Transparante prijzen.
 Premium websites.
 Geen verrassingen.
-
 </p>
 
 </section>
@@ -108,25 +98,18 @@ className={`prijskaart ${pakket.accent}`}
 >
 
 <div className="prijsnummer">
-
 {pakket.nummer}
-
 </div>
 
 <h2>
-
 {pakket.titel}
-
 </h2>
 
 <div className="prijs">
-
 {pakket.prijs}
 
 <span>
-
 {pakket.periode}
-
 </span>
 
 </div>
@@ -136,9 +119,7 @@ className={`prijskaart ${pakket.accent}`}
 {pakket.items.map((item)=>(
 
 <li key={item}>
-
 ✓ {item}
-
 </li>
 
 ))}
@@ -162,6 +143,6 @@ Offerte aanvragen
 
 </div>
 
-)
+);
 
 }
