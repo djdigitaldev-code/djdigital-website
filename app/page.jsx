@@ -2,42 +2,67 @@ export default function Home() {
   return (
     <>
 
-      <section className="hero">
+{/* HERO */}
+<section className="hero">
 
-        <div className="hero-content">
+<div className="hero-glow"></div>
 
-          <h1>
-            DJ DIGITAL
-          </h1>
+<div className="hero-grid">
 
-          <p className="subtitle">
-            Premium websites.
-            Snelle prestaties.
-            SEO & hosting inbegrepen.
-          </p>
+<div className="hero-left">
 
-          <div className="hero-buttons">
+<img
+src="/logo.png"
+alt="DJ Digital"
+className="hero-logo"
+/>
 
-            <a
-              href="/tarieven"
-              className="button"
-            >
-              Bekijk tarieven
-            </a>
+</div>
 
-            <a
-              href="/diensten"
-              className="button secondary"
-            >
-              Onze diensten
-            </a>
+<div className="hero-right">
 
-          </div>
+<h1>
 
-        </div>
+DJ DIGITAL
 
-      </section>
+</h1>
 
+<p className="subtitle">
+
+Premium websites.
+Hosting.
+SEO.
+Ontwikkeld voor ondernemers die online willen groeien.
+
+</p>
+
+<div className="hero-buttons">
+
+<a
+href="/tarieven"
+className="button"
+>
+
+Bekijk tarieven
+
+</a>
+
+<a
+href="/contact"
+className="button secondary"
+>
+
+Contact opnemen
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
       <section className="services-preview">
 
         <div className="glass-card">
@@ -163,3 +188,20 @@ export default function Home() {
     </>
   );
 }
+
+{/* FOOTER */}
+<footer className="footer">
+
+<h3>
+
+DJ DIGITAL
+
+</h3>
+
+<p>
+
+Web Development • Hosting • SEO
+
+</p>
+
+</footer>
