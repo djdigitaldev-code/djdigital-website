@@ -197,47 +197,86 @@ export default function Home() {
 
 <div className="portfolio-grid">
 
-  <div className="project-card">
+  <Link
+href="/projecten"
+className="project-card"
+>
 
-    <div className="project-overlay">
+<div className="project-overlay">
 
-      <span>WEBDESIGN</span>
+  <div className="browser-bar">
 
-      <h3>
-        Premium Websites
-      </h3>
-
-    </div>
-
-  </div>
-
-  <div className="project-card">
-
-    <div className="project-overlay">
-
-      <span>HOSTING</span>
-
-      <h3>
-        Snelle Hosting
-      </h3>
-
-    </div>
+    <span></span>
+    <span></span>
+    <span></span>
 
   </div>
 
-  <div className="project-card">
+  <span>
+    WEBDESIGN
+  </span>
 
-    <div className="project-overlay">
+  <h3>
+    Premium Websites
+  </h3>
 
-      <span>SEO</span>
+</div>
 
-      <h3>
-        Meer Vindbaarheid
-      </h3>
+  </Link>
 
-    </div>
+  <Link
+href="/projecten"
+className="project-card"
+>
+
+<div className="project-overlay">
+
+  <div className="browser-bar">
+
+    <span></span>
+    <span></span>
+    <span></span>
 
   </div>
+
+  <span>
+    HOSTING
+  </span>
+
+  <h3>
+    Snelle Hosting
+  </h3>
+
+</div>>
+
+  </Link>
+
+  <Link
+href="/projecten"
+className="project-card"
+>
+
+<div className="project-overlay">
+
+  <div className="browser-bar">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <span>
+    SEO
+  </span>
+
+  <h3>
+    Meer Vindbaarheid
+  </h3>
+
+</div>
+
+  </Link>
 
 </div>
 
