@@ -195,21 +195,51 @@ export default function Home() {
 
   </div>
 
-  <div className="portfolio-grid">
+<div className="portfolio-grid">
 
-    <div className="project-card">
+  <div className="project-card">
+
+    <div className="project-overlay">
+
       <span>WEBDESIGN</span>
-    </div>
 
-    <div className="project-card">
-      <span>HOSTING</span>
-    </div>
+      <h3>
+        Premium Websites
+      </h3>
 
-    <div className="project-card">
-      <span>SEO</span>
     </div>
 
   </div>
+
+  <div className="project-card">
+
+    <div className="project-overlay">
+
+      <span>HOSTING</span>
+
+      <h3>
+        Snelle Hosting
+      </h3>
+
+    </div>
+
+  </div>
+
+  <div className="project-card">
+
+    <div className="project-overlay">
+
+      <span>SEO</span>
+
+      <h3>
+        Meer Vindbaarheid
+      </h3>
+
+    </div>
+
+  </div>
+
+</div>
 
 </section>
 
