@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+
 function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -10,12 +15,18 @@ function Navbar() {
           href="/"
           className="nav-logo"
         >
-          DJ DIGITAL
+          <img
+            src="/logo.png"
+            alt="DJ Digital"
+            className="logo"
+          />
         </Link>
 
         <div className={`nav-links ${open ? "open" : ""}`}>
 
-          <Link href="/">Home</Link>
+          <Link href="/">
+            Home
+          </Link>
 
           <Link href="/diensten">
             Diensten
@@ -54,13 +65,13 @@ function Navbar() {
     </nav>
   );
 }
+
 export default function Home() {
   return (
     <>
 
       <Navbar />
 
-      {/* HERO */}
       <section className="hero">
 
         <div className="hero-glow"></div>
@@ -114,8 +125,6 @@ export default function Home() {
 
       </section>
 
-      {/* SERVICES */}
-
       <section className="services-preview">
 
         <div className="glass-card">
@@ -156,43 +165,24 @@ export default function Home() {
 
       </section>
 
-      {/* STATS */}
-
       <section className="stats">
 
         <div className="stat-card">
-
           <h2>100%</h2>
-
-          <span>
-            Maatwerk
-          </span>
-
+          <span>Maatwerk</span>
         </div>
 
         <div className="stat-card">
-
           <h2>&lt;2s</h2>
-
-          <span>
-            Snelle websites
-          </span>
-
+          <span>Snelle websites</span>
         </div>
 
         <div className="stat-card">
-
           <h2>SEO</h2>
-
-          <span>
-            Geoptimaliseerd
-          </span>
-
+          <span>Geoptimaliseerd</span>
         </div>
 
       </section>
-
-      {/* ABOUT */}
 
       <section className="about-preview">
 
@@ -205,14 +195,12 @@ export default function Home() {
           </h2>
 
           <p>
-
             DJ Digital bouwt moderne websites
             voor ondernemers die meer online
             resultaat willen behalen.
 
             Geen standaard templates —
             volledig maatwerk.
-
           </p>
 
           <Link
@@ -245,8 +233,6 @@ export default function Home() {
         </div>
 
       </section>
-
-      {/* FOOTER */}
 
       <footer className="footer">
 
