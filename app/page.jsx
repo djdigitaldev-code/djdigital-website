@@ -165,6 +165,54 @@ export default function Home() {
 
       </section>
 
+      <section className="portfolio-preview">
+
+  <div className="portfolio-text">
+
+    <span className="section-tag">
+      RECENTE PROJECTEN
+    </span>
+
+    <h2>
+      Websites die
+      opvallen en converteren.
+    </h2>
+
+    <p>
+
+      Premium websites gebouwd
+      voor ondernemers die online
+      professioneel willen groeien.
+
+    </p>
+
+    <Link
+      href="/projecten"
+      className="button"
+    >
+      Bekijk projecten
+    </Link>
+
+  </div>
+
+  <div className="portfolio-grid">
+
+    <div className="project-card">
+      <span>WEBDESIGN</span>
+    </div>
+
+    <div className="project-card">
+      <span>HOSTING</span>
+    </div>
+
+    <div className="project-card">
+      <span>SEO</span>
+    </div>
+
+  </div>
+
+</section>
+
       <section className="stats">
 
         <div className="stat-card">
