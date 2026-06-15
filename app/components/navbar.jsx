@@ -13,10 +13,7 @@ return(
 
 <div className="nav-container">
 
-<Link
-href="/"
-className="nav-logo"
->
+<Link href="/" className="nav-logo">
 
 <img
 src="/logo.png"
@@ -28,25 +25,15 @@ className="logo"
 
 <div className={`nav-links ${open ? "open" : ""}`}>
 
-<Link href="/">
-Home
-</Link>
+<Link href="/">Home</Link>
 
-<Link href="/diensten">
-Diensten
-</Link>
+<Link href="/diensten">Diensten</Link>
 
-<Link href="/tarieven">
-Tarieven
-</Link>
+<Link href="/tarieven">Tarieven</Link>
 
-<Link href="/over-ons">
-Over ons
-</Link>
+<Link href="/over-ons">Over ons</Link>
 
-<Link href="/contact">
-Contact
-</Link>
+<Link href="/contact">Contact</Link>
 
 <Link
 href="/contact"

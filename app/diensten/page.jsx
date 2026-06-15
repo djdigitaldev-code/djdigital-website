@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import "./diensten.css";
 
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 
 export default function Diensten() {
 
