@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             <a href="/">Home</a>
             <a href="/diensten">Diensten</a>
             <a href="/tarieven">Tarieven</a>
-            <a href="/over">Over</a>
+            <a href="/over-ons">Over</a>
             <a href="/contact">Contact</a>
           </div>
 
