@@ -331,65 +331,115 @@ text-align:center;
 
 .process h2{
 
-font-size:60px;
+font-size:74px;
 
-margin-bottom:70px;
+margin-bottom:80px;
 
-}
+background:
 
-.steps{
-
-display:grid;
-
-grid-template-columns:
-repeat(
-3,
-1fr
+linear-gradient(
+90deg,
+white,
+#18b7ff
 );
 
-gap:30px;
+-webkit-background-clip:text;
 
-max-width:1200px;
-
-margin:auto;
+-webkit-text-fill-color:transparent;
 
 }
 
 .step{
 
+position:relative;
+
 padding:60px;
 
-border-radius:28px;
+border-radius:34px;
 
 background:
 
+linear-gradient(
+180deg,
+rgba(18,18,30,.95),
+rgba(8,8,18,.95)
+);
+
+border:
+
+1px solid
 rgba(
 255,
 255,
 255,
-0.03
+.08
 );
 
-font-size:70px;
+display:flex;
 
-font-weight:800;
+flex-direction:column;
 
-color:#18b7ff;
+align-items:center;
 
+justify-content:center;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.step:hover{
+
+transform:
+translateY(-10px);
+
+box-shadow:
+0 0 60px
+rgba(
+24,
+183,
+255,
+.18
+);
+
+}
+
+.step::before{
+
+font-size:54px;
+
+margin-bottom:24px;
+
+display:block;
+
+}
+
+.step:nth-child(1)::before{
+content:"🤝";
+}
+
+.step:nth-child(2)::before{
+content:"⚡";
+}
+
+.step:nth-child(3)::before{
+content:"🚀";
 }
 
 .step span{
 
-display:block;
+font-size:28px;
 
-font-size:24px;
+font-weight:700;
 
 color:white;
 
-margin-top:25px;
+line-height:1.3;
+
+margin:0;
 
 }
-
 /* CTA */
 
 .diensten-cta{
@@ -488,6 +538,26 @@ font-size:20px;
 .steps{
 
 grid-template-columns:1fr;
+
+}
+
+.step{
+
+padding:42px;
+
+}
+
+.step::before{
+
+font-size:42px;
+
+margin-bottom:18px;
+
+}
+
+.step span{
+
+font-size:22px;
 
 }
 
