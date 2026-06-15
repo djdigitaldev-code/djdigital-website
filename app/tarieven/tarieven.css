@@ -27,7 +27,6 @@ margin-bottom:80px;
 font-size:90px;
 
 background:
-
 linear-gradient(
 90deg,
 #18b7ff,
@@ -66,38 +65,6 @@ repeat(
 gap:30px;
 
 margin-bottom:50px;
-
-}
-
-.price-card{
-
-padding:40px;
-
-border-radius:34px;
-
-background:
-
-rgba(
-255,
-255,
-255,
-.03
-);
-
-border:
-
-1px solid
-rgba(
-255,
-255,
-255,
-.08
-);
-
-backdrop-filter:
-blur(30px);
-
-transition:.4s;
 
 }
 
@@ -735,17 +702,37 @@ flex-direction:column;
 
 justify-content:flex-start;
 
+padding:40px;
+
 border-radius:34px;
 
+clip-path:inset(0 round 34px);
+
 isolation:isolate;
+
+transform:translateZ(0);
 
 background:
 
 linear-gradient(
 180deg,
-rgba(18,18,28,.96),
-rgba(10,10,20,.96)
+rgba(15,18,35,.98),
+rgba(8,8,18,.98)
 );
+
+border:
+
+1px solid
+rgba(
+255,
+255,
+255,
+.06
+);
+
+transition:
+transform .35s,
+box-shadow .35s;
 
 }
 
@@ -755,69 +742,37 @@ content:"";
 
 position:absolute;
 
-width:380px;
+top:0;
 
-height:380px;
+left:0;
 
-top:-180px;
+right:0;
 
-right:-120px;
+bottom:0;
 
-border-radius:999px;
-
-opacity:.18;
-
-filter:blur(90px);
-
-z-index:-1;
-
-}
-
-.price-card.cyan::before{
-
-background:#18b7ff;
-
-}
-
-.price-card.purple::before{
-
-background:#b100ff;
-
-}
-
-.number{
-
-position:relative;
+border-radius:34px;
 
 overflow:hidden;
 
-}
-
-.number::after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
+pointer-events:none;
 
 background:
 
-linear-gradient(
-135deg,
-rgba(255,255,255,.18),
-transparent
+radial-gradient(
+circle at top right,
+rgba(24,183,255,.10),
+transparent 42%
+),
+
+radial-gradient(
+circle at bottom left,
+rgba(177,0,255,.08),
+transparent 50%
 );
 
-}
+z-index:0;
 
-.price{
-
-display:flex;
-
-align-items:flex-end;
-
-gap:10px;
+clip-path:inherit;
 
 }
 
@@ -852,8 +807,17 @@ rgba(
 .price-card:hover{
 
 transform:
+translateY(-10px);
 
-translateY(-14px);
+box-shadow:
+
+0 0 60px
+rgba(
+24,
+183,
+255,
+.12
+);
 
 }
 
