@@ -163,7 +163,6 @@ Hoe we werken
 
 <div className="step">
 
-01
 <span>
 Kennismaking
 </span>
@@ -172,7 +171,6 @@ Kennismaking
 
 <div className="step">
 
-02
 <span>
 Ontwikkeling
 </span>
@@ -181,7 +179,6 @@ Ontwikkeling
 
 <div className="step">
 
-03
 <span>
 Livegang
 </span>
