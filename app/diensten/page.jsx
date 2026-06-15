@@ -1,11 +1,18 @@
 "use client";
 
 import Link from "next/link";
+
 import "./diensten.css";
+
+import Navbar from "../components/Navbar";
 
 export default function Diensten() {
 
 return(
+
+<>
+
+<Navbar/>
 
 <div className="diensten-page">
 
@@ -212,6 +219,8 @@ Bekijk tarieven
 </section>
 
 </div>
+
+</>
 
 );
 
