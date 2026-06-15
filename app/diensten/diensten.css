@@ -20,13 +20,57 @@ color:white;
 
 .diensten-hero{
 
-max-width:1000px;
+position:relative;
+
+max-width:1200px;
 
 margin:auto;
 
 text-align:center;
 
-padding:80px 30px;
+padding:
+140px
+30px
+120px;
+
+overflow:hidden;
+
+}
+
+.diensten-hero::before{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+left:50%;
+
+top:-350px;
+
+transform:
+translateX(-50%);
+
+background:
+
+radial-gradient(
+circle,
+rgba(
+24,
+183,
+255,
+.12
+),
+transparent 60%
+);
+
+filter:
+blur(100px);
+
+pointer-events:none;
 
 }
 
@@ -42,9 +86,9 @@ font-size:14px;
 
 .diensten-hero h1{
 
-font-size:82px;
+font-size:100px;
 
-line-height:1.05;
+line-height:1;
 
 margin:30px 0;
 
@@ -65,14 +109,17 @@ white,
 
 .diensten-hero p{
 
-font-size:24px;
+max-width:900px;
 
-color:#aaa;
+margin:auto;
 
-line-height:1.8;
+font-size:26px;
+
+line-height:1.9;
+
+color:#a9a9b5;
 
 }
-
 /* GRID */
 
 .diensten-grid{
@@ -332,9 +379,24 @@ rgba(
 
 @media(max-width:950px){
 
+.diensten-hero{
+
+padding:
+120px
+20px
+70px;
+
+}
+
 .diensten-hero h1{
 
-font-size:56px;
+font-size:58px;
+
+}
+
+.diensten-hero p{
+
+font-size:20px;
 
 }
 
