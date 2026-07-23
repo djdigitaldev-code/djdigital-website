@@ -77,35 +77,19 @@ export default function ProjectenPage() {
         {projecten.map((project) => (
           <article className="project-card" key={project.naam}>
 <div className="project-image">
-  <div className="browser-frame">
-    <div className="browser-header">
-      <div className="browser-dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div className="browser-address">
-        https://{project.naam.toLowerCase().replace(/\s+/g, "")}.nl
-      </div>
+  {project.image ? (
+    <Image
+      src={project.image}
+      alt={project.naam}
+      width={1200}
+      height={750}
+      className="project-preview"
+    />
+  ) : (
+    <div className="coming-soon">
+      <span>Coming Soon</span>
     </div>
-
-    <div className="browser-content">
-      {project.image ? (
-        <Image
-          src={project.image}
-          alt={project.naam}
-          width={1200}
-          height={750}
-          className="project-preview"
-        />
-      ) : (
-        <div className="coming-soon">
-          <span>Coming Soon</span>
-        </div>
-      )}
-    </div>
-  </div>
+  )}
 </div>
 
             <div className="project-content">
@@ -128,13 +112,13 @@ export default function ProjectenPage() {
     href={project.link}
     target="_blank"
     rel="noopener noreferrer"
-    className="primary-btn"
+    className="project-link"
   >
-    Bekijk project
+    Website bekijken →
   </a>
 ) : (
-  <Link href={project.link} className="primary-btn">
-    Bekijk project
+  <Link href={project.link} className="project-link">
+    Start jouw project →
   </Link>
 )}
             </div>
