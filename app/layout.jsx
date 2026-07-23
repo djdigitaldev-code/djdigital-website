@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "DJ Digital",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main>{children}</main>
+        <footer />
       </body>
     </html>
   );

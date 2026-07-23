@@ -296,19 +296,6 @@ className="project-card"
         </div>
 
       </section>
-
-      <footer className="footer">
-
-        <h3>
-          DJ DIGITAL
-        </h3>
-
-        <p>
-          Web Development • Hosting • SEO
-        </p>
-
-      </footer>
-
     </>
   );
 }
