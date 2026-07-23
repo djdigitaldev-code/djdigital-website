@@ -1,224 +1,260 @@
 "use client";
 
 import Link from "next/link";
-
 import "./diensten.css";
 
-import Navbar from "../components/navbar";
-
 export default function Diensten() {
+  return (
+    <main className="diensten-page">
 
-return(
+      {/* HERO */}
 
-<>
+      <section className="diensten-hero">
 
-<Navbar/>
+        <span className="hero-tag">
+          ONZE DIENSTEN
+        </span>
 
-<div className="diensten-page">
+        <h1>
+          Alles voor een
+          <br />
+          <span>professionele online uitstraling.</span>
+        </h1>
 
-<section className="diensten-hero">
+        <p>
+          Van een moderne website tot veilige hosting en slimme SEO.
+          DJ Digital helpt ondernemers groeien met snelle,
+          betrouwbare en op maat gemaakte digitale oplossingen.
+        </p>
 
-<span>
+        <div className="hero-buttons">
 
-DIENSTEN
+          <Link
+            href="/contact"
+            className="button"
+          >
+            Gratis kennismaking
+          </Link>
 
-</span>
+          <Link
+            href="/tarieven"
+            className="button secondary"
+          >
+            Bekijk tarieven
+          </Link>
 
-<h1>
+        </div>
 
-Digitale oplossingen
-voor ondernemers.
+      </section>
 
-</h1>
+      {/* DIENSTEN */}
 
-<p>
+      <section className="diensten-grid">
 
-Van websites tot SEO —
-alles om online
-professioneel te groeien.
+        <div className="dienst-card">
 
-</p>
+          <div className="dienst-icon">
+            🌐
+          </div>
 
-</section>
+          <h2>Website Ontwikkeling</h2>
 
-<section className="diensten-grid">
+          <p>
+            Professionele maatwerk websites die snelheid,
+            design en gebruiksgemak combineren.
+          </p>
 
-<div className="dienst-card">
+          <ul>
+            <li>✓ Volledig maatwerk</li>
+            <li>✓ Responsive ontwerp</li>
+            <li>✓ Next.js ontwikkeling</li>
+            <li>✓ Razendsnelle prestaties</li>
+            <li>✓ Contactformulieren</li>
+            <li>✓ Premium uitstraling</li>
+          </ul>
 
-<div className="dienst-icon">
+        </div>
 
-🌐
+        <div className="dienst-card">
 
-</div>
+          <div className="dienst-icon">
+            ⚡
+          </div>
 
-<h2>
+          <h2>Hosting & Onderhoud</h2>
 
-Website Ontwikkeling
+          <p>
+            Een veilige en stabiele omgeving zodat jouw
+            website altijd optimaal blijft presteren.
+          </p>
 
-</h2>
+          <ul>
+            <li>✓ SSL-certificaat</li>
+            <li>✓ Dagelijkse back-ups</li>
+            <li>✓ Updates</li>
+            <li>✓ Monitoring</li>
+            <li>✓ Domeinnaam</li>
+            <li>✓ Onderhoud</li>
+          </ul>
 
-<p>
+        </div>
 
-Volledig maatwerk.
-Snelle websites gebouwd
-voor conversie.
+        <div className="dienst-card">
 
-</p>
+          <div className="dienst-icon">
+            📈
+          </div>
 
-<ul>
+          <h2>SEO Optimalisatie</h2>
 
-<li>✓ Next.js</li>
+          <p>
+            Meer bezoekers dankzij een technisch
+            geoptimaliseerde website.
+          </p>
 
-<li>✓ Responsive</li>
+          <ul>
+            <li>✓ Technische SEO</li>
+            <li>✓ Metadata</li>
+            <li>✓ Structured Data</li>
+            <li>✓ Google-indexatie</li>
+            <li>✓ Core Web Vitals</li>
+            <li>✓ Lokale SEO</li>
+          </ul>
 
-<li>✓ Premium design</li>
+        </div>
 
-<li>✓ Snel laden</li>
+      </section>
 
-</ul>
+      {/* WAAROM DJ DIGITAL */}
 
-</div>
+      <section className="why-section">
 
-<div className="dienst-card">
+        <span className="section-tag">
+          WAAROM DJ DIGITAL
+        </span>
 
-<div className="dienst-icon">
+        <h2>
+          Gebouwd voor snelheid,
+          kwaliteit en resultaat.
+        </h2>
 
-🖥
+        <div className="why-grid">
 
-</div>
+          <div className="feature">
+            ⚡ Razendsnelle websites
+          </div>
 
-<h2>
+          <div className="feature">
+            💎 Volledig maatwerk
+          </div>
 
-Hosting & Onderhoud
+          <div className="feature">
+            📱 Responsive design
+          </div>
 
-</h2>
+          <div className="feature">
+            📈 SEO-geoptimaliseerd
+          </div>
 
-<p>
+          <div className="feature">
+            🔒 Veilig & betrouwbaar
+          </div>
 
-Veilige hosting,
-updates en monitoring.
+          <div className="feature">
+            🚀 Moderne technieken
+          </div>
 
-</p>
+        </div>
 
-<ul>
+      </section>
 
-<li>✓ SSL</li>
+      {/* WERKWIJZE */}
 
-<li>✓ Backups</li>
+      <section className="process">
 
-<li>✓ Monitoring</li>
+        <span className="section-tag">
+          WERKWIJZE
+        </span>
 
-<li>✓ Onderhoud</li>
+        <h2>
+          Zo bouwen we jouw website.
+        </h2>
 
-</ul>
+        <div className="steps">
 
-</div>
+          <div className="step">
+            <h3>01</h3>
+            <h4>Kennismaking</h4>
+            <p>
+              We bespreken jouw wensen,
+              doelgroep en doelen.
+            </p>
+          </div>
 
-<div className="dienst-card">
+          <div className="step">
+            <h3>02</h3>
+            <h4>Ontwerp</h4>
+            <p>
+              We ontwerpen een moderne
+              website die past bij jouw bedrijf.
+            </p>
+          </div>
 
-<div className="dienst-icon">
+          <div className="step">
+            <h3>03</h3>
+            <h4>Ontwikkeling</h4>
+            <p>
+              Daarna bouwen we een snelle,
+              veilige en professionele website.
+            </p>
+          </div>
 
-📈
+          <div className="step">
+            <h3>04</h3>
+            <h4>Livegang</h4>
+            <p>
+              Na controle zetten we alles
+              online en blijft ondersteuning beschikbaar.
+            </p>
+          </div>
 
-</div>
+        </div>
 
-<h2>
+      </section>
 
-SEO Optimalisatie
+      {/* CTA */}
 
-</h2>
+      <section className="diensten-cta">
 
-<p>
+        <h2>
+          Klaar om online te groeien?
+        </h2>
 
-Meer bezoekers
-en beter vindbaar.
+        <p>
+          Plan vrijblijvend een kennismaking en ontdek
+          wat DJ Digital voor jouw bedrijf kan betekenen.
+        </p>
 
-</p>
+        <div className="hero-buttons">
 
-<ul>
+          <Link
+            href="/contact"
+            className="button"
+          >
+            Gratis kennismaking
+          </Link>
 
-<li>✓ Zoekwoorden</li>
+          <Link
+            href="/tarieven"
+            className="button secondary"
+          >
+            Bekijk tarieven
+          </Link>
 
-<li>✓ Google</li>
+        </div>
 
-<li>✓ Lokale SEO</li>
+      </section>
 
-<li>✓ Rapportages</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section className="process">
-
-<h2>
-
-Hoe we werken
-
-</h2>
-
-<div className="steps">
-
-<div className="step">
-
-<span>
-Kennismaking
-</span>
-
-</div>
-
-<div className="step">
-
-<span>
-Ontwikkeling
-</span>
-
-</div>
-
-<div className="step">
-
-<span>
-Livegang
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-<section className="diensten-cta">
-
-<h2>
-
-Klaar om te starten?
-
-</h2>
-
-<p>
-
-Laten we samen iets
-professioneels bouwen.
-
-</p>
-
-<Link
-href="/tarieven"
-className="button"
->
-
-Bekijk tarieven
-
-</Link>
-
-</section>
-
-</div>
-
-</>
-
-);
-
+    </main>
+  );
 }
