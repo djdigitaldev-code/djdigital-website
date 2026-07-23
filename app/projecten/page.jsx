@@ -75,16 +75,16 @@ export default function ProjectenPage() {
 
       <section className="projecten-grid">
         {projecten.map((project) => (
-          <article className="project-card" key={project.naam}>
+          <article className="portfolio-card" key={project.naam}>
 <div className="project-image">
   {project.image ? (
-    <Image
-      src={project.image}
-      alt={project.naam}
-      fill
-      className="project-preview"
-      sizes="(max-width: 768px) 100vw, 33vw"
-    />
+<Image
+  src={project.image}
+  alt={project.naam}
+  width={1200}
+  height={750}
+  className="project-preview"
+/>
   ) : (
     <span>Coming Soon</span>
   )}
