@@ -1186,3 +1186,42 @@ transparent 90%
 pointer-events:none;
 
 }
+
+/* ===== DJ Digital Buttons ===== */
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #18b7ff, #b100ff);
+  color: #fff;
+  box-shadow: 0 0 30px rgba(24,183,255,.25);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(177,0,255,.35);
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,.05);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.secondary-btn:hover {
+  background: rgba(24,183,255,.08);
+  border-color: #18b7ff;
+  transform: translateY(-3px);
+}
