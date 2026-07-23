@@ -1,13 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
     <>
-
-      <Navbar />
 
       <section className="hero">
 
@@ -25,38 +22,50 @@ export default function Home() {
 
           </div>
 
-          <div className="hero-right">
+<div className="hero-right">
 
-            <h1>
-              DJ DIGITAL
-            </h1>
+  <span className="hero-tag">
+    WEBDESIGN • HOSTING • SEO
+  </span>
 
-            <p className="subtitle">
-              Premium websites.
-              Hosting.
-              SEO.
-              Ontwikkeld voor ondernemers die online willen groeien.
-            </p>
+  <h1>
+    Websites die <br />
+    <span>ondernemers laten groeien.</span>
+  </h1>
 
-            <div className="hero-buttons">
+  <p className="subtitle">
+Professionele websites die niet alleen mooi zijn, maar ook razendsnel laden, goed gevonden worden in Google en bezoekers omzetten in klanten.
+  </p>
 
-              <Link
-                href="/tarieven"
-                className="button"
-              >
-                Bekijk tarieven
-              </Link>
+  <div className="hero-buttons">
 
-              <Link
-                href="/contact"
-                className="button secondary"
-              >
-                Contact opnemen
-              </Link>
+    <Link
+      href="/contact"
+      className="button"
+    >
+      Gratis kennismaking
+    </Link>
 
-            </div>
+    <Link
+      href="/tarieven"
+      className="button secondary"
+    >
+      Bekijk tarieven
+    </Link>
 
-          </div>
+  </div>
+
+  <div className="hero-features">
+
+    <span>⚡ Razendsnel</span>
+
+    <span>📈 Goed vindbaar</span>
+
+    <span>📱 Mobielvriendelijk</span>
+
+  </div>
+
+</div>
 
         </div>
 
