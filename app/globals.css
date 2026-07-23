@@ -81,12 +81,6 @@ margin:auto;
 
 .nav-logo{
 
-display:block;
-
-}
-
-.nav-logo{
-
 display:flex;
 
 align-items:center;
@@ -650,7 +644,7 @@ gap:25px;
 
 }
 
-.project-card{
+.home-project-card{
 
 height:220px;
 
@@ -684,7 +678,7 @@ transition:.35s;
 
 }
 
-.project-card:hover{
+.home-project-card:hover{
 
 transform:
 
@@ -702,7 +696,7 @@ rgba(
 
 }
 
-.project-card span{
+.home-project-card span{
 
 font-size:24px;
 
@@ -726,7 +720,7 @@ font-size:46px;
 
 }
 
-.project-card{
+.home-project-card{
 
 height:260px;
 
@@ -764,7 +758,7 @@ transition:.45s;
 
 }
 
-.project-card::before{
+.home-project-card::before{
 
 content:"";
 
@@ -790,7 +784,7 @@ opacity:.6;
 
 }
 
-.project-card:hover{
+.home-project-card:hover{
 
 transform:
 
@@ -808,7 +802,7 @@ rgba(
 
 }
 
-.project-overlay{
+.home-project-overlay{
 
 position:relative;
 
@@ -816,7 +810,7 @@ z-index:2;
 
 }
 
-.project-overlay span{
+.home-project-overlay span{
 
 color:#18b7ff;
 
@@ -830,7 +824,7 @@ margin-bottom:14px;
 
 }
 
-.project-overlay h3{
+.home-project-overlay h3{
 
 font-size:34px;
 
@@ -838,7 +832,7 @@ line-height:1.15;
 
 }
 
-.project-card{
+.home-project-card{
 
 cursor:pointer;
 
@@ -846,20 +840,20 @@ text-decoration:none;
 
 }
 
-.project-card:hover .project-overlay{
+.home-project-card:hover .home-project-overlay{
 
 transform:
 translateY(-6px);
 
 }
 
-.project-overlay{
+.home-project-overlay{
 
 transition:.35s;
 
 }
 
-.project-card::after{
+.home-project-card::after{
 
 content:"→";
 
@@ -877,7 +871,7 @@ transition:.35s;
 
 }
 
-.project-card:hover::after{
+.home-project-card:hover::after{
 
 transform:
 translateX(8px);
@@ -886,7 +880,7 @@ opacity:1;
 
 }
 
-.browser-bar{
+.home-browser-bar{
 
 display:flex;
 
@@ -896,7 +890,7 @@ margin-bottom:28px;
 
 }
 
-.browser-bar span{
+.home-browser-bar span{
 
 width:10px;
 
@@ -914,31 +908,31 @@ rgba(
 
 }
 
-.browser-bar span:nth-child(1){
+.home-browser-bar span:nth-child(1){
 
 background:#ff5f57;
 
 }
 
-.browser-bar span:nth-child(2){
+.home-browser-bar span:nth-child(2){
 
 background:#ffbd2f;
 
 }
 
-.browser-bar span:nth-child(3){
+.home-browser-bar span:nth-child(3){
 
 background:#28ca42;
 
 }
 
-.project-overlay{
+.home-project-overlay{
 
 width:100%;
 
 }
 
-.project-overlay h3{
+.home-project-overlay h3{
 
 margin-top:16px;
 
@@ -1185,43 +1179,4 @@ transparent 90%
 
 pointer-events:none;
 
-}
-
-/* ===== DJ Digital Buttons ===== */
-
-.primary-btn,
-.secondary-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  border-radius: 16px;
-  font-weight: 700;
-  font-size: 16px;
-  text-decoration: none;
-  transition: all .3s ease;
-  cursor: pointer;
-}
-
-.primary-btn {
-  background: linear-gradient(90deg, #18b7ff, #b100ff);
-  color: #fff;
-  box-shadow: 0 0 30px rgba(24,183,255,.25);
-}
-
-.primary-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(177,0,255,.35);
-}
-
-.secondary-btn {
-  background: rgba(255,255,255,.05);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.12);
-}
-
-.secondary-btn:hover {
-  background: rgba(24,183,255,.08);
-  border-color: #18b7ff;
-  transform: translateY(-3px);
 }
