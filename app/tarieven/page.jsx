@@ -2,662 +2,159 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
 import "./tarieven.css";
 
-function Navbar() {
-
-const [open,setOpen]=useState(false);
-
-return(
-
-<nav className="navbar">
-
-<div className="nav-container">
-
-<Link
-href="/"
-className="nav-logo"
->
-
-<img
-src="/logo.png"
-alt="DJ Digital"
-className="logo"
-/>
-
-</Link>
-
-<div className={`nav-links ${open ? "open" : ""}`}>
-
-<Link href="/">
-Home
-</Link>
-
-<Link href="/diensten">
-Diensten
-</Link>
-
-<Link href="/tarieven">
-Tarieven
-</Link>
-
-<Link href="/over-ons">
-Over ons
-</Link>
-
-<Link href="/contact">
-Contact
-</Link>
-
-<Link
-href="/contact"
-className="nav-cta"
->
-
-Gratis gesprek
-
-</Link>
-
-</div>
-
-<button
-className="hamburger"
-onClick={()=>setOpen(!open)}
->
-
-☰
-
-</button>
-
-</div>
-
-</nav>
-
-);
-
-}
-
-export default function Tarieven() {
-
-const [selectedPackage,setSelectedPackage]=
-useState(null);
-
-const openContact=(pakket)=>{
-
-setSelectedPackage(
-pakket
-);
-
-};
-
-const sendWhatsApp=()=>{
-
-const tekst=
-
-`Hoi DJ Digital,
-
-Ik heb interesse in het pakket "${selectedPackage}".
-
-Kunnen we een afspraak maken om de mogelijkheden te bespreken?
-
-Alvast bedankt.`;
-
-window.open(
-
-`https://wa.me/31612345678?text=${encodeURIComponent(tekst)}`,
-
-"_blank"
-
-);
-
-setSelectedPackage(null);
-
-};
-
-const sendMail=()=>{
-
-const tekst=
-
-`Hoi DJ Digital,
-
-Ik heb interesse in het pakket "${selectedPackage}".
-
-Kunnen we een afspraak maken?
-
-Alvast bedankt.`;
-
-window.location.href=
-
-`mailto:info@djdigital.nl?subject=Pakket aanvraag&body=${encodeURIComponent(tekst)}`;
-
-setSelectedPackage(null);
-
-};
-
-return(
-
-<>
-
-<Navbar/>
-
-<div className="pricing-page">
-
-<section className="pricing-title">
-
-<h1>
-Tarieven
-</h1>
-
-<p>
-
-Transparante prijzen.
-Geen verrassingen.
-
-</p>
-
-</section>
-
-<section className="pricing-grid">
-
-<div className="price-card cyan">
-
-<div className="number">
-1
-</div>
-
-<h2>
-Website Ontwikkeling
-</h2>
-
-<div className="price">
-
-€59
-
-<span>
-per uur
-</span>
-
-</div>
-
-<ul>
-
-<li>✓ Maatwerk</li>
-
-<li>✓ Functionaliteiten</li>
-
-<li>✓ Technische uitbreidingen</li>
-
-<li>✓ Support</li>
-
-<li>✓ Flexibel uurtarief</li>
-
-</ul>
-
-</div>
-
-<div className="price-card purple">
-
-<div className="number">
-2
-</div>
-
-<h2>
-Hosting & Onderhoud
-</h2>
-
-<div className="price">
-
-€75
-
-<span>
-per maand
-</span>
-
-</div>
-
-<ul>
-
-<li>✓ Hosting</li>
-
-<li>✓ SSL</li>
-
-<li>✓ Backups</li>
-
-<li>✓ Monitoring</li>
-
-<li>✓ Updates</li>
-
-</ul>
-
-</div>
-
-<div className="price-card cyan">
-
-<div className="number">
-3
-</div>
-
-<h2>
-SEO Optimalisatie
-</h2>
-
-<div className="price">
-
-€250
-
-<span>
-per maand
-</span>
-
-</div>
-
-<ul>
-
-<li>✓ Zoekwoorden</li>
-
-<li>✓ Meta titels</li>
-
-<li>✓ Google indexering</li>
-
-<li>✓ Lokale SEO</li>
-
-<li>✓ Rapportage</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section className="wide-grid">
-
-<div className="wide-card">
-
-<div className="wide-title">
-
-<span className="number">
-4
-</span>
-
-<div>
-
-<h2>
-Website pakketten
-</h2>
-
-<p>
-Professionele websites
-voor elke behoefte
-</p>
-
-</div>
-
-</div>
-
-<div className="package-row">
-
-<div>
-
-<h3>
-Kleine bedrijfswebsite
-</h3>
-
-<p>
-Tot 5 pagina's
-</p>
-
-<button
-className="small-cta"
-onClick={()=>
-openContact(
-"Kleine bedrijfswebsite"
-)
-}
->
-
-Kies dit pakket →
-
-</button>
-
-</div>
-
-<strong>
-vanaf €899
-</strong>
-
-</div>
-
-<div className="package-row">
-
-<div>
-
-<h3>
-Uitgebreide website
-</h3>
-
-<p>
-Meer pagina's +
-functionaliteiten
-</p>
-
-<button
-className="small-cta"
-onClick={()=>
-openContact(
-"Uitgebreide website"
-)
-}
->
-
-Kies dit pakket →
-
-</button>
-
-</div>
-
-<strong>
-vanaf €1399
-</strong>
-
-</div>
-
-<div className="package-row">
-
-<div>
-
-<h3>
-Maatwerk website
-</h3>
-
-<p>
-Volledig op maat
-</p>
-
-<button
-className="small-cta"
-onClick={()=>
-openContact(
-"Maatwerk website"
-)
-}
->
-
-Bespreek mogelijkheden →
-
-</button>
-
-</div>
-
-<strong>
-Op aanvraag
-</strong>
-
-</div>
-
-</div>
-
-<div className="wide-card">
-
-<div className="wide-title">
-
-<span className="number">
-5
-</span>
-
-<div>
-
-<h2>
-Extra diensten
-</h2>
-
-<p>
-Uitbreidingen &
-aanvullingen
-</p>
-
-</div>
-
-</div>
-
-<div className="package-row">
-
-<div>
-
-<h3>
-Extra pagina
-</h3>
-
-<p>
-Simpel
-</p>
-
-</div>
-
-<strong>
-vanaf €75
-</strong>
-
-</div>
-
-<div className="package-row">
-
-<div>
-
-<h3>
-Complexe pagina
-</h3>
-
-<p>
-Formulieren /
-boekingen
-</p>
-
-</div>
-
-<strong>
-€200
-</strong>
-
-</div>
-
-<div className="package-row">
-
-<div>
-
-<h3>
-Spoedwerk
-</h3>
-
-<p>
-Versnelde oplevering
-</p>
-
-</div>
-
-<strong>
-Meerprijs
-</strong>
-
-</div>
-
-</div>
-
-</section>
-
-<section className="bottom-grid">
-
-<div className="bottom-card">
-
-<div className="mini-number">
-
-6
-
-</div>
-
-<h3>
-
-Domein &
-E-mail
-
-</h3>
-
-<p>
-
-Domeinnaam,
-zakelijke e-mail
-en installatie.
-
-</p>
-
-</div>
-
-<div className="bottom-card">
-
-<div className="mini-number">
-
-7
-
-</div>
-
-<h3>
-
-Hosting &
-Beveiliging
-
-</h3>
-
-<p>
-
-Hosting,
-backups,
-updates
-en SSL.
-
-</p>
-
-</div>
-
-</section>
-
-<section className="icon-row">
-
-<div className="icon-item">
-
-<span>
-🌐
-</span>
-
-WEBDESIGN
-
-</div>
-
-<div className="icon-item">
-
-<span>
-⚡
-</span>
-
-DEVELOPMENT
-
-</div>
-
-<div className="icon-item">
-
-<span>
-📈
-</span>
-
-SEO
-
-</div>
-
-<div className="icon-item">
-
-<span>
-🖥
-</span>
-
-HOSTING
-
-</div>
-
-<div className="icon-item">
-
-<span>
-💎
-</span>
-
-SUPPORT
-
-</div>
-
-</section>
-
-{selectedPackage && (
-
-<div className="contact-modal">
-
-<div className="contact-box">
-
-<button
-className="close-modal"
-onClick={()=>
-setSelectedPackage(null)
-}
->
-
-✕
-
-</button>
-
-<span>
-
-CONTACT OPNEMEN
-
-</span>
-
-<h2>
-
-{selectedPackage}
-
-</h2>
-
-<p>
-
-Kies hoe je contact
-wil opnemen.
-
-</p>
-
-<button
-className="modal-primary"
-onClick={sendWhatsApp}
->
-
-WhatsApp
-
-</button>
-
-<button
-className="modal-secondary"
-onClick={sendMail}
->
-
-E-mail
-
-</button>
-
-</div>
-
-</div>
-
-)}
-
-</div>
-
-</>
-
-);
-
+const pakketten = [
+  {
+    titel: "Kleine bedrijfswebsite",
+    prijs: "vanaf €899",
+    tekst: "Perfect voor starters en kleine ondernemers.",
+    kenmerken: ["Tot 5 pagina's","Responsive","Basis SEO","Contactformulier"],
+  },
+  {
+    titel: "Uitgebreide website",
+    prijs: "vanaf €1399",
+    tekst: "Meer functionaliteiten en ruimte om te groeien.",
+    kenmerken: ["Maatwerk pagina's","Geavanceerde formulieren","SEO","Snelle oplevering"],
+  },
+  {
+    titel: "Maatwerk",
+    prijs: "Op aanvraag",
+    tekst: "Volledig afgestemd op jouw bedrijf.",
+    kenmerken: ["Volledig maatwerk","Koppelingen","Uitbreidbaar","Persoonlijk advies"],
+  },
+];
+
+export default function TarievenPage() {
+  const [gekozen, setGekozen] = useState(null);
+
+  const whatsapp = () => {
+    const txt = `Hoi DJ Digital,%0A%0AIk heb interesse in het pakket: ${gekozen}`;
+    window.open(`https://wa.me/31612345678?text=${txt}`, "_blank");
+  };
+
+  const mail = () => {
+    const body = encodeURIComponent(
+      `Hoi DJ Digital,\n\nIk heb interesse in het pakket "${gekozen}".`
+    );
+    window.location.href = `mailto:info@djdigital.nl?subject=Pakket aanvraag&body=${body}`;
+  };
+
+  return (
+    <main className="pricing-page">
+      <section className="pricing-title">
+        <div className="hero-tag">TARIEVEN</div>
+        <h1>
+          Transparante <span>prijzen</span>
+        </h1>
+        <p>
+          Heldere tarieven zonder verrassingen. Kies het pakket dat bij jouw
+          onderneming past.
+        </p>
+
+        <div className="hero-buttons">
+          <Link href="/contact" className="primary-btn">
+            Gratis kennismaken
+          </Link>
+
+          <Link href="/projecten" className="secondary-btn">
+            Bekijk projecten
+          </Link>
+        </div>
+      </section>
+
+      <section className="pricing-grid">
+        <article className="price-card cyan">
+          <div className="number">1</div>
+          <h2>Website ontwikkeling</h2>
+          <div className="price">€59 <span>per uur</span></div>
+          <ul>
+            <li>✓ Maatwerk ontwikkeling</li>
+            <li>✓ Nieuwe functies</li>
+            <li>✓ Technische support</li>
+            <li>✓ Flexibel uurtarief</li>
+          </ul>
+        </article>
+
+        <article className="price-card purple">
+          <div className="number">2</div>
+          <h2>Hosting & onderhoud</h2>
+          <div className="price">€75 <span>per maand</span></div>
+          <ul>
+            <li>✓ SSL-certificaat</li>
+            <li>✓ Back-ups</li>
+            <li>✓ Updates</li>
+            <li>✓ Monitoring</li>
+          </ul>
+        </article>
+
+        <article className="price-card cyan">
+          <div className="number">3</div>
+          <h2>SEO optimalisatie</h2>
+          <div className="price">€250 <span>per maand</span></div>
+          <ul>
+            <li>✓ Zoekwoorden</li>
+            <li>✓ Lokale SEO</li>
+            <li>✓ Google optimalisatie</li>
+            <li>✓ Rapportages</li>
+          </ul>
+        </article>
+      </section>
+
+      <section className="wide-grid">
+        <div className="wide-card">
+          <div className="wide-title">
+            <div className="number">4</div>
+            <div>
+              <h2>Websitepakketten</h2>
+              <p>Kies het pakket dat bij je past.</p>
+            </div>
+          </div>
+
+          {pakketten.map((p) => (
+            <div className="package-row" key={p.titel}>
+              <div>
+                <h3>{p.titel}</h3>
+                <p>{p.tekst}</p>
+                <button
+                  className="small-cta"
+                  onClick={() => setGekozen(p.titel)}
+                >
+                  Kies dit pakket →
+                </button>
+              </div>
+              <strong>{p.prijs}</strong>
+            </div>
+          ))}
+        </div>
+
+        <div className="wide-card">
+          <div className="wide-title">
+            <div className="number">5</div>
+            <div>
+              <h2>Waarom DJ Digital?</h2>
+              <p>Meer dan alleen een mooie website.</p>
+            </div>
+          </div>
+
+          <div className="package-row"><div><h3>Snelle websites</h3><p>Geoptimaliseerd voor prestaties.</p></div></div>
+          <div className="package-row"><div><h3>SEO inbegrepen</h3><p>Basisoptimalisatie standaard.</p></div></div>
+          <div className="package-row"><div><h3>Persoonlijk contact</h3><p>Korte lijnen en duidelijke communicatie.</p></div></div>
+        </div>
+      </section>
+
+      {gekozen && (
+        <div className="contact-modal">
+          <div className="contact-box">
+            <button className="close-modal" onClick={() => setGekozen(null)}>✕</button>
+            <span>CONTACT OPNEMEN</span>
+            <h2>{gekozen}</h2>
+            <p>Kies hoe je contact wilt opnemen.</p>
+            <button className="modal-primary" onClick={whatsapp}>WhatsApp</button>
+            <button className="modal-secondary" onClick={mail}>E-mail</button>
+          </div>
+        </div>
+      )}
+    </main>
+  );
 }
