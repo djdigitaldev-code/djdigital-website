@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,12 +15,14 @@ export default function Home() {
 
           <div className="hero-left">
 
-            <img
-              src="/logo.png"
-              alt="DJ Digital"
-              className="hero-logo"
-            />
-
+<Image
+  src="/logo.png"
+  alt="DJ Digital"
+  width={700}
+  height={700}
+  className="hero-logo"
+  priority
+/>
           </div>
 
 <div className="hero-right">
