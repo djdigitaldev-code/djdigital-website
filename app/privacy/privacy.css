@@ -1,0 +1,147 @@
+/* ==========================
+   DJ Digital - Privacy
+========================== */
+
+.privacy-page{
+  min-height:100vh;
+  padding:140px 30px 100px;
+  color:#fff;
+}
+
+.privacy-hero{
+  max-width:1000px;
+  margin:0 auto 70px;
+  text-align:center;
+  position:relative;
+}
+
+.privacy-hero::before{
+  content:"";
+  position:absolute;
+  width:700px;
+  height:700px;
+  left:50%;
+  top:-320px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(24,183,255,.16),transparent 70%);
+  filter:blur(120px);
+  pointer-events:none;
+}
+
+.hero-tag{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(24,183,255,.08);
+  border:1px solid rgba(24,183,255,.25);
+  color:#7fdfff;
+  letter-spacing:2px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+.privacy-hero h1{
+  font-size:70px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.privacy-hero h1 span{
+  background:linear-gradient(90deg,#18b7ff,#b100ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.privacy-hero p{
+  max-width:760px;
+  margin:auto;
+  color:#b8b8c5;
+  font-size:20px;
+  line-height:1.8;
+}
+
+.privacy-content{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  gap:28px;
+}
+
+.privacy-card{
+  background:linear-gradient(180deg,#121421,#090b12);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:35px;
+  transition:.3s;
+}
+
+.privacy-card:hover{
+  transform:translateY(-6px);
+  border-color:#18b7ff;
+  box-shadow:0 0 35px rgba(24,183,255,.15);
+}
+
+.privacy-card h2{
+  font-size:30px;
+  margin-bottom:18px;
+}
+
+.privacy-card p,
+.privacy-card li{
+  color:#b8b8c5;
+  line-height:1.9;
+  font-size:17px;
+}
+
+.privacy-card ul{
+  margin-left:22px;
+  display:grid;
+  gap:10px;
+}
+
+.privacy-card a{
+  color:#18b7ff;
+  text-decoration:none;
+}
+
+.privacy-card a:hover{
+  text-decoration:underline;
+}
+
+.privacy-footer{
+  max-width:1200px;
+  margin:60px auto 0;
+  text-align:center;
+  padding:45px 25px;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(180deg,#121421,#090b12);
+}
+
+.privacy-footer p{
+  color:#9fa6b5;
+  margin-bottom:25px;
+}
+
+@media (max-width:900px){
+  .privacy-page{
+    padding:120px 20px 60px;
+  }
+
+  .privacy-hero h1{
+    font-size:48px;
+  }
+
+  .privacy-hero p{
+    font-size:18px;
+  }
+
+  .privacy-card{
+    padding:28px;
+  }
+
+  .privacy-card h2{
+    font-size:24px;
+  }
+}
