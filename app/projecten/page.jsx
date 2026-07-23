@@ -1,5 +1,6 @@
 import "./projecten.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Projecten | DJ Digital",
@@ -10,21 +11,29 @@ export const metadata = {
 const projecten = [
   {
     naam: "Petra Pedicure",
-    categorie: "Pedicurepraktijk",
+    image: "/images/projecten/petra-pedicure.webp",
+    categorie: "Pedicure aan Huis",
     omschrijving:
-      "Een moderne en rustige website die vertrouwen uitstraalt en nieuwe klanten aantrekt.",
-    diensten: ["Webdesign", "SEO", "Hosting"],
+      "Een elegante en rustige website ontwikkeld voor een ambulante pedicurepraktijk. De focus lag op vertrouwen, een warme uitstraling, duidelijke navigatie en een snelle gebruikservaring op mobiel én desktop.",
+    diensten: [
+      "Webdesign",
+      "Next.js",
+      "Responsive",
+      "SEO",
+      "Hosting",
+    ],
     status: "Live",
-    link: "#",
+    link: "https://www.petrapedicureaanhuis.nl/",
   },
   {
     naam: "DAAN Administraties",
+    image: "/images/projecten/daan-administraties.webp",
     categorie: "Administratiekantoor",
     omschrijving:
       "Een professionele website met een zakelijke uitstraling en sterke focus op vindbaarheid.",
     diensten: ["Webdesign", "SEO"],
     status: "Live",
-    link: "#",
+    link: "https://daan-administraties.nl/",
   },
   {
     naam: "Jouw bedrijf?",
@@ -67,9 +76,19 @@ export default function ProjectenPage() {
       <section className="projecten-grid">
         {projecten.map((project) => (
           <article className="project-card" key={project.naam}>
-            <div className="project-image">
-              <span>Preview</span>
-            </div>
+<div className="project-image">
+  {project.image ? (
+    <Image
+      src={project.image}
+      alt={project.naam}
+      fill
+      className="project-preview"
+      sizes="(max-width: 768px) 100vw, 33vw"
+    />
+  ) : (
+    <span>Coming Soon</span>
+  )}
+</div>
 
             <div className="project-content">
               <span className="project-status">{project.status}</span>
@@ -86,9 +105,20 @@ export default function ProjectenPage() {
                 ))}
               </div>
 
-              <Link href={project.link} className="primary-btn">
-                Bekijk project
-              </Link>
+{project.link.startsWith("http") ? (
+  <a
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="primary-btn"
+  >
+    Bekijk project
+  </a>
+) : (
+  <Link href={project.link} className="primary-btn">
+    Bekijk project
+  </Link>
+)}
             </div>
           </article>
         ))}
