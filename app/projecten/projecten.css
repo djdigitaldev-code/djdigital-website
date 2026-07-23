@@ -100,14 +100,20 @@
 }
 
 .project-image{
-  height:220px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(135deg,#18b7ff22,#b100ff22);
-  font-size:28px;
-  font-weight:700;
-  color:#9fdfff;
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.project-preview{
+  object-fit: cover;
+  transition: transform .4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-preview{
+  transform: scale(1.04);
 }
 
 .project-content{
@@ -209,4 +215,18 @@ padding:80px 20px;
 font-size:40px;
 }
 
+}
+
+.project-content{
+    position: relative;
+    z-index: 10;
+}
+
+.project-image{
+    position: relative;
+    z-index: 1;
+}
+
+.project-preview{
+    pointer-events: none;
 }
