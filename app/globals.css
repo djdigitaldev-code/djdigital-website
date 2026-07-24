@@ -845,7 +845,7 @@ transition:.35s;
 
 }
 
-.project-card::after{
+.portfolio-preview .project-card::after{
 
 content:"→";
 
@@ -863,10 +863,9 @@ transition:.35s;
 
 }
 
-.project-card:hover::after{
+.portfolio-preview .project-card:hover::after{
 
-transform:
-translateX(8px);
+transform:translateX(8px);
 
 opacity:1;
 
