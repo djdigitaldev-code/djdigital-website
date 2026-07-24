@@ -148,17 +148,21 @@
 }
 
 .coming-soon{
-  height:260px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:18px;
-  background:linear-gradient(135deg,#162033,#0d1018);
-  color:#9fdfff;
-  font-size:28px;
-  font-weight:700;
+    height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+    border-radius:18px;
+    padding:20px;
 }
 
+.coming-soon span{
+    color:#18b7ff;
+    font-size:34px;
+    font-weight:700;
+}
 .project-status{
   display:inline-block;
   padding:6px 12px;
