@@ -121,6 +121,12 @@
   overflow:hidden;
 }
 
+.project-image,
+.project-content{
+    position: relative;
+    z-index: 2;
+}
+
 .project-preview{
   display:block;
   width:100%;
