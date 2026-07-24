@@ -1,6 +1,6 @@
-/* ==========================================================
-   DJ DIGITAL - PROJECTEN
-   ========================================================== */
+/* ===========================
+   DJ Digital - Projecten
+=========================== */
 
 *{
   margin:0;
@@ -10,61 +10,59 @@
 
 .projecten-page{
   min-height:100vh;
-  padding-top:140px;
+  padding:140px 30px 100px;
   color:#fff;
 }
 
+/* ===========================
+   HERO
+=========================== */
+
 .projecten-hero{
-  position:relative;
-  max-width:1200px;
-  margin:auto;
-  padding:80px 30px 120px;
+  max-width:1100px;
+  margin:0 auto 110px;
   text-align:center;
-  overflow:hidden;
+  position:relative;
 }
 
 .projecten-hero::before{
   content:"";
   position:absolute;
-  width:700px;
-  height:700px;
+  width:650px;
+  height:650px;
   left:50%;
   top:-320px;
   transform:translateX(-50%);
-  background:radial-gradient(circle,rgba(24,183,255,.16),transparent 65%);
-  filter:blur(110px);
-}
-
-.hero-tag{
-  display:inline-flex;
-  padding:10px 18px;
-  border-radius:999px;
-  background:rgba(24,183,255,.08);
-  border:1px solid rgba(24,183,255,.15);
-  color:#7fdfff;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:2px;
-  margin-bottom:28px;
+  background:radial-gradient(
+      circle,
+      rgba(24,183,255,.16),
+      transparent 65%
+  );
+  filter:blur(120px);
+  pointer-events:none;
 }
 
 .projecten-hero h1{
   font-size:76px;
-  line-height:1.08;
-  margin-bottom:28px;
+  line-height:1.1;
+  margin:28px 0 24px;
 }
 
 .projecten-hero h1 span{
-  background:linear-gradient(90deg,#18b7ff,#b100ff);
+  background:linear-gradient(
+      90deg,
+      #18b7ff,
+      #b100ff
+  );
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .projecten-hero p{
-  max-width:850px;
-  margin:auto;
+  max-width:760px;
+  margin:0 auto;
   color:#b8b8c5;
-  font-size:22px;
+  font-size:21px;
   line-height:1.8;
 }
 
@@ -76,214 +74,527 @@
   margin-top:45px;
 }
 
+/* ===========================
+   PROJECT GRID
+=========================== */
+
 .projecten-grid{
+
   max-width:1400px;
-  margin:auto;
-  padding:120px 40px;
+  margin:0 auto 120px;
+
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
-  gap:35px;
-  align-items:stretch;
+  gap:30px;
+
 }
 
 .project-card{
-  background:linear-gradient(180deg,#111421,#090b12);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:28px;
+
+  position:relative;
   overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+
+  background:linear-gradient(
+      180deg,
+      #121421,
+      #090b12
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:30px;
+
+  transition:
+      transform .35s ease,
+      border-color .35s ease,
+      box-shadow .35s ease;
+
+}
+
+.project-card::before{
+
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+      180deg,
+      rgba(24,183,255,.05),
+      transparent 45%
+  );
+
+  opacity:0;
   transition:.35s;
+
 }
 
 .project-card:hover{
+
   transform:translateY(-10px);
   border-color:#18b7ff;
-  box-shadow:0 0 50px rgba(24,183,255,.18);
+  box-shadow:0 0 55px rgba(24,183,255,.18);
+
 }
 
-.project-card{
-  display:flex;
-  flex-direction:column;
-  height:100%;
+.project-card:hover::before{
+
+  opacity:1;
+
 }
 
-.project-content{
-  display:flex;
-  flex-direction:column;
-  flex:1;
-  padding:35px;
-  position:relative;
-  z-index:2;
-}
+/* ===========================
+   PROJECT AFBEELDINGEN
+=========================== */
 
 .project-image{
+  position:relative;
   padding:22px;
   background:#10141f;
   overflow:hidden;
-}
-
-.project-image,
-.project-content{
-    position: relative;
-    z-index: 2;
+  z-index:2;
 }
 
 .project-preview{
   display:block;
   width:100%;
   height:260px;
+
   object-fit:cover;
   object-position:center top;
+
   border-radius:18px;
+
+  background:#0f1320;
+  padding:8px;
+
   box-shadow:0 18px 40px rgba(0,0,0,.35);
-  transition:transform .35s ease, box-shadow .35s ease;
-  background: #0f1320;
-  padding: 8px;
+
+  transition:
+      transform .35s ease,
+      box-shadow .35s ease;
 }
 
 .project-card:hover .project-preview{
-  transform:translateY(-4px) scale(1.03);
+
+  transform:scale(1.03);
+
   box-shadow:
-    0 28px 60px rgba(0,0,0,.45),
-    0 0 25px rgba(24,183,255,.15);
+      0 30px 60px rgba(0,0,0,.45),
+      0 0 25px rgba(24,183,255,.15);
+
 }
 
-.coming-soon{
-    height:260px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.petra-preview{
+  object-position:center top;
+}
 
-    background:#fff;
-    border-radius:18px;
-    padding:20px;
+.daan-preview{
+  background:#fff;
+  padding:20px;
+  border-radius:16px;
+}
+
+/* ===========================
+   COMING SOON
+=========================== */
+
+.coming-soon{
+
+  height:260px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:18px;
+
+  background:linear-gradient(
+      135deg,
+      rgba(24,183,255,.08),
+      rgba(177,0,255,.08)
+  );
+
+  border:1px dashed rgba(24,183,255,.25);
+
 }
 
 .coming-soon span{
-    color:#18b7ff;
-    font-size:34px;
-    font-weight:700;
-}
-.project-status{
-  display:inline-block;
-  padding:6px 12px;
-  border-radius:999px;
-  background:#18b7ff22;
+
   color:#7fdfff;
+  font-size:32px;
+  font-weight:700;
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.project-content{
+
+  display:flex;
+  flex-direction:column;
+  flex:1;
+
+  padding:36px;
+
+  position:relative;
+  z-index:2;
+
+}
+
+.project-status{
+
+  display:inline-flex;
+  align-items:center;
+
+  width:fit-content;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:rgba(24,183,255,.08);
+  border:1px solid rgba(24,183,255,.18);
+
+  color:#7fdfff;
+
   font-size:12px;
-  margin-bottom:20px;
+  font-weight:700;
+  letter-spacing:1px;
+
+  margin-bottom:22px;
+
 }
 
 .project-content h2{
-  font-size:32px;
+
+  font-size:34px;
   margin-bottom:10px;
+
 }
 
 .project-content h3{
+
   color:#18b7ff;
+
   font-size:18px;
-  margin-bottom:20px;
+  font-weight:600;
+
+  margin-bottom:22px;
+
 }
 
 .project-content p{
+
   color:#b8b8c5;
+
+  font-size:17px;
   line-height:1.8;
-  margin-bottom:25px;
+
+  margin-bottom:28px;
+
 }
 
+/* ===========================
+   BADGES
+=========================== */
+
 .badges{
+
   display:flex;
   flex-wrap:wrap;
-  gap:10px;
-  margin-bottom:30px;
+  gap:12px;
+
+  margin-bottom:32px;
+
 }
 
 .badges span{
+
   padding:8px 14px;
+
   border-radius:999px;
-  background:rgba(255,255,255,.06);
+
+  background:rgba(255,255,255,.05);
   border:1px solid rgba(255,255,255,.08);
+
+  color:#ddd;
   font-size:14px;
+
+  transition:.3s;
+
 }
 
+.project-card:hover .badges span{
+
+  border-color:rgba(24,183,255,.22);
+  color:#fff;
+
+}
+
+/* ===========================
+   LINK
+=========================== */
+
 .project-link{
+
   display:inline-flex;
   align-items:center;
   gap:8px;
+
   margin-top:auto;
   width:fit-content;
+
   color:#18b7ff;
+
   font-size:16px;
   font-weight:700;
+
   text-decoration:none;
-  transition:gap .25s ease, color .25s ease;
+
+  transition:
+      gap .25s ease,
+      color .25s ease;
+
 }
 
 .project-link:hover{
+
   gap:14px;
   color:#63d0ff;
+
 }
 
+/* ===========================
+   CTA
+=========================== */
+
 .projecten-cta{
+  max-width:1100px;
+  margin:0 auto;
+
+  padding:70px 50px;
+
+  position:relative;
+  overflow:hidden;
+
   text-align:center;
-  padding:120px 30px;
+
+  background:linear-gradient(
+      180deg,
+      #121421,
+      #090b12
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:30px;
+}
+
+.projecten-cta::before{
+  content:"";
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  left:50%;
+  top:-260px;
+
+  transform:translateX(-50%);
+
+  background:radial-gradient(
+      circle,
+      rgba(24,183,255,.14),
+      transparent 70%
+  );
+
+  filter:blur(120px);
+  pointer-events:none;
 }
 
 .projecten-cta h2{
-  font-size:56px;
+  position:relative;
+  z-index:2;
+
+  font-size:52px;
+  line-height:1.2;
   margin-bottom:24px;
 }
 
 .projecten-cta p{
-  max-width:700px;
-  margin:0 auto 40px;
+  position:relative;
+  z-index:2;
+
+  max-width:720px;
+  margin:0 auto;
+
   color:#b8b8c5;
   font-size:20px;
+  line-height:1.8;
 }
 
-.petra-preview{
-    object-position:center 0%;
+.projecten-cta .hero-buttons{
+  position:relative;
+  z-index:2;
+  margin-top:45px;
 }
 
-.daan-preview{
-    background: #fff;
-    border-radius: 16px;
-    padding: 20px;
+/* ===========================
+   BUTTON FINETUNING
+=========================== */
+
+.hero-buttons .button{
+  min-width:220px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+  .projecten-hero h1{
+    font-size:62px;
+  }
+
+  .projecten-cta h2{
+    font-size:44px;
+  }
+
 }
 
 @media(max-width:900px){
 
-.projecten-page{
-padding-top:120px;
+  .projecten-page{
+    padding:120px 22px 70px;
+  }
+
+  .projecten-hero{
+    margin-bottom:80px;
+  }
+
+  .projecten-hero h1{
+    font-size:50px;
+  }
+
+  .projecten-hero p{
+    font-size:18px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .projecten-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+    margin-bottom:90px;
+  }
+
+  .project-content{
+    padding:32px;
+  }
+
+  .project-content h2{
+    font-size:30px;
+  }
+
+  .project-preview,
+  .coming-soon{
+    height:220px;
+  }
+
+  .projecten-cta{
+    padding:55px 30px;
+  }
+
+  .projecten-cta h2{
+    font-size:38px;
+  }
+
+  .projecten-cta p{
+    font-size:18px;
+  }
+
 }
 
-.projecten-hero h1{
-font-size:52px;
-}
+@media(max-width:600px){
 
-.projecten-hero p{
-font-size:18px;
-}
+  .projecten-page{
+    padding:110px 18px 60px;
+  }
 
-.hero-buttons{
-flex-direction:column;
-align-items:center;
-}
+  .projecten-hero{
+    margin-bottom:70px;
+  }
 
-.projecten-grid{
-padding:80px 20px;
-grid-template-columns:1fr;
-}
+  .projecten-hero h1{
+    font-size:40px;
+  }
 
-.project-content{
-padding:28px;
-}
+  .projecten-hero p{
+    font-size:17px;
+    line-height:1.7;
+  }
 
-.projecten-cta{
-padding:80px 20px;
-}
+  .project-image{
+    padding:16px;
+  }
 
-.projecten-cta h2{
-font-size:40px;
-}
+  .project-preview,
+  .coming-soon{
+    height:200px;
+  }
+
+  .coming-soon span{
+    font-size:26px;
+  }
+
+  .project-content{
+    padding:28px 24px;
+  }
+
+  .project-content h2{
+    font-size:28px;
+  }
+
+  .project-content h3{
+    font-size:17px;
+  }
+
+  .project-content p{
+    font-size:16px;
+  }
+
+  .badges span{
+    font-size:13px;
+    padding:7px 12px;
+  }
+
+  .project-link{
+    font-size:15px;
+  }
+
+  .projecten-cta{
+    border-radius:24px;
+    padding:45px 24px;
+  }
+
+  .projecten-cta h2{
+    font-size:32px;
+  }
+
+  .projecten-cta p{
+    font-size:17px;
+  }
+
+  .hero-buttons .button{
+    width:100%;
+    max-width:320px;
+  }
 
 }
