@@ -90,27 +90,27 @@
 }
 
 .project-card{
+    position:relative;
+    overflow:hidden;
 
-  position:relative;
-  overflow:hidden;
+    display:flex;
+    flex-direction:column;
 
-  display:flex;
-  flex-direction:column;
+    min-height:850px;
 
-  background:linear-gradient(
-      180deg,
-      #121421,
-      #090b12
-  );
+    background:linear-gradient(
+        180deg,
+        #121421,
+        #090b12
+    );
 
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:30px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:30px;
 
-  transition:
-      transform .35s ease,
-      border-color .35s ease,
-      box-shadow .35s ease;
-
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
 }
 
 .project-card::before{
@@ -150,10 +150,10 @@
 
 .project-image{
     position:relative;
-    padding:22px;
-    background:#10141f;
+    width:100%;
+    height:420px;
     overflow:hidden;
-    z-index:2;
+    background:#10141f;
 }
 
 .project-preview{
