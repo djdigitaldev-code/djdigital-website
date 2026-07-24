@@ -19,11 +19,11 @@ export default function ContactPage() {
         </p>
 
         <div className="hero-buttons">
-          <Link href="/projecten" className="primary-btn">
+          <Link href="/projecten" className="button">
             Bekijk projecten
           </Link>
 
-          <a href="#formulier" className="secondary-btn">
+          <a href="#formulier" className="button secondary">
             Gratis kennismaking
           </a>
         </div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
               placeholder="Vertel iets over je project..."
               required
             />
-            <button type="submit" className="primary-btn">
+            <button type="submit" className="button">
               Bericht versturen
             </button>
           </form>
@@ -115,7 +115,7 @@ export default function ContactPage() {
         <h2>Klaar om online te groeien?</h2>
         <p>Laten we samen een website bouwen waar je trots op bent.</p>
 
-        <a href="#formulier" className="primary-btn">
+        <a href="#formulier" className="button">
           Neem contact op
         </a>
       </section>
