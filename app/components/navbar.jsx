@@ -25,23 +25,59 @@ className="logo"
 
 <div className={`nav-links ${open ? "open" : ""}`}>
 
-<Link href="/">Home</Link>
-
-<Link href="/diensten">Diensten</Link>
-
-<Link href="/tarieven">Tarieven</Link>
-
-<Link href="/over-ons">Over ons</Link>
-
-<Link href="/contact">Contact</Link>
+<Link
+  href="/"
+  onClick={() => {
+    setOpen(false);
+  }}
+>
+  Home
+</Link>
 
 <Link
-href="/contact"
-className="nav-cta"
+  href="/diensten"
+  onClick={() => {
+    setOpen(false);
+  }}
 >
+  Diensten
+</Link>
 
-Gratis gesprek
+<Link
+  href="/tarieven"
+  onClick={() => {
+    setOpen(false);
+  }}
+>
+  Tarieven
+</Link>
 
+<Link
+  href="/over-ons"
+  onClick={() => {
+    setOpen(false);
+  }}
+>
+  Over ons
+</Link>
+
+<Link
+  href="/contact"
+  onClick={() => {
+    setOpen(false);
+  }}
+>
+  Contact
+</Link>
+
+<Link
+  href="/contact"
+  className="nav-cta"
+  onClick={() => {
+    setOpen(false);
+  }}
+>
+  Gratis gesprek
 </Link>
 
 </div>

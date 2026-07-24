@@ -539,32 +539,35 @@ transform:translateY(-8px);
 
 @media(max-width:950px){
 
+.hero{
+    padding:160px 20px 80px;
+}
+
 .hero-grid{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:40px;
 }
 
 .hero-right h1{
-
-font-size:70px;
-
+    font-size:70px;
 }
 
 .hero-logo{
+    max-width:320px;
+    margin:auto;
+}
 
-max-width:320px;
-
-margin:auto;
-
+.services-preview,
+.portfolio-preview,
+.about-preview,
+.stats{
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .about-preview{
-
-grid-template-columns:1fr;
-
+    grid-template-columns:1fr;
 }
 
 }
