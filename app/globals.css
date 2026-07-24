@@ -1176,3 +1176,70 @@ transparent 90%
 pointer-events:none;
 
 }
+
+
+
+/* =======================================================
+   FINAL MOBILE OVERRIDES
+   Plaats altijd als laatste in globals.css
+======================================================= */
+@media (max-width:950px){
+
+  .hero{
+    padding:160px 20px 80px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+  }
+
+  .hero-right h1{
+    font-size:48px;
+    line-height:1.15;
+  }
+
+  .subtitle{
+    font-size:18px;
+    line-height:1.7;
+  }
+
+  .hero-logo{
+    max-width:280px;
+    margin:auto;
+  }
+
+  .hero-buttons,
+  .hero-features{
+    justify-content:center;
+  }
+
+  .services-preview,
+  .portfolio-preview,
+  .about-preview,
+  .stats{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .portfolio-preview,
+  .about-preview{
+    grid-template-columns:1fr;
+  }
+
+  .portfolio-text h2,
+  .about-left h2{
+    font-size:38px;
+  }
+
+  .glass-card,
+  .feature,
+  .stat-card{
+    padding:28px;
+  }
+
+  .footer{
+    padding:50px 20px;
+  }
+}
