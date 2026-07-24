@@ -111,6 +111,8 @@
   flex-direction:column;
   flex:1;
   padding:35px;
+  position:relative;
+  z-index:2;
 }
 
 .project-image{

@@ -773,6 +773,7 @@ transparent 50%
 );
 
 opacity:.6;
+pointer-events:none;
 
 }
 
