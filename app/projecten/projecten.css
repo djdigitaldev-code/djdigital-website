@@ -176,12 +176,15 @@
 .petra-preview{
   padding:20px;
   border-radius:16px;
+  object-fit:contain;
+  background:#10141f;
 }
 
 .daan-preview{
   background:#fff;
   padding:20px;
   border-radius:16px;
+  object-fit:contain;
 }
 
 /* ===========================
