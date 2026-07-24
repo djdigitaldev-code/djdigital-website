@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Navbar from "../components/navbar";
 
 import "./over.css";
 
@@ -9,26 +8,20 @@ export default function Over(){
 
 return(
 
-<>
-
-<Navbar/>
-
 <div className="over-page">
 
 <section className="over-hero">
 
-<span>
+<div className="over-hero-content">
 
-OVER DJ DIGITAL
-
-</span>
+  <span className="hero-tag">
+    OVER ONS
+  </span>
 
 <h1>
-
-Websites die
-ondernemers
-laten groeien.
-
+  Websites die <br />
+  ondernemers <br />
+  laten groeien.
 </h1>
 
 <p>
@@ -39,6 +32,8 @@ die vertrouwen uitstralen
 en klanten opleveren.
 
 </p>
+
+</div>
 
 </section>
 
@@ -189,8 +184,6 @@ Gratis gesprek
 </section>
 
 </div>
-
-</>
 
 );
 
