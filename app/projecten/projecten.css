@@ -174,7 +174,12 @@
 }
 
 .petra-preview{
-  object-position:center top;
+    object-position: center top;
+    transform: scale(1.08);
+}
+
+.project-card:hover .petra-preview{
+    transform: scale(1.12);
 }
 
 .daan-preview{
