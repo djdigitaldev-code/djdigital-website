@@ -63,11 +63,11 @@ export default function ProjectenPage() {
         </p>
 
         <div className="hero-buttons">
-          <Link href="/contact" className="primary-btn">
+          <Link href="/contact" className="button">
             Start jouw project
           </Link>
 
-          <Link href="/diensten" className="secondary-btn">
+          <Link href="/diensten" className="button secondary">
             Bekijk diensten
           </Link>
         </div>
@@ -78,19 +78,19 @@ export default function ProjectenPage() {
           <article className="project-card" key={project.naam}>
 <div className="project-image">
   {project.image ? (
-<Image
-  src={project.image}
-  alt={project.naam}
-  width={1200}
-  height={750}
-  className={`project-preview ${
-    project.naam === "Petra Pedicure"
-      ? "petra-preview"
-      : project.naam === "DAAN Administraties"
-      ? "daan-preview"
-      : ""
-  }`}
-/>
+    <Image
+      src={project.image}
+      alt={project.naam}
+      fill
+      sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+      className={`project-preview ${
+        project.naam === "Petra Pedicure"
+          ? "petra-preview"
+          : project.naam === "DAAN Administraties"
+          ? "daan-preview"
+          : ""
+      }`}
+    />
   ) : (
     <div className="coming-soon">
       <span>Coming Soon</span>
@@ -141,7 +141,7 @@ export default function ProjectenPage() {
         </p>
 
         <div className="hero-buttons">
-          <Link href="/contact" className="primary-btn">
+          <Link href="/contact" className="button">
             Gratis kennismaken
           </Link>
         </div>
