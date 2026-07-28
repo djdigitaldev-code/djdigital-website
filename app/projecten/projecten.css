@@ -10,7 +10,7 @@
 
 .projecten-page{
   min-height:100vh;
-  padding:140px 30px 100px;
+  padding:160px 30px 100px;
   color:#fff;
 }
 
@@ -463,7 +463,7 @@
 @media(max-width:900px){
 
   .projecten-page{
-    padding:120px 22px 70px;
+    padding:140px 22px 70px;
   }
 
   .projecten-hero{
@@ -519,7 +519,7 @@
 @media(max-width:600px){
 
   .projecten-page{
-    padding:110px 18px 60px;
+    padding:130px 18px 60px;
   }
 
   .projecten-hero{

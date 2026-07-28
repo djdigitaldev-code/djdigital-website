@@ -4,7 +4,7 @@
 
 .privacy-page{
   min-height:100vh;
-  padding:140px 30px 100px;
+  padding:160px 30px 100px;
   color:#fff;
 }
 
@@ -126,7 +126,7 @@
 
 @media (max-width:900px){
   .privacy-page{
-    padding:120px 20px 60px;
+    padding:140px 20px 60px;
   }
 
   .privacy-hero h1{
