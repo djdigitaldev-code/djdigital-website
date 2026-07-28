@@ -83,7 +83,9 @@ export default function ProjectenPage() {
   alt={project.naam}
   width={1200}
   height={750}
-  className="project-preview"
+  className={`project-preview ${
+    project.naam === "DAAN Administraties" ? "daan-preview" : ""
+  }`}
 />
 
   ) : (
