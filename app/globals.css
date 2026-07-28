@@ -1192,3 +1192,12 @@ transparent 90%
 pointer-events:none;
 
 }
+
+html,
+body{
+  overflow-x:hidden;
+}
+
+*{
+  max-width:100%;
+}
