@@ -149,20 +149,22 @@
 =========================== */
 
 .project-image{
-    position: relative;
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
-    background: #10141f;
+    position:relative;
+    width:100%;
+    height:320px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#10141f;
 }
 
 .project-preview{
-    display:block;
-
     width:82%;
     height:82%;
-
-    margin:auto;
 
     object-fit:contain;
     object-position:center;
@@ -172,7 +174,6 @@
     transition:transform .35s ease;
 }
 
-
 .daan-preview{
     background:#fff;
 }
@@ -181,38 +182,28 @@
     transform:scale(1.02);
 }
 
-.project-preview[alt="Petra Pedicure"]{
-    width:62%;
-    height:62%;
-}
-
 /* ===========================
    COMING SOON
 =========================== */
 
 .coming-soon{
-    width: 100%;
-    height: 320px;
+    width:82%;
+    height:82%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    background: linear-gradient(
+    background:linear-gradient(
         135deg,
         rgba(24,183,255,.08),
         rgba(177,0,255,.08)
     );
 
-    border: 1px dashed rgba(24,183,255,.25);
-}
+    border:1px dashed rgba(24,183,255,.25);
 
-.coming-soon span{
-    color:#7fdfff;
-    font-size:32px;
-    font-weight:700;
+    border-radius:20px;
 }
-
 /* ===========================
    CONTENT
 =========================== */
