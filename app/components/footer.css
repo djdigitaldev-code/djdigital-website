@@ -23,6 +23,7 @@
 }
 
 .footer-container{
+  width:100%;
   max-width:1400px;
   margin:0 auto;
   padding:80px 30px 50px;
@@ -86,6 +87,11 @@
   gap:14px;
 }
 
+.footer-brand,
+.footer-links{
+  min-width:0;
+}
+
 .footer-links a,
 .footer-links span{
   color:#a8a8b7;
@@ -101,6 +107,7 @@
 .footer-bottom{
   max-width:1400px;
   margin:0 auto;
+  width:100%;
   padding:28px 30px;
   border-top:1px solid rgba(255,255,255,.08);
   display:flex;
