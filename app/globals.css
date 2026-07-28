@@ -1201,3 +1201,12 @@ body{
 *{
   max-width:100%;
 }
+
+html,
+body{
+  overflow-x: hidden;
+}
+
+.hero-right h1{
+  overflow-wrap: anywhere;
+}
