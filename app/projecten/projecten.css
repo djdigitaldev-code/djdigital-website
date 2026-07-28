@@ -159,32 +159,41 @@
 
     overflow: hidden;
 
-    background: #10141f;
+    background: #ffffff;
     border-radius: 20px;
 }
 
 .project-preview{
     display: block;
 
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 85%;
 
     object-fit: contain;
     object-position: center;
-
-    border-radius: 20px;
 
     transition: transform .35s ease;
 }
 
 .project-card:hover .project-preview{
-    transform: scale(1.015);
+    transform: scale(1.02);
 }
 
-.petra-preview,
-.daan-preview{
-    background: #fff;
+.petra-preview{
+    width: 72%;
+    height: 72%;
     border-radius: 20px;
+}
+
+.daan-preview{
+    width: 85%;
+    height: 85%;
+    border-radius: 20px;
+}
+
+/* Alleen de Coming Soon kaart donker */
+.project-image:has(.coming-soon){
+    background: #10141f;
 }
 
 /* ===========================
@@ -217,6 +226,10 @@
   font-size:32px;
   font-weight:700;
 
+}
+
+.coming-soon-image{
+    background: #10141f;
 }
 
 /* ===========================

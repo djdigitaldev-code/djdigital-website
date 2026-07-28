@@ -92,7 +92,7 @@ export default function ProjectenPage() {
   }`}
 />
   ) : (
-    <div className="coming-soon">
+    <div className={`project-image ${!project.image ? "coming-soon-image" : ""}`}>
       <span>Coming Soon</span>
     </div>
   )}
