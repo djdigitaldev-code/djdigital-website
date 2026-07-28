@@ -6,7 +6,7 @@
 
 .pricing-page{
   min-height:100vh;
-  padding:140px 30px 100px;
+  padding:160px 30px 100px;
   color:#fff;
 }
 
@@ -217,7 +217,7 @@
 }
 
 @media(max-width:950px){
-  .pricing-page{padding:120px 20px 60px;}
+  .pricing-page{padding:140px 20px 60px;}
   .pricing-title h1{font-size:52px;}
   .pricing-title p{font-size:18px;}
   .hero-buttons{flex-direction:column;align-items:center;}
