@@ -120,6 +120,7 @@
   display:flex;
   gap:24px;
   flex-wrap:wrap;
+  justify-content:center;
 }
 
 .footer-bottom-links a{
@@ -130,6 +131,11 @@
 
 .footer-bottom-links a:hover{
   color:#18b7ff;
+}
+
+.footer-bottom-links a{
+  white-space:normal;
+  overflow-wrap:anywhere;
 }
 
 @media (max-width:1100px){
