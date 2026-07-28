@@ -149,42 +149,42 @@
 =========================== */
 
 .project-image{
-    position:relative;
-    width:100%;
-    height:420px;
-    overflow:hidden;
-    background:#10141f;
+    position: relative;
+    width: 100%;
+    height: 320px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #10141f;
+    border-radius: 20px;
 }
 
 .project-preview{
-    display:block;
-    width:100%;
-    height:auto;
+    display: block;
 
-    object-fit:cover;
-    object-position:top center;
+    width: 100%;
+    height: 100%;
 
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease;
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 20px;
+
+    transition: transform .35s ease;
 }
 
 .project-card:hover .project-preview{
-    transform:scale(1.03);
+    transform: scale(1.015);
 }
 
-.petra-preview{
-  padding:20px;
-  border-radius:16px;
-  object-fit:contain;
-  background:#10141f;
-}
-
+.petra-preview,
 .daan-preview{
-  background:#fff;
-  padding:20px;
-  border-radius:16px;
-  object-fit:contain;
+    background: #fff;
+    border-radius: 20px;
 }
 
 /* ===========================
