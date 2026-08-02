@@ -195,8 +195,14 @@
 .petra-preview{
   background:#faf4ef;
 
-  object-fit:contain;
+  object-fit:cover;
   object-position:center;
+
+  transform:scale(1.28);
+}
+
+.project-card:hover .petra-preview{
+  transform:scale(1.31);
 }
 
 
