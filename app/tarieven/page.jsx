@@ -67,7 +67,6 @@ export default function TarievenPage() {
 <section className="packages-section">
   <div className="wide-card">
     <div className="wide-title">
-      <div className="number">1</div>
 
       <div>
         <h2>Websitepakketten</h2>
@@ -100,7 +99,6 @@ export default function TarievenPage() {
 <section className="pricing-grid">
 
   <article className="price-card cyan">
-    <div className="number">2</div>
 
     <h2>Website ontwikkeling</h2>
 
@@ -118,7 +116,6 @@ export default function TarievenPage() {
 
 
   <article className="price-card purple">
-    <div className="number">3</div>
 
     <h2>Hosting & onderhoud</h2>
 
@@ -136,7 +133,6 @@ export default function TarievenPage() {
 
 
   <article className="price-card cyan">
-    <div className="number">4</div>
 
     <h2>SEO optimalisatie</h2>
 
@@ -161,7 +157,6 @@ export default function TarievenPage() {
   <div className="wide-card">
 
     <div className="wide-title">
-      <div className="number">5</div>
 
       <div>
         <h2>Waarom DJ Digital?</h2>

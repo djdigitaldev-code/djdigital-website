@@ -71,6 +71,50 @@
   margin-top:45px;
 }
 
+.primary-btn,
+.secondary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-width:220px;
+  padding:16px 28px;
+
+  border-radius:16px;
+
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.primary-btn{
+  color:#fff;
+  background:linear-gradient(90deg,#18b7ff,#b100ff);
+  border:1px solid transparent;
+}
+
+.primary-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 35px rgba(24,183,255,.22);
+}
+
+.secondary-btn{
+  color:#fff;
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.14);
+}
+
+.secondary-btn:hover{
+  transform:translateY(-3px);
+  border-color:#18b7ff;
+  background:rgba(24,183,255,.06);
+}
+
 .pricing-grid{
   max-width:1400px;
   margin:0 auto 60px;
@@ -93,14 +137,6 @@
   transform:translateY(-10px);
   border-color:#18b7ff;
   box-shadow:0 0 55px rgba(24,183,255,.18);
-}
-
-.number{
-  width:58px;height:58px;border-radius:18px;
-  display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,#18b7ff,#b100ff);
-  font-weight:700;
-  margin-bottom:24px;
 }
 
 .price-card h2{font-size:34px;margin-bottom:24px;}
@@ -253,6 +289,12 @@
     align-items:center;
   }
 
+  .primary-btn,
+.secondary-btn{
+  width:100%;
+  max-width:320px;
+}
+
   .wide-grid{
     grid-template-columns:1fr;
   }
@@ -267,10 +309,6 @@
     align-items:center;
     text-align:center;
     gap:14px;
-  }
-
-  .wide-title .number{
-    margin-bottom:0;
   }
 
   .package-row{
