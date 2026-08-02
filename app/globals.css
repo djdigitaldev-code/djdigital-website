@@ -1212,3 +1212,32 @@ body{
   }
 
 }
+
+@media(max-width:950px){
+
+  /* Homepage diensten */
+  .services-preview{
+    width:100%;
+    padding:70px 20px;
+    grid-template-columns:1fr;
+  }
+
+  .glass-card{
+    width:100%;
+    text-align:center;
+  }
+
+  /* Homepage statistieken */
+  .stats{
+    width:100%;
+    padding:70px 20px;
+    grid-template-columns:1fr;
+  }
+
+  .stat-card{
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+  }
+
+}
