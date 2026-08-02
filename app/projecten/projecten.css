@@ -193,18 +193,16 @@
 =========================== */
 
 .petra-preview{
-  background:#faf4ef;
+  width:248px;
+  height:248px;
 
-  object-fit:cover;
+  object-fit:contain;
   object-position:center;
 
-  transform:scale(1.28);
-}
+  background:#faf4ef;
 
-.project-card:hover .petra-preview{
-  transform:scale(1.31);
+  transform:none;
 }
-
 
 /* ===========================
    DAAN ADMINISTRATIES
