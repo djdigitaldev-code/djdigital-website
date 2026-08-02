@@ -18,8 +18,8 @@ export default function Home() {
 <Image
   src="/logo.png"
   alt="DJ Digital"
-  width={700}
-  height={700}
+  width={637}
+  height={392}
   className="hero-logo"
   priority
 />
