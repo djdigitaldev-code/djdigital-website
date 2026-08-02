@@ -84,7 +84,11 @@ export default function ProjectenPage() {
   width={1200}
   height={750}
   className={`project-preview ${
-    project.naam === "DAAN Administraties" ? "daan-preview" : ""
+    project.naam === "Petra Pedicure"
+      ? "petra-preview"
+      : project.naam === "DAAN Administraties"
+      ? "daan-preview"
+      : ""
   }`}
 />
 
