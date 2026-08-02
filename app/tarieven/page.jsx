@@ -52,15 +52,15 @@ export default function TarievenPage() {
           onderneming past.
         </p>
 
-        <div className="hero-buttons">
-          <Link href="/contact" className="primary-btn">
-            Gratis kennismaken
-          </Link>
+<div className="hero-buttons">
+  <Link href="/contact" className="button">
+    Gratis kennismaken
+  </Link>
 
-          <Link href="/projecten" className="secondary-btn">
-            Bekijk projecten
-          </Link>
-        </div>
+  <Link href="/projecten" className="button secondary">
+    Bekijk projecten
+  </Link>
+</div>
       </section>
 
 {/* =========================
