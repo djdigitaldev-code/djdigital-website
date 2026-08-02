@@ -76,27 +76,26 @@ export default function ProjectenPage() {
       <section className="projecten-grid">
         {projecten.map((project) => (
           <article className="project-card" key={project.naam}>
-<div
-  className={`project-image ${
-    project.naam === "Petra Pedicure"
-      ? "petra-image"
-      : project.naam === "DAAN Administraties"
-      ? "daan-image"
-      : "coming-image"
-  }`}
->
+<div className="project-image">
   {project.image ? (
-    <Image
-      src={project.image}
-      alt={project.naam}
-      width={1200}
-      height={1200}
-      className="project-preview"
-    />
+<Image
+  src={project.image}
+  alt={project.naam}
+  width={1200}
+  height={750}
+  className={`project-preview ${
+    project.naam === "Petra Pedicure"
+      ? "petra-preview"
+      : project.naam === "DAAN Administraties"
+      ? "daan-preview"
+      : ""
+  }`}
+/>
+
   ) : (
-    <div className="coming-soon">
-      <span>Coming Soon</span>
-    </div>
+<div className="coming-soon">
+  <span>Coming Soon</span>
+</div>
   )}
 </div>
 
