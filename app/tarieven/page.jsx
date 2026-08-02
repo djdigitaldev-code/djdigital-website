@@ -75,21 +75,25 @@ export default function TarievenPage() {
     </div>
 
     {pakketten.map((p) => (
-      <div className="package-row" key={p.titel}>
-        <div>
-          <h3>{p.titel}</h3>
-          <p>{p.tekst}</p>
+<div className="package-row" key={p.titel}>
 
-          <button
-            className="small-cta"
-            onClick={() => setGekozen(p.titel)}
-          >
-            Kies dit pakket →
-          </button>
-        </div>
+  <div className="package-info">
+    <h3>{p.titel}</h3>
+    <p>{p.tekst}</p>
+  </div>
 
-        <strong>{p.prijs}</strong>
-      </div>
+  <div className="package-action">
+    <strong>{p.prijs}</strong>
+
+    <button
+      className="small-cta"
+      onClick={() => setGekozen(p.titel)}
+    >
+      Kies dit pakket →
+    </button>
+  </div>
+
+</div>
     ))}
   </div>
 </section>

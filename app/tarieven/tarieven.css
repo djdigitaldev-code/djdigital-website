@@ -187,8 +187,16 @@
   align-self:center;
 }
 
+.package-action{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:center;
+  gap:14px;
+}
+
 .small-cta{
-  margin-top:16px;
+  margin-top:0px;
   border:none;
   cursor:pointer;
   border-radius:14px;
@@ -311,17 +319,26 @@
     gap:14px;
   }
 
-  .package-row{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+.package-row{
+  grid-template-columns:1fr;
+  text-align:center;
+  padding:28px 20px;
+}
 
-  .package-row strong{
-    justify-self:center;
-  }
+.package-action{
+  align-items:center;
+  margin-top:18px;
+  gap:14px;
+}
 
-  .small-cta{
-    display:inline-block;
-  }
+.package-row strong{
+  font-size:30px;
+}
+
+.small-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
 
 }
