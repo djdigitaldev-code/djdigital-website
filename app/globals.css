@@ -1240,4 +1240,46 @@ body{
     text-align:center;
   }
 
+  /* Onderste homepage sectie */
+.about-preview{
+  grid-template-columns:1fr;
+  width:100%;
+  gap:50px;
+  padding:70px 20px;
+}
+
+.about-left{
+  width:100%;
+  min-width:0;
+  text-align:center;
+}
+
+.about-left h2{
+  font-size:38px;
+  line-height:1.15;
+  margin-bottom:25px;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+
+.about-left p{
+  font-size:18px;
+  line-height:1.7;
+  margin-bottom:35px;
+}
+
+.about-right{
+  width:100%;
+  min-width:0;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.about-right .feature{
+  width:100%;
+  padding:30px 20px;
+  text-align:center;
+}
+
 }
