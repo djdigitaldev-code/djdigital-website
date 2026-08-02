@@ -1194,11 +1194,21 @@ body{
   overflow-x:hidden;
 }
 
-html,
-body{
-  overflow-x: hidden;
-}
-
 .hero-right h1{
   overflow-wrap: anywhere;
+}
+
+@media(max-width:950px){
+
+  .hero-left::before{
+    width:280px;
+    height:280px;
+  }
+
+  .hero-glow{
+    width:350px;
+    height:350px;
+    left:-100px;
+  }
+
 }
