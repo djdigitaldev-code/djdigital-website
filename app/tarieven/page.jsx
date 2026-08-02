@@ -63,161 +63,255 @@ export default function TarievenPage() {
         </div>
       </section>
 
-{/* WEBSITEPAKKETTEN */}
+{/* =========================
+    WEBSITEPAKKETTEN
+========================= */}
+
 <section className="packages-section">
 
-  <div className="packages-header">
-    <div>
-      <span className="section-label">WEBSITEPAKKETTEN</span>
-      <h2>Een website voor iedere onderneming.</h2>
-      <p>
-        Kies een pakket dat bij jouw bedrijf past. Alle websites worden
-        responsive, snel en SEO-vriendelijk opgeleverd.
-      </p>
-    </div>
+  <div className="packages-heading">
+    <span>WEBSITEPAKKETTEN</span>
+
+    <h2>Een website die bij jouw bedrijf past.</h2>
+
+    <p>
+      Kies het pakket dat aansluit bij jouw onderneming.
+      Alle websites zijn snel, responsive en SEO-vriendelijk.
+    </p>
   </div>
 
-  <div className="packages-list">
 
-    {pakketten.map((p, index) => (
-      <article className="package-item" key={p.titel}>
+  <div className="packages-grid">
 
-        <div className="package-icon">
-          {index === 0 && "▣"}
-          {index === 1 && "◇"}
-          {index === 2 && "</>"}
-        </div>
+    {pakketten.map((p) => (
+      <article className="package-card" key={p.titel}>
 
-        <div className="package-main">
-
+        <div className="package-top">
           <h3>{p.titel}</h3>
-
           <p>{p.tekst}</p>
-
-          <ul className="package-features">
-            {p.kenmerken.map((kenmerk) => (
-              <li key={kenmerk}>
-                <span>✓</span>
-                {kenmerk}
-              </li>
-            ))}
-          </ul>
-
         </div>
 
-        <div className="package-action">
-
-          <strong>{p.prijs}</strong>
-
-          <button
-            className="small-cta"
-            onClick={() => setGekozen(p.titel)}
-          >
-            Kies pakket →
-          </button>
-
+        <div className="package-price">
+          {p.prijs}
         </div>
+
+        <div className="package-line"></div>
+
+        <ul className="package-features">
+          {p.kenmerken.map((kenmerk) => (
+            <li key={kenmerk}>
+              <span>✓</span>
+              {kenmerk}
+            </li>
+          ))}
+        </ul>
+
+        <button
+          className="package-button"
+          onClick={() => setGekozen(p.titel)}
+        >
+          Kies dit pakket
+          <span>→</span>
+        </button>
 
       </article>
     ))}
 
   </div>
 
-  <div className="packages-note">
+  <div className="packages-bottom">
     <span>★</span>
-    Alle websites zijn responsive, snel, veilig en SEO-vriendelijk.
+    Alle websites worden responsive, snel, veilig en SEO-vriendelijk opgeleverd.
   </div>
 
 </section>
 
-{/* LOSSE TARIEVEN */}
-<section className="pricing-grid">
 
-  <article className="price-card cyan">
 
-    <h2>Website ontwikkeling</h2>
+{/* =========================
+    DIENSTEN + WAAROM
+========================= */}
 
-    <div className="price">
-      €59 <span>per uur</span>
+<section className="pricing-bottom-grid">
+
+
+  {/* DIENSTEN */}
+
+  <div className="services-price-block">
+
+    <div className="bottom-block-heading">
+
+      <span className="bottom-label">
+        DIENSTEN & TARIEVEN
+      </span>
+
+      <h2>Losse diensten</h2>
+
+      <p>
+        Voor werkzaamheden buiten een websitepakket.
+      </p>
+
     </div>
 
-    <ul>
-      <li>✓ Maatwerk ontwikkeling</li>
-      <li>✓ Nieuwe functies</li>
-      <li>✓ Technische support</li>
-      <li>✓ Flexibel uurtarief</li>
-    </ul>
-  </article>
 
+    <div className="service-price-row">
 
-  <article className="price-card purple">
+      <div className="service-price-info">
 
-    <h2>Hosting & onderhoud</h2>
+        <div className="service-icon">
+          &lt;/&gt;
+        </div>
 
-    <div className="price">
-      €75 <span>per maand</span>
-    </div>
+        <div>
+          <h3>Website ontwikkeling</h3>
+          <p>
+            Aanpassingen, uitbreidingen en maatwerk.
+          </p>
+        </div>
 
-    <ul>
-      <li>✓ SSL-certificaat</li>
-      <li>✓ Back-ups</li>
-      <li>✓ Updates</li>
-      <li>✓ Monitoring</li>
-    </ul>
-  </article>
-
-
-  <article className="price-card cyan">
-
-    <h2>SEO optimalisatie</h2>
-
-    <div className="price">
-      €250 <span>per maand</span>
-    </div>
-
-    <ul>
-      <li>✓ Zoekwoorden</li>
-      <li>✓ Lokale SEO</li>
-      <li>✓ Google optimalisatie</li>
-      <li>✓ Rapportages</li>
-    </ul>
-  </article>
-
-</section>
-
-
-{/* WAAROM DJ DIGITAL */}
-<section className="wide-grid single-wide">
-
-  <div className="wide-card">
-
-    <div className="wide-title">
-
-      <div>
-        <h2>Waarom DJ Digital?</h2>
-        <p>Meer dan alleen een mooie website.</p>
       </div>
+
+      <div className="service-price">
+        €59
+        <span>per uur</span>
+      </div>
+
     </div>
 
-    <div className="package-row">
+
+    <div className="service-price-row">
+
+      <div className="service-price-info">
+
+        <div className="service-icon">
+          ◇
+        </div>
+
+        <div>
+          <h3>Hosting & onderhoud</h3>
+          <p>
+            Hosting, beveiliging, updates en monitoring.
+          </p>
+        </div>
+
+      </div>
+
+      <div className="service-price">
+        €75
+        <span>per maand</span>
+      </div>
+
+    </div>
+
+
+    <div className="service-price-row">
+
+      <div className="service-price-info">
+
+        <div className="service-icon">
+          ↗
+        </div>
+
+        <div>
+          <h3>SEO optimalisatie</h3>
+          <p>
+            Meer vindbaarheid in Google en lokale zoekresultaten.
+          </p>
+        </div>
+
+      </div>
+
+      <div className="service-price">
+        €250
+        <span>per maand</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  {/* WAAROM DJ DIGITAL */}
+
+  <div className="why-price-block">
+
+    <div className="bottom-block-heading">
+
+      <span className="bottom-label purple-label">
+        WAAROM DJ DIGITAL?
+      </span>
+
+      <h2>Meer dan alleen een website.</h2>
+
+      <p>
+        Persoonlijke service en kwaliteit staan centraal.
+      </p>
+
+    </div>
+
+
+    <div className="why-row">
+
+      <div className="why-icon">
+        ⚡
+      </div>
+
       <div>
         <h3>Snelle websites</h3>
-        <p>Geoptimaliseerd voor prestaties.</p>
+        <p>
+          Geoptimaliseerd voor snelheid en prestaties.
+        </p>
       </div>
+
     </div>
 
-    <div className="package-row">
+
+    <div className="why-row">
+
+      <div className="why-icon">
+        📈
+      </div>
+
       <div>
         <h3>SEO inbegrepen</h3>
-        <p>Basisoptimalisatie standaard.</p>
+        <p>
+          Basis SEO-optimalisatie standaard bij iedere website.
+        </p>
       </div>
+
     </div>
 
-    <div className="package-row">
+
+    <div className="why-row">
+
+      <div className="why-icon">
+        💬
+      </div>
+
       <div>
         <h3>Persoonlijk contact</h3>
-        <p>Korte lijnen en duidelijke communicatie.</p>
+        <p>
+          Korte lijnen en duidelijke communicatie.
+        </p>
       </div>
+
+    </div>
+
+
+    <div className="why-row">
+
+      <div className="why-icon">
+        🔒
+      </div>
+
+      <div>
+        <h3>Veilig & betrouwbaar</h3>
+        <p>
+          Veilige hosting, SSL en technisch onderhoud.
+        </p>
+      </div>
+
     </div>
 
   </div>
