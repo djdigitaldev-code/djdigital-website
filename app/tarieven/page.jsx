@@ -26,7 +26,7 @@ const pakketten = [
 ];
 
 export default function TarievenPage() {
-  const [gekozen, setGekozen] = useState(null);
+  const [gekozen, setGekozen] = useState<string | null>(null);
 
   const whatsapp = () => {
     const txt = `Hoi DJ Digital,%0A%0AIk heb interesse in het pakket: ${gekozen}`;
