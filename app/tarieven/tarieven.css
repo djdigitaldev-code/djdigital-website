@@ -216,11 +216,74 @@
   font-size:24px;cursor:pointer;
 }
 
+/* ===========================
+   WEBSITEPAKKETTEN
+=========================== */
+
+.packages-section{
+  max-width:1400px;
+  margin:0 auto 60px;
+}
+
+.packages-section .wide-card{
+  width:100%;
+}
+
+.single-wide{
+  grid-template-columns:1fr;
+  margin-top:60px;
+}
+
 @media(max-width:950px){
-  .pricing-page{padding:140px 20px 60px;}
-  .pricing-title h1{font-size:52px;}
-  .pricing-title p{font-size:18px;}
-  .hero-buttons{flex-direction:column;align-items:center;}
-  .wide-grid{grid-template-columns:1fr;}
-  .package-row{grid-template-columns:1fr;}
+
+  .pricing-page{
+    padding:140px 20px 60px;
+  }
+
+  .pricing-title h1{
+    font-size:52px;
+  }
+
+  .pricing-title p{
+    font-size:18px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .wide-grid{
+    grid-template-columns:1fr;
+  }
+
+  .wide-card,
+  .price-card{
+    width:100%;
+  }
+
+  .wide-title{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:14px;
+  }
+
+  .wide-title .number{
+    margin-bottom:0;
+  }
+
+  .package-row{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .package-row strong{
+    justify-self:center;
+  }
+
+  .small-cta{
+    display:inline-block;
+  }
+
 }
