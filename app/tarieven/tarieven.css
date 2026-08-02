@@ -267,15 +267,297 @@
 .packages-section{
   max-width:1400px;
   margin:0 auto 60px;
+
+  background:linear-gradient(
+    180deg,
+    #121421 0%,
+    #090b12 100%
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:30px;
+
+  padding:40px;
+
+  position:relative;
+  overflow:hidden;
 }
 
-.packages-section .wide-card{
-  width:100%;
+
+/* subtiele DJ Digital glow */
+
+.packages-section::before{
+  content:"";
+  position:absolute;
+
+  width:500px;
+  height:300px;
+
+  top:-220px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  background:radial-gradient(
+    circle,
+    rgba(24,183,255,.14),
+    transparent 70%
+  );
+
+  filter:blur(70px);
+  pointer-events:none;
 }
 
-.single-wide{
-  grid-template-columns:1fr;
-  margin-top:60px;
+
+/* ===========================
+   HEADER
+=========================== */
+
+.packages-header{
+  position:relative;
+  z-index:2;
+
+  padding-bottom:30px;
+  margin-bottom:0;
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.section-label{
+  display:inline-block;
+
+  color:#18b7ff;
+
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:2px;
+
+  margin-bottom:12px;
+}
+
+.packages-header h2{
+  font-size:34px;
+  line-height:1.2;
+
+  margin-bottom:10px;
+}
+
+.packages-header p{
+  max-width:750px;
+
+  color:#aeb2c0;
+
+  font-size:16px;
+  line-height:1.7;
+}
+
+
+/* ===========================
+   PAKKET RIJEN
+=========================== */
+
+.packages-list{
+  position:relative;
+  z-index:2;
+}
+
+.package-item{
+  display:grid;
+
+  grid-template-columns:
+    70px
+    minmax(0,1fr)
+    220px;
+
+  align-items:center;
+
+  gap:26px;
+
+  padding:32px 10px;
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+  transition:
+    background .3s ease,
+    padding .3s ease;
+}
+
+.package-item:hover{
+  background:rgba(24,183,255,.025);
+
+  padding-left:20px;
+  padding-right:20px;
+}
+
+
+/* ===========================
+   ICOON
+=========================== */
+
+.package-icon{
+  width:58px;
+  height:58px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:16px;
+
+  background:rgba(24,183,255,.07);
+
+  border:1px solid rgba(24,183,255,.30);
+
+  color:#18b7ff;
+
+  font-size:21px;
+  font-weight:800;
+
+  box-shadow:
+    inset 0 0 20px rgba(24,183,255,.05);
+}
+
+
+/* ===========================
+   PAKKET INFO
+=========================== */
+
+.package-main h3{
+  font-size:26px;
+
+  margin-bottom:8px;
+}
+
+.package-main > p{
+  color:#aeb2c0;
+
+  font-size:16px;
+  line-height:1.6;
+
+  margin-bottom:16px;
+}
+
+
+/* ===========================
+   KENMERKEN
+=========================== */
+
+.package-features{
+  list-style:none;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:10px 18px;
+}
+
+.package-features li{
+  display:flex;
+  align-items:center;
+
+  gap:7px;
+
+  color:#d5d7df;
+
+  font-size:14px;
+}
+
+.package-features li span{
+  color:#18b7ff;
+
+  font-weight:800;
+}
+
+
+/* ===========================
+   PRIJS + KNOP
+=========================== */
+
+.package-action{
+  display:flex;
+  flex-direction:column;
+
+  align-items:flex-end;
+  justify-content:center;
+
+  gap:14px;
+
+  text-align:right;
+}
+
+.package-action strong{
+  font-size:30px;
+  font-weight:800;
+
+  background:linear-gradient(
+    90deg,
+    #18b7ff,
+    #6d5cff
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.small-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:12px 18px;
+
+  border-radius:12px;
+
+  border:1px solid rgba(24,183,255,.20);
+
+  background:rgba(24,183,255,.08);
+
+  color:#18b7ff;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.small-cta:hover{
+  color:#fff;
+
+  border-color:transparent;
+
+  background:linear-gradient(
+    90deg,
+    #18b7ff,
+    #b100ff
+  );
+
+  transform:translateY(-2px);
+}
+
+
+/* ===========================
+   ONDERSTE INFO
+=========================== */
+
+.packages-note{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  padding-top:24px;
+
+  color:#8fdfff;
+
+  font-size:14px;
+}
+
+.packages-note span{
+  color:#18b7ff;
 }
 
 @media(max-width:950px){
@@ -339,6 +621,70 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
+}
+
+.packages-section{
+  padding:28px 20px;
+}
+
+.packages-header{
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.packages-header h2{
+  font-size:28px;
+}
+
+.packages-header p{
+  font-size:15px;
+}
+
+.package-item{
+  grid-template-columns:1fr;
+
+  text-align:center;
+
+  gap:18px;
+
+  padding:30px 0;
+}
+
+.package-item:hover{
+  padding-left:0;
+  padding-right:0;
+}
+
+.package-icon{
+  margin:0 auto;
+}
+
+.package-main h3{
+  font-size:25px;
+}
+
+.package-features{
+  justify-content:center;
+}
+
+.package-action{
+  align-items:center;
+
+  text-align:center;
+
+  margin-top:5px;
+}
+
+.package-action strong{
+  font-size:30px;
+}
+
+.packages-note{
+  justify-content:center;
+
+  text-align:center;
+
+  line-height:1.6;
 }
 
 }

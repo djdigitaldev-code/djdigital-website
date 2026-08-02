@@ -63,41 +63,72 @@ export default function TarievenPage() {
         </div>
       </section>
 
-{/* WEBSITEPAKKETTEN EERST */}
+{/* WEBSITEPAKKETTEN */}
 <section className="packages-section">
-  <div className="wide-card">
-    <div className="wide-title">
 
-      <div>
-        <h2>Websitepakketten</h2>
-        <p>Kies het pakket dat bij je past.</p>
-      </div>
+  <div className="packages-header">
+    <div>
+      <span className="section-label">WEBSITEPAKKETTEN</span>
+      <h2>Een website voor iedere onderneming.</h2>
+      <p>
+        Kies een pakket dat bij jouw bedrijf past. Alle websites worden
+        responsive, snel en SEO-vriendelijk opgeleverd.
+      </p>
     </div>
-
-    {pakketten.map((p) => (
-<div className="package-row" key={p.titel}>
-
-  <div className="package-info">
-    <h3>{p.titel}</h3>
-    <p>{p.tekst}</p>
   </div>
 
-  <div className="package-action">
-    <strong>{p.prijs}</strong>
+  <div className="packages-list">
 
-    <button
-      className="small-cta"
-      onClick={() => setGekozen(p.titel)}
-    >
-      Kies dit pakket →
-    </button>
-  </div>
+    {pakketten.map((p, index) => (
+      <article className="package-item" key={p.titel}>
 
-</div>
+        <div className="package-icon">
+          {index === 0 && "▣"}
+          {index === 1 && "◇"}
+          {index === 2 && "</>"}
+        </div>
+
+        <div className="package-main">
+
+          <h3>{p.titel}</h3>
+
+          <p>{p.tekst}</p>
+
+          <ul className="package-features">
+            {p.kenmerken.map((kenmerk) => (
+              <li key={kenmerk}>
+                <span>✓</span>
+                {kenmerk}
+              </li>
+            ))}
+          </ul>
+
+        </div>
+
+        <div className="package-action">
+
+          <strong>{p.prijs}</strong>
+
+          <button
+            className="small-cta"
+            onClick={() => setGekozen(p.titel)}
+          >
+            Kies pakket →
+          </button>
+
+        </div>
+
+      </article>
     ))}
-  </div>
-</section>
 
+  </div>
+
+  <div className="packages-note">
+    <span>★</span>
+    Alle websites zijn responsive, snel, veilig en SEO-vriendelijk.
+  </div>
+
+</section>
 
 {/* LOSSE TARIEVEN */}
 <section className="pricing-grid">
