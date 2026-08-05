@@ -20,8 +20,10 @@ return(
 
 <h1>
   Websites die <br />
-  ondernemers <br />
-  laten groeien.
+  <span>
+    ondernemers <br />
+    laten groeien.
+  </span>
 </h1>
 
 <p>

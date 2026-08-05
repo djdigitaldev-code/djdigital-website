@@ -51,20 +51,21 @@
   font-size:76px;
   line-height:1.1;
   margin:28px 0 24px;
+  color:#fff;
 }
 
-.over-hero h1 br{
-  display:block;
-}
-
-.over-hero h1{
+.over-hero h1 span{
   background:linear-gradient(
-      90deg,
-      #18b7ff,
-      #b100ff
+    90deg,
+    #18b7ff,
+    #b100ff
   );
+
   -webkit-background-clip:text;
+  background-clip:text;
+
   -webkit-text-fill-color:transparent;
+  color:transparent;
 }
 
 .over-hero p{
