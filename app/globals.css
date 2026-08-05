@@ -83,12 +83,21 @@ main{
 .nav-logo{
   display:flex;
   align-items:center;
+  justify-content:center;
+
+  height:100%;
   cursor:pointer;
+
+  /* logo optisch netjes midden in navbar */
+  transform:translateY(6px);
 }
 
 .logo{
-  height:88px;
+  display:block;
   width:auto;
+  height:86px;
+
+  object-fit:contain;
 
   transition:
     transform .35s,
@@ -589,10 +598,14 @@ transform:translateY(-8px);
     grid-template-columns:1fr;
   }
 
+  .nav-logo{
+    justify-content:flex-start;
+    transform:translate(-18px, 6px);
+  }
+
   .logo{
-  height:82px;
-  width:auto;
-}
+    height:82px;
+  }
 
 }
 
