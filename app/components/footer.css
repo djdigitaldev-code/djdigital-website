@@ -61,21 +61,21 @@
 
   width: 100%;
   max-width: 1400px;
-
   margin: 0 auto;
 
-  padding: 85px 45px 80px;
+  padding: 70px 45px 65px;
 
   display: grid;
 
   grid-template-columns:
-    minmax(330px, 1.7fr)
-    minmax(150px, .8fr)
-    minmax(180px, .9fr)
-    minmax(250px, 1fr);
+    minmax(330px, 1.45fr)
+    minmax(150px, .75fr)
+    minmax(180px, .85fr)
+    minmax(260px, 1fr);
 
-  gap: 70px;
+  gap: 65px;
 
+  /* belangrijk: alles exact bovenaan */
   align-items: start;
 }
 
@@ -88,6 +88,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  /* exact gelijk met Navigatie */
+  align-self: start;
+
+  /* iets omhoog */
+  margin-top: -20px;
 }
 
 
@@ -97,7 +103,7 @@
   display: block;
 
   width: 100%;
-  max-width: 330px;
+  max-width: 360px;
 
   margin-bottom: 28px;
 
@@ -133,16 +139,15 @@
 /* BRAND TEXT */
 
 .footer-brand p {
-  max-width: 430px;
+  max-width: 400px;
 
-  margin: 0 0 32px;
+  margin: 0 0 24px;
 
   color: #aeb4c4;
 
-  font-size: 17px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.75;
 }
-
 
 /* ===========================
    CTA
@@ -152,19 +157,18 @@
   position: relative;
 
   width: 100%;
-  max-width: 310px;
-
-  min-height: 58px;
+  max-width: 280px;
+  min-height: 54px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 24px;
+  padding: 0 22px;
 
   color: #7fdfff;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 
   text-decoration: none;
@@ -178,9 +182,6 @@
       rgba(24,183,255,.07),
       rgba(177,0,255,.05)
     );
-
-  box-shadow:
-    inset 0 0 20px rgba(24,183,255,.025);
 
   transition:
     transform .25s ease,
@@ -247,6 +248,9 @@
 .footer-contact h3 {
   position: relative;
 
+  display: inline-block;
+  width: fit-content;
+
   color: #fff;
 
   font-size: 19px;
@@ -270,12 +274,11 @@
 
   border-radius: 10px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #18b7ff,
-      #b100ff
-    );
+  background: linear-gradient(
+    90deg,
+    #18b7ff,
+    #b100ff
+  );
 }
 
 
@@ -319,6 +322,7 @@
 .footer-contact {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .contact-item {
