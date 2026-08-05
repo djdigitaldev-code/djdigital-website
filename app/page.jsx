@@ -33,7 +33,7 @@ export default function Home() {
 
   <h1>
     Websites die <br />
-    <span>ondernem-ers laten groeien.</span>
+    <span>ondernemers laten groeien.</span>
   </h1>
 
   <p className="subtitle">
