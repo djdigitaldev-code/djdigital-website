@@ -11,7 +11,7 @@ export const metadata = {
 const projecten = [
   {
     naam: "Petra Pedicure",
-    image: "/images/projecten/petra-pedicure.webp",
+    image: "/images/projecten/petra-pedicure.png",
     categorie: "Pedicure aan Huis",
     omschrijving:
       "Een elegante en rustige website ontwikkeld voor een ambulante pedicurepraktijk. De focus lag op vertrouwen, een warme uitstraling, duidelijke navigatie en een snelle gebruikservaring op mobiel én desktop.",
@@ -27,7 +27,7 @@ const projecten = [
   },
   {
     naam: "DAAN Administraties",
-    image: "/images/projecten/daan-administraties.webp",
+    image: "/images/projecten/daan-administraties.png",
     categorie: "Administratiekantoor",
     omschrijving:
       "Een professionele website met een zakelijke uitstraling en sterke focus op vindbaarheid.",
