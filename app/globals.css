@@ -1445,3 +1445,21 @@ body{
     padding:24px 20px;
   }
 }
+
+/* ===========================
+   HERO - MOBIEL TITEL
+=========================== */
+
+@media (max-width:600px){
+
+  .hero-right h1{
+    font-size:52px;
+    line-height:1.08;
+  }
+
+  .hero-right h1 span{
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+
+}
