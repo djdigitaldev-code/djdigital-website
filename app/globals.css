@@ -231,23 +231,22 @@ display:none;
 
 /* HERO */
 
+/* HERO */
+
 .hero{
+    position:relative;
 
-position:relative;
+    min-height:100vh;
 
-min-height:100vh;
+    padding:
+        140px
+        40px
+        70px;
 
-padding:
-180px
-40px
-120px;
+    display:flex;
+    align-items:center;
 
-display:flex;
-
-align-items:center;
-
-overflow:hidden;
-
+    overflow:hidden;
 }
 
 .hero-grid{
@@ -564,11 +563,20 @@ transform:translateY(-8px);
     min-width:0;
   }
 
-  .hero-logo{
-    width:100%;
-    max-width:800px;
-    margin:0 auto;
-}
+  .hero-left{
+        min-height:300px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:visible;
+    }
+
+    .hero-logo{
+        width:135%;
+        max-width:520px;
+        margin:0 auto;
+    }
+
   .hero-tag{
     margin:0 auto 24px;
   }
