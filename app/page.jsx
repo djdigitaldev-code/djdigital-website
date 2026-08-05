@@ -148,7 +148,7 @@ Professionele websites die niet alleen mooi zijn, maar ook razendsnel laden, goe
 
   <Link
 href="/projecten"
-className="project-card"
+className="home-project-card"
 >
 
 <div className="project-overlay">
@@ -175,7 +175,7 @@ className="project-card"
 
   <Link
 href="/projecten"
-className="project-card"
+className="home-project-card"
 >
 
 <div className="project-overlay">
@@ -202,7 +202,7 @@ className="project-card"
 
   <Link
 href="/projecten"
-className="project-card"
+className="home-project-card"
 >
 
 <div className="project-overlay">

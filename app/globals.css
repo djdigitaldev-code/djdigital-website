@@ -815,6 +815,7 @@ gap:25px;
 
 }
 
+
 @media(max-width:950px){
 
 .portfolio-preview{
@@ -831,39 +832,48 @@ font-size:46px;
 
 }
 
-.project-card{
-  width:100%;
-  height:260px;
-  min-height:260px;
-  max-height:260px;
+.home-project-card{
 
-  border-radius:32px;
+width:100%;
+height:260px;
+min-height:260px;
+max-height:260px;
 
-  position:relative;
-  overflow:hidden;
+border-radius:32px;
 
-  display:flex;
-  align-items:flex-end;
+position:relative;
 
-  padding:35px;
+overflow:hidden;
 
-  background:linear-gradient(
-    135deg,
-    rgba(18,18,28,.95),
-    rgba(35,35,60,.55)
-  );
+display:flex;
 
-  border:1px solid rgba(255,255,255,.08);
+align-items:end;
 
-  cursor:pointer;
-  text-decoration:none;
+padding:35px;
 
-  transition:
-    transform .45s ease,
-    box-shadow .45s ease;
+background:
+
+linear-gradient(
+135deg,
+rgba(18,18,28,.95),
+rgba(35,35,60,.55)
+);
+
+border:
+
+1px solid
+rgba(
+255,
+255,
+255,
+.08
+);
+
+transition:.45s;
+
 }
 
-.project-card::before{
+.home-project-card::before{
 
 content:"";
 
@@ -889,7 +899,7 @@ opacity:.6;
 
 }
 
-.project-card:hover{
+.home-project-card:hover{
 
 transform:
 
@@ -937,7 +947,7 @@ line-height:1.15;
 
 }
 
-.project-card{
+.home-project-card{
 
 cursor:pointer;
 
@@ -945,7 +955,7 @@ text-decoration:none;
 
 }
 
-.project-card:hover .project-overlay{
+.home-project-card:hover .project-overlay{
 
 transform:
 translateY(-6px);
@@ -958,7 +968,7 @@ transition:.35s;
 
 }
 
-.portfolio-preview .project-card::after{
+.portfolio-preview .home-project-card::after{
 
 content:"→";
 
@@ -976,7 +986,7 @@ transition:.35s;
 
 }
 
-.portfolio-preview .project-card:hover::after{
+.portfolio-preview .home-project-card:hover::after{
 
 transform:translateX(8px);
 
@@ -1338,8 +1348,10 @@ body{
     gap:16px;
   }
 
-  .project-card{
+  .home-project-card{
     height:210px;
+    min-height:210px;
+    max-height:210px;
     padding:28px;
   }
 
@@ -1415,8 +1427,10 @@ body{
     font-size:36px;
   }
 
-  .project-card{
+  .home-project-card{
     height:190px;
+    min-height:190px;
+    max-height:190px;
   }
 
   .project-overlay h3{
