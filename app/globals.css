@@ -268,8 +268,8 @@ overflow:hidden;
     position:relative;
     z-index:2;
 
-    width:100%;
-    max-width:500px;
+    width:115%;
+    max-width:590px;
     height:auto;
     display:block;
 
@@ -565,10 +565,10 @@ transform:translateY(-8px);
   }
 
   .hero-logo{
-    max-width:260px;
+    width:100%;
+    max-width:340px;
     margin:0 auto;
-  }
-
+}
   .hero-tag{
     margin:0 auto 24px;
   }
