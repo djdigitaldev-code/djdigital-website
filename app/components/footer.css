@@ -164,6 +164,9 @@
   align-items: center;
   justify-content: space-between;
 
+  /* CENTREERT DE KNOP */
+  margin: 0 auto;
+
   padding: 0 22px;
 
   color: #7fdfff;
