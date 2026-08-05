@@ -81,39 +81,26 @@ main{
 /* NAVBAR LOGO */
 
 .nav-logo{
-
-display:block;
-
-}
-
-.nav-logo{
-
-display:flex;
-
-align-items:center;
-
-cursor:pointer;
-
+  display:flex;
+  align-items:center;
+  cursor:pointer;
 }
 
 .logo{
+  height:88px;
+  width:auto;
 
-height:72px;
-
-transition:
-transform .35s,
-filter .35s;
-
+  transition:
+    transform .35s,
+    filter .35s;
 }
 
 .logo:hover{
+  transform:scale(1.05);
 
-transform:scale(1.05);
-
-filter:
-drop-shadow(0 0 25px rgba(24,183,255,.9))
-drop-shadow(0 0 55px rgba(177,0,255,.65));
-
+  filter:
+    drop-shadow(0 0 25px rgba(24,183,255,.9))
+    drop-shadow(0 0 55px rgba(177,0,255,.65));
 }
 
 /* MENU */
@@ -601,6 +588,11 @@ transform:translateY(-8px);
   .about-preview{
     grid-template-columns:1fr;
   }
+
+  .logo{
+  height:82px;
+  width:auto;
+}
 
 }
 
