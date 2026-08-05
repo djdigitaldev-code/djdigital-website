@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import "./footer.css";
 
 export default function Footer() {
@@ -19,23 +18,21 @@ export default function Footer() {
         <div className="footer-brand">
 
           <Link href="/" className="footer-logo">
-            <Image
+            <img
               src="/logo.png"
               alt="DJ Digital"
-              width={637}
-              height={392}
-              className="footer-logo-image"
             />
           </Link>
 
           <p>
-            Professionele websites voor ondernemers die online willen groeien.
-            Snel, modern en volledig geoptimaliseerd voor Google.
+            Professionele websites voor ondernemers die
+            online willen groeien. Snel, modern en volledig
+            geoptimaliseerd voor Google.
           </p>
 
           <Link href="/contact" className="footer-cta">
-            Gratis kennismaken
-            <span>→</span>
+            <span>Gratis kennismaken</span>
+            <span className="footer-arrow">→</span>
           </Link>
 
         </div>
@@ -70,22 +67,25 @@ export default function Footer() {
 
 
         {/* CONTACT */}
-        <div className="footer-links footer-contact">
+        <div className="footer-contact">
 
           <h3>Contact</h3>
 
-          <a href="mailto:info@djdigital.nl">
-            <span className="footer-contact-icon">✉</span>
-            info@djdigital.nl
+          <a
+            href="mailto:info@djdigital.nl"
+            className="contact-item"
+          >
+            <span className="contact-icon">✉</span>
+            <span>info@djdigital.nl</span>
           </a>
 
-          <div className="footer-contact-item">
-            <span className="footer-contact-icon">⌖</span>
+          <div className="contact-item">
+            <span className="contact-icon">⌖</span>
             <span>Heel Nederland</span>
           </div>
 
-          <div className="footer-contact-item">
-            <span className="footer-contact-icon">◷</span>
+          <div className="contact-item">
+            <span className="contact-icon">◷</span>
             <span>Reactie binnen 24 uur</span>
           </div>
 
@@ -94,22 +94,30 @@ export default function Footer() {
       </div>
 
 
-      {/* ONDERSTE BALK */}
-      <div className="footer-bottom-wrapper">
+      {/* ONDERKANT */}
+      <div className="footer-bottom">
 
-        <div className="footer-bottom">
+        <p>
+          © {year} DJ Digital. Alle rechten voorbehouden.
+        </p>
 
-          <p>
-            © {year} DJ Digital. Alle rechten voorbehouden.
-          </p>
+        <div className="footer-bottom-links">
 
-          <div className="footer-bottom-links">
-            <Link href="/privacy">Privacyverklaring</Link>
-            <Link href="/algemene-voorwaarden">
-              Algemene voorwaarden
-            </Link>
-            <Link href="/cookiebeleid">Cookiebeleid</Link>
-          </div>
+          <Link href="/privacy">
+            Privacyverklaring
+          </Link>
+
+          <span className="footer-dot"></span>
+
+          <Link href="/algemene-voorwaarden">
+            Algemene voorwaarden
+          </Link>
+
+          <span className="footer-dot purple"></span>
+
+          <Link href="/cookiebeleid">
+            Cookiebeleid
+          </Link>
 
         </div>
 
