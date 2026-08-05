@@ -3,98 +3,94 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Navbar(){
+export default function Navbar() {
 
-const [open,setOpen]=useState(false);
+  const [open, setOpen] = useState(false);
 
-return(
-
-<nav className="navbar">
-
-<div className="nav-container">
-
-<Link href="/" className="nav-logo">
-
-<img
-src="/logo.png"
-alt="DJ Digital"
-className="logo"
-/>
-
-</Link>
-
-<div className={`nav-links ${open ? "open" : ""}`}>
-
-<Link
-  href="/"
-  onClick={() => {
+  const handleNavClick = () => {
     setOpen(false);
-  }}
->
-  Home
-</Link>
 
-<Link
-  href="/diensten"
-  onClick={() => {
-    setOpen(false);
-  }}
->
-  Diensten
-</Link>
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-<Link
-  href="/tarieven"
-  onClick={() => {
-    setOpen(false);
-  }}
->
-  Tarieven
-</Link>
+  return (
 
-<Link
-  href="/over-ons"
-  onClick={() => {
-    setOpen(false);
-  }}
->
-  Over ons
-</Link>
+    <nav className="navbar">
 
-<Link
-  href="/contact"
-  onClick={() => {
-    setOpen(false);
-  }}
->
-  Contact
-</Link>
+      <div className="nav-container">
 
-<Link
-  href="/contact"
-  className="nav-cta"
-  onClick={() => {
-    setOpen(false);
-  }}
->
-  Gratis gesprek
-</Link>
+        <Link
+          href="/"
+          className="nav-logo"
+          onClick={handleNavClick}
+        >
+          <img
+            src="/logo.png"
+            alt="DJ Digital"
+            className="logo"
+          />
+        </Link>
 
-</div>
+        <div className={`nav-links ${open ? "open" : ""}`}>
 
-<button
-className="hamburger"
-onClick={()=>setOpen(!open)}
->
+          <Link
+            href="/"
+            onClick={handleNavClick}
+          >
+            Home
+          </Link>
 
-☰
+          <Link
+            href="/diensten"
+            onClick={handleNavClick}
+          >
+            Diensten
+          </Link>
 
-</button>
+          <Link
+            href="/tarieven"
+            onClick={handleNavClick}
+          >
+            Tarieven
+          </Link>
 
-</div>
+          <Link
+            href="/over-ons"
+            onClick={handleNavClick}
+          >
+            Over ons
+          </Link>
 
-</nav>
+          <Link
+            href="/contact"
+            onClick={handleNavClick}
+          >
+            Contact
+          </Link>
 
-);
+          <Link
+            href="/contact"
+            className="nav-cta"
+            onClick={handleNavClick}
+          >
+            Gratis gesprek
+          </Link>
 
+        </div>
+
+        <button
+          className="hamburger"
+          onClick={() => setOpen(!open)}
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </nav>
+
+  );
 }
