@@ -129,7 +129,7 @@ en nieuwe klanten.
 
 <div className="stat">
 
-10+
+5+
 
 <span>
 
@@ -153,11 +153,11 @@ Maatwerk
 
 <div className="stat">
 
-24/7
+1-op-1
 
 <span>
 
-Support
+Persoonlijk support
 
 </span>
 
