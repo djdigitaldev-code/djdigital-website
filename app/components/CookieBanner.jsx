@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import "./cookie-banner.css";
 
 const STORAGE_KEY = "dj-digital-cookie-consent";
 
@@ -16,34 +15,42 @@ export default function CookieBanner() {
 
     if (!savedConsent) {
       setVisible(true);
+      return;
+    }
+
+    try {
+      const settings = JSON.parse(savedConsent);
+      setAnalytics(Boolean(settings.analytics));
+      setMarketing(Boolean(settings.marketing));
+    } catch {
+      localStorage.removeItem(STORAGE_KEY);
+      setVisible(true);
     }
   }, []);
 
   const saveConsent = (settings) => {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({
-        necessary: true,
-        analytics: settings.analytics,
-        marketing: settings.marketing,
-        date: new Date().toISOString(),
-      })
-    );
+    const consent = {
+      necessary: true,
+      analytics: settings.analytics,
+      marketing: settings.marketing,
+      date: new Date().toISOString(),
+    };
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(consent));
 
     window.dispatchEvent(
       new CustomEvent("cookieConsentChanged", {
-        detail: settings,
+        detail: consent,
       })
     );
 
+    setAnalytics(settings.analytics);
+    setMarketing(settings.marketing);
     setVisible(false);
     setPreferencesOpen(false);
   };
 
   const acceptAll = () => {
-    setAnalytics(true);
-    setMarketing(true);
-
     saveConsent({
       analytics: true,
       marketing: true,
@@ -51,9 +58,6 @@ export default function CookieBanner() {
   };
 
   const rejectAll = () => {
-    setAnalytics(false);
-    setMarketing(false);
-
     saveConsent({
       analytics: false,
       marketing: false,
@@ -80,13 +84,19 @@ export default function CookieBanner() {
           setAnalytics(false);
           setMarketing(false);
         }
+      } else {
+        setAnalytics(false);
+        setMarketing(false);
       }
 
       setPreferencesOpen(true);
       setVisible(true);
     };
 
-    window.addEventListener("openCookiePreferences", openPreferences);
+    window.addEventListener(
+      "openCookiePreferences",
+      openPreferences
+    );
 
     return () => {
       window.removeEventListener(
@@ -108,14 +118,19 @@ export default function CookieBanner() {
       >
         {!preferencesOpen ? (
           <>
-            <span className="cookie-label">PRIVACY & COOKIES</span>
+            <span className="cookie-label">
+              PRIVACY & COOKIES
+            </span>
 
-            <h2 id="cookie-title">Jouw privacy, jouw keuze.</h2>
+            <h2 id="cookie-title">
+              Jouw privacy, jouw keuze.
+            </h2>
 
             <p>
               We gebruiken noodzakelijke cookies om de website goed te
               laten werken. Met jouw toestemming gebruiken we aanvullende
-              cookies voor analyse en marketing.
+              cookies voor analyse en marketing. Je kunt je keuze later
+              altijd wijzigen.
             </p>
 
             <div className="cookie-actions">
@@ -146,13 +161,17 @@ export default function CookieBanner() {
           </>
         ) : (
           <>
-            <span className="cookie-label">COOKIEVOORKEUREN</span>
+            <span className="cookie-label">
+              COOKIEVOORKEUREN
+            </span>
 
-            <h2 id="cookie-title">Beheer je voorkeuren.</h2>
+            <h2 id="cookie-title">
+              Beheer je voorkeuren.
+            </h2>
 
             <p>
               Bepaal zelf welke aanvullende cookies DJ Digital mag
-              gebruiken.
+              gebruiken. Je kunt deze voorkeuren later altijd wijzigen.
             </p>
 
             <div className="cookie-preference">
@@ -163,22 +182,27 @@ export default function CookieBanner() {
                 </span>
               </div>
 
-              <span className="cookie-required">Altijd actief</span>
+              <span className="cookie-required">
+                Altijd actief
+              </span>
             </div>
 
             <div className="cookie-preference">
               <div>
                 <strong>Analyse</strong>
                 <span>
-                  Helpt ons begrijpen hoe de website wordt gebruikt.
+                  Hiermee kunnen we via Google Analytics begrijpen hoe
+                  bezoekers de website gebruiken en deze verbeteren.
                 </span>
               </div>
 
               <input
                 type="checkbox"
                 checked={analytics}
-                onChange={(e) => setAnalytics(e.target.checked)}
-                aria-label="Analytische cookies"
+                onChange={(e) =>
+                  setAnalytics(e.target.checked)
+                }
+                aria-label="Analytische cookies toestaan"
               />
             </div>
 
@@ -186,15 +210,18 @@ export default function CookieBanner() {
               <div>
                 <strong>Marketing</strong>
                 <span>
-                  Kan worden gebruikt om advertenties en campagnes te meten.
+                  Hiermee kunnen we de prestaties van advertenties en
+                  marketingcampagnes meten en verbeteren.
                 </span>
               </div>
 
               <input
                 type="checkbox"
                 checked={marketing}
-                onChange={(e) => setMarketing(e.target.checked)}
-                aria-label="Marketingcookies"
+                onChange={(e) =>
+                  setMarketing(e.target.checked)
+                }
+                aria-label="Marketingcookies toestaan"
               />
             </div>
 

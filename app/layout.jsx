@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import CookieBanner from "./components/CookieBanner";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata = {
   metadataBase: new URL("https://djdigital.nl"),
@@ -101,7 +102,10 @@ export default function RootLayout({ children }) {
 
         <Footer />
 
+        <GoogleAnalytics />
+
         <CookieBanner />
+        
       </body>
     </html>
   );
