@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import CookieBanner from "./components/CookieBanner";
 
 export const metadata = {
   metadataBase: new URL("https://djdigital.nl"),
@@ -99,6 +100,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
 
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
