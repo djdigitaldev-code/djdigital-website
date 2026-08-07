@@ -233,20 +233,20 @@ className="home-project-card"
 
       <section className="stats">
 
-        <div className="stat-card">
-          <h2>100%</h2>
-          <span>Maatwerk</span>
-        </div>
+<div className="stat-card">
+  <div className="stat-value">100%</div>
+  <span>Maatwerk</span>
+</div>
 
-        <div className="stat-card">
-          <h2>&lt;2s</h2>
-          <span>Snelle websites</span>
-        </div>
+<div className="stat-card">
+  <div className="stat-value">&lt;2s</div>
+  <span>Snelle websites</span>
+</div>
 
-        <div className="stat-card">
-          <h2>SEO</h2>
-          <span>Geoptimaliseerd</span>
-        </div>
+<div className="stat-card">
+  <div className="stat-value">SEO</div>
+  <span>Geoptimaliseerd</span>
+</div>
 
       </section>
 

@@ -516,7 +516,7 @@ rgba(
   border-left:1px solid rgba(255,255,255,.08);
 }
 
-.stat-card h2{
+.stat-card .stat-value{
   font-size:44px;
   line-height:1;
 
@@ -1364,10 +1364,9 @@ body{
     border-radius:20px !important;
   }
 
-  .stat-card h2{
-    font-size:38px;
-  }
-
+.stat-card .stat-value{
+  font-size:38px;
+}
   .about-preview{
     grid-template-columns:1fr;
 

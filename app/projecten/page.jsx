@@ -3,9 +3,21 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Projecten | DJ Digital",
+  title: "Projecten & Websites",
+
   description:
-    "Bekijk een selectie van websites die DJ Digital heeft ontworpen en ontwikkeld voor ondernemers.",
+    "Bekijk websites die DJ Digital heeft ontworpen en ontwikkeld voor ondernemers. Moderne, snelle en SEO-vriendelijke websites op maat.",
+
+  alternates: {
+    canonical: "/projecten",
+  },
+
+  openGraph: {
+    title: "Projecten & Websites | DJ Digital",
+    description:
+      "Bekijk een selectie van moderne websites die DJ Digital heeft ontworpen en ontwikkeld voor ondernemers.",
+    url: "/projecten",
+  },
 };
 
 const projecten = [

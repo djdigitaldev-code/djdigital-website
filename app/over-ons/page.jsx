@@ -129,18 +129,6 @@ en nieuwe klanten.
 
 <div className="stat">
 
-5+
-
-<span>
-
-Projecten
-
-</span>
-
-</div>
-
-<div className="stat">
-
 100%
 
 <span>
@@ -153,11 +141,23 @@ Maatwerk
 
 <div className="stat">
 
-1-op-1
+Persoonlijk
 
 <span>
 
-Persoonlijk support
+Éen vast aanspreekpunt
+
+</span>
+
+</div>
+
+<div className="stat">
+
+SEO
+
+<span>
+
+Geoptimaliseerd voor Google
 
 </span>
 
