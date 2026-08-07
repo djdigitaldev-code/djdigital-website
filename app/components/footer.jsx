@@ -13,6 +13,10 @@ export default function Footer() {
     });
   };
 
+  const openCookiePreferences = () => {
+  window.dispatchEvent(new Event("openCookiePreferences"));
+};
+
   return (
     <footer className="footer">
 
@@ -164,6 +168,16 @@ export default function Footer() {
           <Link href="/cookiebeleid" onClick={handleFooterNavClick}>
             Cookiebeleid
           </Link>
+
+          <span className="footer-dot"></span>
+
+          <button
+          type="button"
+          onClick={openCookiePreferences}
+          className="footer-cookie-button"
+          >
+            Cookievoorkeuren
+          </button>
 
         </div>
 
