@@ -1,4 +1,6 @@
 import "./globals.css";
+import "./components/cookie-banner.css";
+
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import CookieBanner from "./components/CookieBanner";
@@ -105,7 +107,7 @@ export default function RootLayout({ children }) {
         <GoogleAnalytics />
 
         <CookieBanner />
-        
+
       </body>
     </html>
   );
