@@ -1,0 +1,561 @@
+/* ===========================
+   DJ Digital - Diensten
+=========================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.diensten-page{
+  min-height:100vh;
+  padding:160px 30px 100px;
+  color:#fff;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.diensten-hero{
+  max-width:1100px;
+  margin:0 auto 100px;
+  text-align:center;
+  position:relative;
+}
+
+.diensten-hero::before{
+  content:"";
+  position:absolute;
+  width:650px;
+  height:650px;
+  left:50%;
+  top:-320px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,
+      rgba(24,183,255,.16),
+      transparent 65%);
+  filter:blur(120px);
+  pointer-events:none;
+}
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(24,183,255,.08);
+  border:1px solid rgba(24,183,255,.18);
+  color:#7fdfff;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:28px;
+}
+
+.diensten-hero h1{
+  font-size:76px;
+  line-height:1.1;
+  margin-bottom:24px;
+}
+
+.diensten-hero h1 span{
+  background:linear-gradient(
+      90deg,
+      #18b7ff,
+      #b100ff
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.diensten-hero p{
+  max-width:760px;
+  margin:0 auto;
+  color:#b8b8c5;
+  font-size:21px;
+  line-height:1.8;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:45px;
+}
+
+/* ===========================
+   DIENSTEN GRID
+=========================== */
+
+.diensten-grid{
+  max-width:1400px;
+  margin:0 auto 120px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+  gap:30px;
+}
+
+.dienst-card{
+  background:linear-gradient(
+      180deg,
+      #121421,
+      #090b12
+  );
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:30px;
+  padding:42px;
+  transition:
+      transform .35s ease,
+      border-color .35s ease,
+      box-shadow .35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.dienst-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+      180deg,
+      rgba(24,183,255,.04),
+      transparent 40%
+  );
+  opacity:0;
+  transition:.35s;
+}
+
+.dienst-card:hover{
+  transform:translateY(-10px);
+  border-color:#18b7ff;
+  box-shadow:0 0 55px rgba(24,183,255,.18);
+}
+
+.dienst-card:hover::before{
+  opacity:1;
+}
+
+.dienst-icon{
+  width:64px;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:20px;
+  font-size:30px;
+  margin-bottom:28px;
+
+  background:linear-gradient(
+      135deg,
+      #18b7ff,
+      #b100ff
+  );
+}
+
+.dienst-card h2{
+  font-size:34px;
+  margin-bottom:22px;
+  line-height:1.2;
+}
+
+.dienst-card p{
+  color:#b8b8c5;
+  line-height:1.8;
+  font-size:17px;
+  margin-bottom:28px;
+}
+
+.dienst-card ul{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.dienst-card li{
+  color:#ddd;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:16px;
+  transition:.25s;
+}
+
+.dienst-card:hover li{
+  color:#fff;
+}
+
+/* ===========================
+   WAAROM DJ DIGITAL
+=========================== */
+
+.why-section{
+  max-width:1400px;
+  margin:0 auto 120px;
+  text-align:center;
+}
+
+.section-tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(24,183,255,.08);
+  border:1px solid rgba(24,183,255,.18);
+  color:#7fdfff;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:28px;
+}
+
+.why-section h2{
+  max-width:760px;
+  margin:0 auto 60px;
+  font-size:52px;
+  line-height:1.2;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.feature{
+  background:linear-gradient(
+      180deg,
+      #121421,
+      #090b12
+  );
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:28px;
+  font-size:20px;
+  font-weight:600;
+  transition:
+      transform .35s ease,
+      border-color .35s ease,
+      box-shadow .35s ease;
+}
+
+.feature:hover{
+  transform:translateY(-8px);
+  border-color:#18b7ff;
+  box-shadow:0 0 45px rgba(24,183,255,.16);
+}
+
+/* ===========================
+   WERKWIJZE
+=========================== */
+
+.process{
+  max-width:1400px;
+  margin:0 auto 120px;
+  text-align:center;
+}
+
+.process h2{
+  max-width:760px;
+  margin:0 auto 70px;
+  font-size:52px;
+  line-height:1.2;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.step{
+  position:relative;
+  overflow:hidden;
+
+  background:linear-gradient(
+      180deg,
+      #121421,
+      #090b12
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:30px;
+  padding:42px;
+
+  transition:
+      transform .35s ease,
+      border-color .35s ease,
+      box-shadow .35s ease;
+}
+
+.step::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+      180deg,
+      rgba(24,183,255,.05),
+      transparent 45%
+  );
+
+  opacity:0;
+  transition:.35s;
+}
+
+.step:hover{
+  transform:translateY(-10px);
+  border-color:#18b7ff;
+  box-shadow:0 0 55px rgba(24,183,255,.18);
+}
+
+.step:hover::before{
+  opacity:1;
+}
+
+.step h3{
+  width:70px;
+  height:70px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:0 auto 28px;
+
+  border-radius:22px;
+
+  background:linear-gradient(
+      135deg,
+      #18b7ff,
+      #b100ff
+  );
+
+  color:#fff;
+  font-size:28px;
+  font-weight:800;
+}
+
+.step h4{
+  font-size:30px;
+  margin-bottom:18px;
+}
+
+.step p{
+  color:#b8b8c5;
+  line-height:1.8;
+  font-size:17px;
+  max-width:260px;
+  margin:0 auto;
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.diensten-cta{
+  max-width:1100px;
+  margin:0 auto;
+  padding:70px 50px;
+
+  text-align:center;
+
+  background:linear-gradient(
+      180deg,
+      #121421,
+      #090b12
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:30px;
+
+  position:relative;
+  overflow:hidden;
+}
+
+.diensten-cta::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  left:50%;
+  top:-260px;
+  transform:translateX(-50%);
+
+  background:radial-gradient(
+      circle,
+      rgba(24,183,255,.14),
+      transparent 70%
+  );
+
+  filter:blur(120px);
+  pointer-events:none;
+}
+
+.diensten-cta h2{
+  position:relative;
+  font-size:52px;
+  margin-bottom:22px;
+  line-height:1.2;
+}
+
+.diensten-cta p{
+  position:relative;
+  max-width:700px;
+  margin:0 auto;
+  color:#b8b8c5;
+  font-size:20px;
+  line-height:1.8;
+}
+
+.diensten-cta .hero-buttons{
+  position:relative;
+  margin-top:45px;
+}
+
+/* ===========================
+   BUTTON FINETUNING
+=========================== */
+
+.hero-buttons .button{
+  min-width:220px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+  .diensten-hero h1{
+    font-size:62px;
+  }
+
+  .why-section h2,
+  .process h2,
+  .diensten-cta h2{
+    font-size:44px;
+  }
+
+}
+
+@media(max-width:900px){
+
+  .diensten-page{
+    padding:140px 22px 70px;
+  }
+
+  .diensten-hero{
+    margin-bottom:80px;
+  }
+
+  .diensten-hero h1{
+    font-size:50px;
+  }
+
+  .diensten-hero p{
+    font-size:18px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .diensten-grid{
+    gap:24px;
+    margin-bottom:90px;
+  }
+
+  .why-section,
+  .process{
+    margin-bottom:90px;
+  }
+
+  .why-section h2,
+  .process h2,
+  .diensten-cta h2{
+    font-size:38px;
+  }
+
+  .dienst-card,
+  .step{
+    padding:34px;
+  }
+
+  .feature{
+    font-size:18px;
+    padding:24px;
+  }
+
+  .diensten-cta{
+    padding:55px 30px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .diensten-page{
+    padding:130px 18px 60px;
+  }
+
+  .diensten-hero{
+    margin-bottom:70px;
+  }
+
+  .diensten-hero h1{
+    font-size:40px;
+  }
+
+  .diensten-hero p{
+    font-size:17px;
+    line-height:1.7;
+  }
+
+  .why-section h2,
+  .process h2,
+  .diensten-cta h2{
+    font-size:32px;
+  }
+
+  .dienst-card h2{
+    font-size:28px;
+  }
+
+  .step h4{
+    font-size:24px;
+  }
+
+  .dienst-icon{
+    width:56px;
+    height:56px;
+    font-size:26px;
+  }
+
+  .step h3{
+    width:60px;
+    height:60px;
+    font-size:24px;
+  }
+
+  .diensten-cta{
+    border-radius:24px;
+    padding:45px 24px;
+  }
+
+  .diensten-cta p{
+    font-size:17px;
+  }
+
+  .hero-buttons .button{
+    width:100%;
+    max-width:320px;
+  }
+
+}

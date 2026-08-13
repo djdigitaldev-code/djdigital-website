@@ -1,0 +1,21 @@
+{
+  "name": "DJ Digital",
+  "short_name": "DJ Digital",
+  "description": "Professionele websites voor ondernemers. Webdesign, hosting en SEO.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04040b",
+  "theme_color": "#0f1225",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,891 @@
+/* ===========================
+   DJ Digital - Tarieven
+   Volledig responsive
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pricing-page {
+  min-height: 100vh;
+  padding: 160px 30px 100px;
+  color: #fff;
+}
+
+/* ===========================
+   HERO / TITEL
+=========================== */
+
+.pricing-title {
+  max-width: 1100px;
+  margin: 0 auto 90px;
+  text-align: center;
+  position: relative;
+}
+
+.pricing-title::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  left: 50%;
+  top: -320px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(24, 183, 255, 0.16),
+    transparent 65%
+  );
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(24, 183, 255, 0.08);
+  border: 1px solid rgba(24, 183, 255, 0.18);
+  color: #7fdfff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.pricing-title h1 {
+  font-size: 76px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.pricing-title h1 span {
+  background: linear-gradient(90deg, #18b7ff, #b100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pricing-title p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #b8b8c5;
+  font-size: 21px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.hero-buttons .button {
+  min-width: 220px;
+}
+
+/* ===========================
+   WEBSITEPAKKETTEN
+=========================== */
+
+.packages-section {
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #121421, #090b12);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+}
+
+.packages-section::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 350px;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(24, 183, 255, 0.14),
+    transparent 70%
+  );
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.packages-heading {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 35px;
+}
+
+.packages-heading > span,
+.bottom-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #18b7ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.packages-heading h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.packages-heading p {
+  max-width: 760px;
+  color: #a8acba;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ===========================
+   3 PAKKETTEN
+=========================== */
+
+.packages-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.package-card {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 19, 31, 0.95),
+    rgba(8, 10, 18, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 22px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(24, 183, 255, 0.55);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(24, 183, 255, 0.08);
+}
+
+/* PAKKET TITEL + OMSCHRIJVING */
+
+.package-top {
+  min-height: 145px;
+}
+
+.package-top h3 {
+  font-size: 27px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.package-top p {
+  color: #aeb2c0;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 430px;
+}
+
+/* PRIJS */
+
+.package-price {
+  margin-top: 18px;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 800;
+  background: linear-gradient(90deg, #18b7ff, #765cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SCHEIDING */
+
+.package-line {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+  background: linear-gradient(
+    90deg,
+    rgba(24, 183, 255, 0.35),
+    rgba(255, 255, 255, 0.04)
+  );
+}
+
+/* KENMERKEN */
+
+.package-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 30px;
+}
+
+.package-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #d5d7df;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.package-features li span {
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  border-radius: 50%;
+  color: #18b7ff;
+  background: rgba(24, 183, 255, 0.08);
+  border: 1px solid rgba(24, 183, 255, 0.25);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* PAKKET KNOP */
+
+.package-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 15px 18px;
+  border-radius: 13px;
+  border: 1px solid rgba(24, 183, 255, 0.22);
+  background: rgba(24, 183, 255, 0.08);
+  color: #18b7ff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.package-button span {
+  transition: transform 0.25s ease;
+}
+
+.package-button:hover {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(90deg, #18b7ff, #b100ff);
+}
+
+.package-button:hover span {
+  transform: translateX(4px);
+}
+
+/* ONDERREGEL */
+
+.packages-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #8fdfff;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.packages-bottom span {
+  color: #18b7ff;
+}
+
+/* ===========================
+   DIENSTEN + WAAROM
+=========================== */
+
+.pricing-bottom-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.services-price-block,
+.why-price-block {
+  min-width: 0;
+  padding: 35px;
+  background: linear-gradient(180deg, #121421, #090b12);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+}
+
+.why-price-block {
+  border-color: rgba(177, 0, 255, 0.16);
+}
+
+/* HEADERS */
+
+.bottom-block-heading {
+  min-height: 125px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bottom-block-heading h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.bottom-block-heading p {
+  color: #a8acba;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.purple-label {
+  color: #c55cff;
+}
+
+/* ===========================
+   DIENSTEN
+=========================== */
+
+.service-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 27px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-price-row:last-child {
+  border-bottom: none;
+}
+
+.service-price-info {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(24, 183, 255, 0.07);
+  border: 1px solid rgba(24, 183, 255, 0.25);
+  color: #18b7ff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.service-price-info h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.service-price-info p {
+  color: #9fa4b2;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* PRIJS RECHTS */
+
+.service-price {
+  flex-shrink: 0;
+  text-align: right;
+  color: #18b7ff;
+  font-size: 31px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.service-price span {
+  display: block;
+  margin-top: 5px;
+  color: #9fa4b2;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===========================
+   WAAROM DJ DIGITAL
+=========================== */
+
+.why-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.why-row:last-child {
+  border-bottom: none;
+}
+
+.why-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(177, 0, 255, 0.07);
+  border: 1px solid rgba(177, 0, 255, 0.22);
+  font-size: 20px;
+}
+
+.why-row h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.why-row p {
+  color: #9fa4b2;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ===========================
+   CONTACT MODAL
+=========================== */
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.contact-box {
+  width: min(520px, 92%);
+  background: linear-gradient(180deg, #161826, #090b12);
+  border: 1px solid rgba(177, 0, 255, 0.25);
+  border-radius: 28px;
+  padding: 42px;
+  position: relative;
+  text-align: center;
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(177, 0, 255, 0.08);
+}
+
+.contact-box > span {
+  color: #18b7ff;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-box h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.contact-box p {
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.modal-primary,
+.modal-secondary {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 14px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.modal-primary {
+  border: none;
+  background: linear-gradient(90deg, #18b7ff, #b100ff);
+  color: #fff;
+}
+
+.modal-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-primary:hover,
+.modal-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.close-modal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #18b7ff;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 1100px) {
+  .packages-section {
+    padding: 32px;
+  }
+
+  .package-card {
+    padding: 28px;
+  }
+
+  .package-top {
+    min-height: 155px;
+  }
+
+  .pricing-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   TABLET / MOBIEL
+=========================== */
+
+@media (max-width: 950px) {
+  .pricing-page {
+    padding: 140px 20px 60px;
+  }
+
+  .pricing-title {
+    margin-bottom: 65px;
+  }
+
+  .pricing-title h1 {
+    font-size: 52px;
+  }
+
+  .pricing-title p {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .button {
+    width: min(100%, 320px);
+  }
+
+  /* WEBSITEPAKKETTEN */
+
+  .packages-section {
+    padding: 28px 20px;
+  }
+
+  .packages-heading {
+    text-align: center;
+  }
+
+  .packages-heading h2 {
+    font-size: 30px;
+  }
+
+  .packages-heading p {
+    margin: 0 auto;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-card {
+    padding: 28px 24px;
+  }
+
+  .package-top {
+    min-height: auto;
+  }
+
+  .package-top h3 {
+    font-size: 26px;
+  }
+
+  .package-price {
+    font-size: 32px;
+  }
+
+  .packages-bottom {
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* DIENSTEN + WAAROM */
+
+  .pricing-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-price-block,
+  .why-price-block {
+    padding: 28px 22px;
+  }
+
+  .bottom-block-heading {
+    min-height: auto;
+  }
+
+  .bottom-block-heading h2 {
+    font-size: 27px;
+  }
+
+  .service-price-row {
+    align-items: flex-start;
+  }
+}
+
+/* ===========================
+   MOBIEL
+=========================== */
+
+@media (max-width: 600px) {
+  .pricing-page {
+    padding: 120px 16px 50px;
+  }
+
+  .pricing-title {
+    margin-bottom: 50px;
+  }
+
+  .pricing-title::before {
+    width: 420px;
+    height: 420px;
+  }
+
+  .pricing-title h1 {
+    font-size: 42px;
+  }
+
+  .pricing-title p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    margin-top: 32px;
+    gap: 12px;
+  }
+
+  .packages-section {
+    padding: 24px 16px;
+    border-radius: 24px;
+  }
+
+  .packages-heading {
+    margin-bottom: 25px;
+  }
+
+  .packages-heading h2 {
+    font-size: 27px;
+  }
+
+  .packages-heading p {
+    font-size: 15px;
+  }
+
+  .package-card {
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  .package-top h3 {
+    font-size: 25px;
+  }
+
+  .package-top p {
+    font-size: 15px;
+  }
+
+  .package-price {
+    font-size: 31px;
+  }
+
+  .package-line {
+    margin: 20px 0;
+  }
+
+  .package-features {
+    gap: 12px;
+  }
+
+  .package-features li {
+    font-size: 15px;
+  }
+
+  /* DIENSTEN OP KLEIN SCHERM */
+
+  .service-price-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .service-price-info {
+    align-items: flex-start;
+  }
+
+  .service-price {
+    width: 100%;
+    padding-left: 70px;
+    text-align: left;
+    font-size: 28px;
+  }
+
+  .why-row {
+    align-items: flex-start;
+  }
+
+  .why-row h3 {
+    font-size: 19px;
+  }
+
+  .why-row p {
+    font-size: 14px;
+  }
+
+  /* MODAL */
+
+  .contact-box {
+    padding: 36px 24px 28px;
+    border-radius: 24px;
+  }
+
+  .contact-box h2 {
+    font-size: 30px;
+  }
+}
+
+/* ===========================
+   EXTRA KLEIN
+=========================== */
+
+@media (max-width: 400px) {
+  .pricing-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .pricing-title h1 {
+    font-size: 36px;
+  }
+
+  .packages-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .package-card {
+    padding: 22px 17px;
+  }
+
+  .package-top h3 {
+    font-size: 23px;
+  }
+
+  .package-price {
+    font-size: 28px;
+  }
+
+  .services-price-block,
+  .why-price-block {
+    padding: 24px 18px;
+  }
+
+  .service-price-info {
+    gap: 13px;
+  }
+
+  .service-icon,
+  .why-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .service-price {
+    padding-left: 59px;
+  }
+}
