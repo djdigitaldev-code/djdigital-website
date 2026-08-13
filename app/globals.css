@@ -1303,8 +1303,8 @@ body{
 
 @media (max-width: 768px) {
   .hero-features {
-    gap: 10px;
-    font-size: 14px;
+    gap: 8px;
+    font-size: 13px;
   }
 }
 
