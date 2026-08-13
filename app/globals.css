@@ -319,25 +319,22 @@ margin-bottom:50px;
 }
 
 .button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-padding:
-18px
-34px;
+  padding:18px 34px;
+  border-radius:20px;
 
-border-radius:20px;
+  background:
+    linear-gradient(
+      90deg,
+      #18b7ff,
+      #b100ff
+    );
 
-background:
-
-linear-gradient(
-90deg,
-#18b7ff,
-#b100ff
-);
-
-font-weight:700;
-
-transition:.3s;
-
+  font-weight:700;
+  transition:.3s;
 }
 
 .button:hover{
