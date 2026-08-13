@@ -312,13 +312,10 @@ margin-bottom:50px;
 }
 
 .hero-buttons{
-
-display:flex;
-
-gap:20px;
-
-flex-wrap:wrap;
-
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .button{
@@ -1174,6 +1171,7 @@ background:linear-gradient(
 .hero-features {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   margin-top: 28px;
   width: 100%;
