@@ -2,19 +2,7 @@
 
 import { useEffect } from "react";
 
-declare global {
-  interface Window {
-    onTurnstileSuccess?: (token: string) => void;
-  }
-}
-
-interface TurnstileWidgetProps {
-  onVerify: (token: string) => void;
-}
-
-export default function TurnstileWidget({
-  onVerify,
-}: TurnstileWidgetProps) {
+export default function TurnstileWidget({ onVerify }) {
   useEffect(() => {
     const script = document.createElement("script");
 
@@ -26,12 +14,14 @@ export default function TurnstileWidget({
     document.head.appendChild(script);
 
     return () => {
-      document.head.removeChild(script);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
 
   useEffect(() => {
-    window.onTurnstileSuccess = (token: string) => {
+    window.onTurnstileSuccess = (token) => {
       onVerify(token);
     };
 
