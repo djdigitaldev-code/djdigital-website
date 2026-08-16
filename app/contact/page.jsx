@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import "./contact.css";
-import TurnstileWidget from "@/app/components/TurnstileWidget";
+import TurnstileWidget from "../components/TurnstileWidget";
 
 export default function ContactPage() {
   const [status, setStatus] = useState("");
