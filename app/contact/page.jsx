@@ -3,41 +3,48 @@
 import { useState } from "react";
 import Link from "next/link";
 import "./contact.css";
+import TurnstileWidget from "@/app/components/TurnstileWidget";
 
 export default function ContactPage() {
   const [status, setStatus] = useState("");
   const [sending, setSending] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
 
-  async function handleSubmit(event) {
-    event.preventDefault();
+async function handleSubmit(event) {
+  event.preventDefault();
 
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    setSending(true);
-    setStatus("");
-
-    try {
-      const response = await fetch("https://formspree.io/f/mnpavdga", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
-        form.reset();
-        setStatus("success");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    } finally {
-      setSending(false);
-    }
+  if (!turnstileToken) {
+    setStatus("captcha");
+    return;
   }
+
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+
+  formData.append("turnstileToken", turnstileToken);
+
+  setSending(true);
+  setStatus("");
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      form.reset();
+      setTurnstileToken("");
+      setStatus("success");
+    } else {
+      setStatus("error");
+    }
+  } catch {
+    setStatus("error");
+  } finally {
+    setSending(false);
+  }
+}
 
   return (
     <main className="contact-page">
@@ -128,6 +135,10 @@ export default function ContactPage() {
               placeholder="Vertel iets over je project..."
               required
             />
+
+<TurnstileWidget
+  onVerify={(token) => setTurnstileToken(token)}
+/>
 
 <label className="privacy-check">
   <input type="checkbox" required />
