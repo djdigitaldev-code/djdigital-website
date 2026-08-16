@@ -51,7 +51,7 @@ export async function POST(request) {
       );
     }
 
-    formData.delete("turnstileToken");
+    formData.set("cf-turnstile-response", turnstileToken);
 
     const formspreeResponse = await fetch(
       "https://formspree.io/f/mnpavdga",
