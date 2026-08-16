@@ -13,44 +13,8 @@ export async function POST(request) {
       );
     }
 
-    const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY;
-
-    if (!secretKey) {
-      console.error("Cloudflare Turnstile secret key ontbreekt.");
-      return NextResponse.json(
-        { error: "Server configuratie ontbreekt." },
-        { status: 500 }
-      );
-    }
-
-    const turnstileResponse = await fetch(
-      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          secret: secretKey,
-          response: turnstileToken,
-        }),
-      }
-    );
-
-    const turnstileResult = await turnstileResponse.json();
-
-    if (!turnstileResult.success) {
-      console.error(
-        "Turnstile verificatie mislukt:",
-        turnstileResult
-      );
-
-      return NextResponse.json(
-        { error: "Beveiligingscontrole mislukt." },
-        { status: 403 }
-      );
-    }
-
+    // Geef de Turnstile-token door aan Formspree.
+    // Formspree controleert de token vervolgens zelf bij Cloudflare.
     formData.set("cf-turnstile-response", turnstileToken);
 
     const formspreeResponse = await fetch(
@@ -65,10 +29,9 @@ export async function POST(request) {
     );
 
     if (!formspreeResponse.ok) {
-      console.error(
-        "Formspree fout:",
-        await formspreeResponse.text()
-      );
+      const errorText = await formspreeResponse.text();
+
+      console.error("Formspree fout:", errorText);
 
       return NextResponse.json(
         { error: "Formulier kon niet worden verzonden." },
