@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(request) {
   try {
     const formData = await request.formData();
 
@@ -23,7 +23,6 @@ export async function POST(request: Request) {
       );
     }
 
-    // Controleer de Turnstile-token bij Cloudflare
     const turnstileResponse = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
       {
@@ -41,7 +40,10 @@ export async function POST(request: Request) {
     const turnstileResult = await turnstileResponse.json();
 
     if (!turnstileResult.success) {
-      console.error("Turnstile verificatie mislukt:", turnstileResult);
+      console.error(
+        "Turnstile verificatie mislukt:",
+        turnstileResult
+      );
 
       return NextResponse.json(
         { error: "Beveiligingscontrole mislukt." },
@@ -49,10 +51,8 @@ export async function POST(request: Request) {
       );
     }
 
-    // Turnstile-token verwijderen voordat het formulier naar Formspree gaat
     formData.delete("turnstileToken");
 
-    // Verstuur het formulier naar Formspree
     const formspreeResponse = await fetch(
       "https://formspree.io/f/mnpavdga",
       {
