@@ -54,7 +54,7 @@ export default function TarievenPage() {
 
   const whatsapp = () => {
     const txt = encodeURIComponent(
-      `Hoi DJ Digital,\n\nIk heb interesse in het pakket "${gekozen}". Ik hoor graag wat de mogelijkheden zijn.`
+      `Hoi DJ Digital Works,\n\nIk heb interesse in het pakket "${gekozen}". Ik hoor graag wat de mogelijkheden zijn.`
     );
 
     window.open(
@@ -66,7 +66,7 @@ export default function TarievenPage() {
 
   const mail = () => {
     const body = encodeURIComponent(
-      `Hoi DJ Digital,\n\nIk heb interesse in het pakket "${gekozen}". Ik hoor graag wat de mogelijkheden zijn.`
+      `Hoi DJ Digital Works,\n\nIk heb interesse in het pakket "${gekozen}". Ik hoor graag wat de mogelijkheden zijn.`
     );
 
     window.location.href = `mailto:info@djdigitalworks.nl?subject=Pakket aanvraag - ${encodeURIComponent(
