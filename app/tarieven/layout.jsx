@@ -9,7 +9,7 @@ export const metadata = {
 
   openGraph: {
     type: "website",
-    title: "Tarieven Webdesign & SEO | DJ Digital",
+    title: "Tarieven | DJ Digital Works",
     description:
       "Bekijk de tarieven voor professionele websites, webdesign, hosting, onderhoud en SEO bij DJ Digital.",
     url: "/tarieven",

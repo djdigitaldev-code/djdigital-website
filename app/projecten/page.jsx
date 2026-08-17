@@ -13,7 +13,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Projecten & Websites | DJ Digital",
+    title: "Projecten & Websites | DJ Digital Works",
     description:
       "Bekijk een selectie van moderne websites die DJ Digital heeft ontworpen en ontwikkeld voor ondernemers.",
     url: "/projecten",

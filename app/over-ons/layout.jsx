@@ -9,7 +9,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Over ons | DJ Digital",
+    title: "Over ons | DJ Digital Works",
     description:
       "DJ Digital bouwt moderne, snelle en professionele websites op maat voor ondernemers die online willen groeien.",
     url: "/over-ons",

@@ -10,7 +10,7 @@ export const metadata = {
   metadataBase: new URL("https://djdigitalworks.nl"),
 
   title: {
-    default: "Website laten maken | DJ Digital W",
+    default: "Website laten maken | DJ Digital Works",
     template: "%s | DJ Digital",
   },
 
