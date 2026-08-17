@@ -1,7 +1,8 @@
 export const metadata = {
-  title: "Tarieven Webdesign & SEO",
+  title: "Tarieven",
+
   description:
-    "Bekijk de tarieven van DJ Digital voor professionele websites, webdesign, hosting, onderhoud en SEO. Transparante prijzen voor ondernemers.",
+    "Bekijk de tarieven van DJ Digital Works voor professionele websites, webdesign, hosting, onderhoud en SEO. Transparante prijzen voor ondernemers.",
 
   alternates: {
     canonical: "/tarieven",
@@ -11,25 +12,25 @@ export const metadata = {
     type: "website",
     title: "Tarieven | DJ Digital Works",
     description:
-      "Bekijk de tarieven voor professionele websites, webdesign, hosting, onderhoud en SEO bij DJ Digital.",
+      "Bekijk de tarieven voor professionele websites, webdesign, hosting, onderhoud en SEO bij DJ Digital Works.",
     url: "/tarieven",
-    siteName: "DJ Digital",
+    siteName: "DJ Digital Works",
     locale: "nl_NL",
     images: [
       {
         url: "/og-image-v2.png",
         width: 1200,
         height: 630,
-        alt: "DJ Digital - Tarieven voor webdesign, hosting en SEO",
+        alt: "DJ Digital Works - Tarieven voor webdesign, hosting en SEO",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Tarieven Webdesign & SEO | DJ Digital",
+    title: "Tarieven | DJ Digital Works",
     description:
-      "Bekijk de tarieven voor professionele websites, webdesign, hosting, onderhoud en SEO bij DJ Digital.",
+      "Bekijk de tarieven voor professionele websites, webdesign, hosting, onderhoud en SEO bij DJ Digital Works.",
     images: ["/og-image-v2.png"],
   },
 };

@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Webdesign, Hosting & SEO",
+  title: "Diensten",
   description:
-    "Ontdek de diensten van DJ Digital: professionele maatwerk websites, veilige hosting, onderhoud en SEO-optimalisatie voor ondernemers.",
+    "Ontdek de diensten van DJ Digital Works: professionele maatwerk websites, veilige hosting, onderhoud en SEO-optimalisatie voor ondernemers.",
 
   alternates: {
     canonical: "/diensten",
