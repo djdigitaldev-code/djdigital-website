@@ -127,7 +127,7 @@ export default function Footer() {
 
             {/* FACEBOOK */}
             <a
-              href="#"
+              href="https://www.facebook.com/djdigitalworks/"
               className="social-icon"
               aria-label="Facebook"
               target="_blank"
@@ -146,7 +146,7 @@ export default function Footer() {
 
             {/* INSTAGRAM */}
             <a
-              href="#"
+              href="https://www.instagram.com/djdigitalworks/"
               className="social-icon"
               aria-label="Instagram"
               target="_blank"
