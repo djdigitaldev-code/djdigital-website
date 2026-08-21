@@ -127,7 +127,7 @@ export default function Footer() {
 
             {/* FACEBOOK */}
             <a
-              href="https://www.facebook.com/djdigitalworks/"
+              href="https://www.facebook.com/profile.php?id=61593592471344"
               className="social-icon"
               aria-label="Facebook"
               target="_blank"
